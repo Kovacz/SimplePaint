@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/akukh/Documents/Projects/Paint/include/keyhandler.h
+GLFW/glfw3.h
+-
+
+/Users/akukh/Documents/Projects/Paint/src/keyhandler.cpp
+../include/keyhandler.h
+/Users/akukh/Documents/Projects/Paint/include/keyhandler.h
+iostream
+-
+
