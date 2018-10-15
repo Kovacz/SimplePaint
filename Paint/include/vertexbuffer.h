@@ -2,27 +2,30 @@
 #define VERTEXBUFFER_H
 
 #include <cstddef>
+#include "include/defines.hpp"
 
 namespace mlg
 {
-class Vertex;
+struct Vertex;
 
 class VertexBuffer
 {
 public:
     VertexBuffer();
-    //VertexBuffer(PrimitiveType type, Usage usage);
+    //VertexBuffer(Usage usage);
    ~VertexBuffer();
 
-    bool        create(const Vertex* vertices, std::size_t vertexCount);
-    unsigned    getVBOHandle() const;
-    unsigned    getVAOHandle() const;
-    std::size_t getVertexCount()  const;
+    unsigned    getBufferHandle() const noexcept;
+    std::size_t getVertexCount()  const noexcept;
+
+	bool        init(const Vertex* vertices, std::size_t vertexCount);
+	bool        init(const Vertex3& vertices);
+	void		update(const Vertex* vertices, std::size_t vertexCount) const;
+	void		update(const Vertex3& vertices) const;
+
     static void bind(const VertexBuffer* vertexBuffer);
-    static void unbind(const VertexBuffer* vertexBuffer);
 private:
-    unsigned    m_VBO;
-    unsigned    m_VAO;
+    unsigned    m_bufferHandler;
     std::size_t m_bufferSize;
 };
 

@@ -2,7 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
-#include "../include/shader.h"
+#include "include/shader.h"
 using mlg::Shader;
 
 Shader::Shader(const std::string& vertexShaderFilename, const std::string& fragmentShaderFilename)
