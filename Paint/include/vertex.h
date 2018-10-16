@@ -1,7 +1,7 @@
 #ifndef VERTEX_H
 #define VERTEX_H
-#include "include/vector2.hpp"
-#include "include/vector3.hpp"
+#include "../include/vector2.hpp"
+#include "../include/vector3.hpp"
 
 namespace mlg
 {

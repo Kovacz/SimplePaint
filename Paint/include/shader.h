@@ -12,7 +12,7 @@ public:
    ~Shader();
 
     Shader&   use();
-    unsigned& getID() const;
+    unsigned& getID();
 
     // Utility functions
     void    setFloat    (const char *name, float value, bool useShader = false);

@@ -1,4 +1,4 @@
-#include "include/vertex.h"
+#include "../include/vertex.h"
 
 namespace mlg
 {

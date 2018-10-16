@@ -1,14 +1,14 @@
 #include <glad/glad.h>
 #include <iostream>
-#include "include/vector2.hpp"
-#include "include/vector3.hpp"
-#include "include/vertex.h"
-#include "include/vertexbuffer.h"
+#include "../include/vector2.hpp"
+#include "../include/vector3.hpp"
+#include "../include/vertex.h"
+#include "../include/vertexbuffer.h"
 
 namespace mlg
 {
 
-unsigned tmp = 0;
+unsigned drawableVAO;
 float colorRGB[] = { 0.f, 0.f, 0.f };
 
 VertexBuffer::VertexBuffer() : m_bufferHandler(0), m_bufferSize(0)
@@ -24,12 +24,19 @@ VertexBuffer::~VertexBuffer()
 
 bool VertexBuffer::init(const Vertex3& vertices)
 {
-	glGenBuffers(1, &m_bufferHandler);
+    glGenVertexArrays(1, &drawableVAO);
+
+    glGenBuffers(1, &this->m_bufferHandler);
+
+    glBindVertexArray(drawableVAO);
+
 	glBindBuffer(GL_ARRAY_BUFFER, this->m_bufferHandler);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(Vertex3), &vertices[0], GL_STATIC_DRAW);
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), reinterpret_cast<void*>(0));
 	glEnableVertexAttribArray(0);
+
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
+    glBindVertexArray(0);
 
 	this->m_bufferSize = vertices.size();
 	return true;
@@ -63,11 +70,7 @@ void VertexBuffer::update(const Vertex3& vertices) const
 	glBindBuffer(GL_ARRAY_BUFFER, this->m_bufferHandler);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(Vertex3) * vertices.size(), &vertices[0], GL_STATIC_DRAW);
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), reinterpret_cast<void*>(0));
-	glEnableVertexAttribArray(0);
-
-// 	glBindBuffer(GL_ARRAY_BUFFER, tmp);
-// 	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), reinterpret_cast<void*>(0));
-// 	glEnableVertexAttribArray(1);
+    glEnableVertexAttribArray(0);
 }
 
 void VertexBuffer::update(const Vertex* vertices, std::size_t vertexCount) const

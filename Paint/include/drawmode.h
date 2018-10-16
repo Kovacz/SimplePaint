@@ -12,7 +12,8 @@ public:
 		LINES_MODE,
 		LINES_STRIP_MODE,
 		BRUSH_MODE,
-		CIRCLE_MODE
+        CIRCLE_MODE,
+        LOAD_BG_MODE,
 	};
 private:
 	DrawMode();

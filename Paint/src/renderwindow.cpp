@@ -1,9 +1,10 @@
 #include "glad/glad.h"
-#include "include/renderwindow.h"
+#include "../include/renderwindow.h"
 #include <iostream>
-#include "include/vertex.h"
-#include "include/keyhandler.h"
-#include "include/texture.h"
+#include "../include/vertex.h"
+#include "../include/keyhandler.h"
+#include "../include/texture.h"
+
 
 namespace mlg
 {
@@ -30,9 +31,9 @@ RenderWindow::RenderWindow(int width
 	, m_share(share)
 {
 	glfwInit();
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 2);
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 0);
-	// 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 #ifdef __APPLE__
 	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 #endif
@@ -67,14 +68,11 @@ void RenderWindow::draw()
 		{
 			g_vertices.clear();
 		}
-//  			glDrawArrays(GL_LINE, 0, 0);
-
-		//glDrawElements(GL_LINE_STRIP, 2, GL_UNSIGNED_INT, 0);
 		glDrawArrays(GL_LINE_STRIP_ADJACENCY, 0, g_vertices.size());
 	}
 }
 
-void RenderWindow::draw(const Texture& texture) const
+void RenderWindow::draw(const Texture& texture, CircleShape& circle) const
 {
 	if (singleDrawMode.getDrawFlagState())
 	{
@@ -82,16 +80,24 @@ void RenderWindow::draw(const Texture& texture) const
 		singleDrawMode.setDrawFlag(false);
 	}
 
-	if (singleDrawMode.getModeState() == DrawMode::LINES_MODE)
+    if (singleDrawMode.getModeState() == DrawMode::LOAD_BG_MODE)
+    {
+        glBindVertexArray(textureVAO);
+        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+        glBindVertexArray(0);
+    }
+    else if (singleDrawMode.getModeState() == DrawMode::LINES_MODE)
 	{
-		glBindVertexArray(1);
-		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
-		glBindVertexArray(0);
+        glBindVertexArray(drawableVAO);
 		glDrawArrays(GL_LINES, 0, g_vertices.size());
+        glBindVertexArray(0);
+
 	}
 	else if (singleDrawMode.getModeState() == DrawMode::LINES_STRIP_MODE)
 	{
-		glDrawArrays(GL_LINE_STRIP, 0, g_vertices.size());
+        glBindVertexArray(drawableVAO);
+        glDrawArrays(GL_LINE_STRIP_ADJACENCY, 0, g_vertices.size());
+        glBindVertexArray(0);
 	}
 	else if (singleDrawMode.getModeState() == DrawMode::BRUSH_MODE)
 	{
@@ -100,27 +106,32 @@ void RenderWindow::draw(const Texture& texture) const
 			singleDrawMode.setDrawFlag(true);
 			double xpos = 0.f, ypos = 0.f;
 			glfwGetCursorPos(this->m_window, &xpos, &ypos);
-			g_X1 = static_cast<float>( (xpos - (this->m_width  / 2)) / (this->m_width  / 2));
-			g_Y1 = static_cast<float>(-(ypos - (this->m_height / 2)) / (this->m_height / 2));
-			g_vertices.push_back(Vector3f(g_X1, g_Y1, 0.f));
+            g_X1 = static_cast<float>( (xpos - (this->m_width  / 2)) / (this->m_width  / 2));
+            g_Y1 = static_cast<float>(-(ypos - (this->m_height / 2)) / (this->m_height / 2));
+            g_vertices.push_back(Vector3f(g_X1, g_Y1, 0.f));
 		}
 		else
 		{
 			g_vertices.clear();
 		}
-//		glBindVertexArray(1);
-		//glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
-//		glBindVertexArray(0);
+        glBindVertexArray(drawableVAO);
 		glDrawArrays(GL_LINE_STRIP_ADJACENCY, 0, g_vertices.size());
-	}
+        glBindVertexArray(0);
+    }
 	else if (singleDrawMode.getModeState() == DrawMode::CIRCLE_MODE)
 	{
-		unsigned triangleAmount = 1000u;
-		GLfloat  twicePi        = 6.28318531f;
+        if (g_vertices.size() > 0)
+        {
+            circle.onPaint(g_vertices[g_vertices.size() - 2],
+                    vecDistance(g_vertices[g_vertices.size() - 2]
+                              , g_vertices[g_vertices.size() - 1])
+                    );
+        }
+
+
+
+
 	}
-// 	glBindVertexArray(1);
-// 	glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
-// 	glBindVertexArray(0);
 }
 
 void RenderWindow::draw(const Vertex* vertices) const

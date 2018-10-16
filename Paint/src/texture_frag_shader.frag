@@ -7,8 +7,10 @@ out vec4 color;
 
 uniform sampler2D ourTexture;
 
+uniform vec2 viewDimensions;
+uniform float outerRadius;
+
 void main()
 {
-	color = vec4(ourColor, 1.f);
-    //color = texture(ourTexture, TexCoord);
+    color = vec4(ourColor, 1.f);
 }

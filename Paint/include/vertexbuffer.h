@@ -2,7 +2,7 @@
 #define VERTEXBUFFER_H
 
 #include <cstddef>
-#include "include/defines.hpp"
+#include "../include/defines.hpp"
 
 namespace mlg
 {

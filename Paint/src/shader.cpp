@@ -2,7 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
-#include "include/shader.h"
+#include "../include/shader.h"
 using mlg::Shader;
 
 Shader::Shader(const std::string& vertexShaderFilename, const std::string& fragmentShaderFilename)
@@ -82,6 +82,10 @@ void Shader::compile(const char* vertexShaderCode
         glDeleteShader(geometry);
 }
 
+unsigned& Shader::getID()
+{
+    return this->m_shaderProgramID;
+}
 void Shader::setFloat(const char *name, float value, bool useShader)
 {
     if (useShader)

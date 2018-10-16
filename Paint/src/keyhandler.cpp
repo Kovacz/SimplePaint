@@ -1,5 +1,5 @@
-#include "include/keyhandler.h"
-#include "include/renderwindow.h"
+#include "../include/keyhandler.h"
+#include "../include/renderwindow.h"
 
 #include <iostream>
 
@@ -36,6 +36,11 @@ void KeyHandler::keyboardCallback(GLFWwindow* window
 		g_vertices.clear();
 		singleDrawMode.setMode(DrawMode::CIRCLE_MODE);
 	}
+    else if (key == GLFW_KEY_N && action == GLFW_PRESS)
+    {
+        g_vertices.clear();
+        singleDrawMode.setMode(DrawMode::LOAD_BG_MODE);
+    }
 }
 
 void KeyHandler::mouseButtonCallback(GLFWwindow* window
@@ -51,21 +56,21 @@ void KeyHandler::mouseButtonCallback(GLFWwindow* window
 	if (scancode == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS)
 	{
 		mouseClicked = true;
-		g_X1 = static_cast<float>( (xpos - (width  / 2)) / (width  / 2));
-		g_Y1 = static_cast<float>(-(ypos - (height / 2)) / (height / 2));
-		if (singleDrawMode.getModeState() == DrawMode::BRUSH_MODE)
-		{
-			g_vertices.push_back(Vector3f(g_X1, g_Y1, 0.f));
-		}
-	}
-	else if (action == GLFW_RELEASE)
+        if (singleDrawMode.getModeState() != DrawMode::BRUSH_MODE)
+        {
+            g_X1 = static_cast<float>( (xpos - (width  / 2)) / (width  / 2));
+            g_Y1 = static_cast<float>(-(ypos - (height / 2)) / (height / 2));
+        }
+    }
+    else if (action == GLFW_RELEASE)
 	{
 		mouseClicked = false;
-		if (singleDrawMode.getModeState() != DrawMode::BRUSH_MODE)
+        if (singleDrawMode.getModeState() != DrawMode::LINES_MODE
+         || singleDrawMode.getModeState() != DrawMode::CIRCLE_MODE)
 		{
 			singleDrawMode.setDrawFlag(true);
 
-			g_X2 = static_cast<float>((xpos - (width / 2)) / (width / 2));
+            g_X2 = static_cast<float>((xpos - (width / 2)) / (width / 2));
 			g_Y2 = static_cast<float>(-(ypos - (height / 2)) / (height / 2));
 
 			g_vertices.push_back(Vector3f(g_X1, g_Y1, 0.f));

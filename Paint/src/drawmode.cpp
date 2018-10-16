@@ -1,4 +1,4 @@
-#include "include/drawmode.h"
+#include "../include/drawmode.h"
 
 namespace mlg
 {

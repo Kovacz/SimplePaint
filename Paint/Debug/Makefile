@@ -163,32 +163,59 @@ libs/glad/src/glad.c.s:
 	$(MAKE) -f CMakeFiles/GLAD.dir/build.make CMakeFiles/GLAD.dir/libs/glad/src/glad.c.s
 .PHONY : libs/glad/src/glad.c.s
 
-src/graphics.o: src/graphics.cpp.o
+src/circleshape.o: src/circleshape.cpp.o
 
-.PHONY : src/graphics.o
+.PHONY : src/circleshape.o
 
 # target to build an object file
-src/graphics.cpp.o:
-	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/graphics.cpp.o
-.PHONY : src/graphics.cpp.o
+src/circleshape.cpp.o:
+	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/circleshape.cpp.o
+.PHONY : src/circleshape.cpp.o
 
-src/graphics.i: src/graphics.cpp.i
+src/circleshape.i: src/circleshape.cpp.i
 
-.PHONY : src/graphics.i
+.PHONY : src/circleshape.i
 
 # target to preprocess a source file
-src/graphics.cpp.i:
-	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/graphics.cpp.i
-.PHONY : src/graphics.cpp.i
+src/circleshape.cpp.i:
+	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/circleshape.cpp.i
+.PHONY : src/circleshape.cpp.i
 
-src/graphics.s: src/graphics.cpp.s
+src/circleshape.s: src/circleshape.cpp.s
 
-.PHONY : src/graphics.s
+.PHONY : src/circleshape.s
 
 # target to generate assembly for a file
-src/graphics.cpp.s:
-	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/graphics.cpp.s
-.PHONY : src/graphics.cpp.s
+src/circleshape.cpp.s:
+	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/circleshape.cpp.s
+.PHONY : src/circleshape.cpp.s
+
+src/drawmode.o: src/drawmode.cpp.o
+
+.PHONY : src/drawmode.o
+
+# target to build an object file
+src/drawmode.cpp.o:
+	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/drawmode.cpp.o
+.PHONY : src/drawmode.cpp.o
+
+src/drawmode.i: src/drawmode.cpp.i
+
+.PHONY : src/drawmode.i
+
+# target to preprocess a source file
+src/drawmode.cpp.i:
+	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/drawmode.cpp.i
+.PHONY : src/drawmode.cpp.i
+
+src/drawmode.s: src/drawmode.cpp.s
+
+.PHONY : src/drawmode.s
+
+# target to generate assembly for a file
+src/drawmode.cpp.s:
+	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/drawmode.cpp.s
+.PHONY : src/drawmode.cpp.s
 
 src/keyhandler.o: src/keyhandler.cpp.o
 
@@ -244,6 +271,33 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/renderwindow.o: src/renderwindow.cpp.o
+
+.PHONY : src/renderwindow.o
+
+# target to build an object file
+src/renderwindow.cpp.o:
+	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/renderwindow.cpp.o
+.PHONY : src/renderwindow.cpp.o
+
+src/renderwindow.i: src/renderwindow.cpp.i
+
+.PHONY : src/renderwindow.i
+
+# target to preprocess a source file
+src/renderwindow.cpp.i:
+	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/renderwindow.cpp.i
+.PHONY : src/renderwindow.cpp.i
+
+src/renderwindow.s: src/renderwindow.cpp.s
+
+.PHONY : src/renderwindow.s
+
+# target to generate assembly for a file
+src/renderwindow.cpp.s:
+	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/renderwindow.cpp.s
+.PHONY : src/renderwindow.cpp.s
+
 src/shader.o: src/shader.cpp.o
 
 .PHONY : src/shader.o
@@ -270,6 +324,33 @@ src/shader.s: src/shader.cpp.s
 src/shader.cpp.s:
 	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/shader.cpp.s
 .PHONY : src/shader.cpp.s
+
+src/texture.o: src/texture.cpp.o
+
+.PHONY : src/texture.o
+
+# target to build an object file
+src/texture.cpp.o:
+	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/texture.cpp.o
+.PHONY : src/texture.cpp.o
+
+src/texture.i: src/texture.cpp.i
+
+.PHONY : src/texture.i
+
+# target to preprocess a source file
+src/texture.cpp.i:
+	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/texture.cpp.i
+.PHONY : src/texture.cpp.i
+
+src/texture.s: src/texture.cpp.s
+
+.PHONY : src/texture.s
+
+# target to generate assembly for a file
+src/texture.cpp.s:
+	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/texture.cpp.s
+.PHONY : src/texture.cpp.s
 
 src/vertex.o: src/vertex.cpp.o
 
@@ -338,18 +419,27 @@ help:
 	@echo "... libs/glad/src/glad.o"
 	@echo "... libs/glad/src/glad.i"
 	@echo "... libs/glad/src/glad.s"
-	@echo "... src/graphics.o"
-	@echo "... src/graphics.i"
-	@echo "... src/graphics.s"
+	@echo "... src/circleshape.o"
+	@echo "... src/circleshape.i"
+	@echo "... src/circleshape.s"
+	@echo "... src/drawmode.o"
+	@echo "... src/drawmode.i"
+	@echo "... src/drawmode.s"
 	@echo "... src/keyhandler.o"
 	@echo "... src/keyhandler.i"
 	@echo "... src/keyhandler.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/renderwindow.o"
+	@echo "... src/renderwindow.i"
+	@echo "... src/renderwindow.s"
 	@echo "... src/shader.o"
 	@echo "... src/shader.i"
 	@echo "... src/shader.s"
+	@echo "... src/texture.o"
+	@echo "... src/texture.i"
+	@echo "... src/texture.s"
 	@echo "... src/vertex.o"
 	@echo "... src/vertex.i"
 	@echo "... src/vertex.s"

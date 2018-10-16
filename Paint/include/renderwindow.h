@@ -2,7 +2,8 @@
 #define RENDERWINDOW_H
 
 
-#include "include/vertexbuffer.h"
+#include "../include/vertexbuffer.h"
+#include "../include/circleshape.h"
 
 namespace mlg
 {
@@ -20,7 +21,7 @@ public:
 	~RenderWindow();
 
 	void draw();
-	void draw(const Texture& texture) const;
+    void draw(const Texture& texture, CircleShape& circle) const;
 	void draw(const Vertex* vertices) const;
 	void close() const;
 	void create();

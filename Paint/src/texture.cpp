@@ -1,18 +1,19 @@
 #include "glad/glad.h"
-#include "include/texture.h"
-#include "include/defines.hpp"
+#include "../include/texture.h"
+#include "../include/defines.hpp"
 
 namespace mlg
 {
-	GLuint VBO, VAO, EBO;
+unsigned textureVAO;
+GLuint VBO, EBO;
 Texture::Texture() : m_textureID(0)
 {
-	//GLuint VBO, VAO, EBO;
-	glGenVertexArrays(1, &VAO);
+
+    glGenVertexArrays(1, &textureVAO);
 	glGenBuffers(1, &VBO);
 	glGenBuffers(1, &EBO);
 
-	glBindVertexArray(VAO);
+    glBindVertexArray(textureVAO);
 
 	glBindBuffer(GL_ARRAY_BUFFER, VBO);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(this->m_vertices), this->m_vertices, GL_STATIC_DRAW);
@@ -30,7 +31,7 @@ Texture::Texture() : m_textureID(0)
 	glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(GLfloat), (GLvoid*)(6 * sizeof(GLfloat)));
 	glEnableVertexAttribArray(2);
 	
-	glBindVertexArray(0);
+    glBindVertexArray(0);
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 	// Generate tex
 	glGenTextures(1, &m_textureID);

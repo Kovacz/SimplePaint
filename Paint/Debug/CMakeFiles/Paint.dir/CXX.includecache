@@ -6,13 +6,57 @@
 
 #IncludeRegexTransform: 
 
+/Users/akukh/Documents/Projects/Paint/include/circleshape.h
+../include/shader.h
+/Users/akukh/Documents/Projects/Paint/include/shader.h
+../include/vector3.hpp
+/Users/akukh/Documents/Projects/Paint/include/vector3.hpp
+vector
+-
+
+/Users/akukh/Documents/Projects/Paint/include/defines.hpp
+GLFW/glfw3.h
+-
+vector
+-
+cmath
+-
+../include/vector3.hpp
+/Users/akukh/Documents/Projects/Paint/include/vector3.hpp
+../include/drawmode.h
+/Users/akukh/Documents/Projects/Paint/include/drawmode.h
+
+/Users/akukh/Documents/Projects/Paint/include/drawmode.h
+
 /Users/akukh/Documents/Projects/Paint/include/keyhandler.h
 GLFW/glfw3.h
 -
+utility
+-
+
+/Users/akukh/Documents/Projects/Paint/include/renderwindow.h
+../include/vertexbuffer.h
+/Users/akukh/Documents/Projects/Paint/include/vertexbuffer.h
+../include/circleshape.h
+/Users/akukh/Documents/Projects/Paint/include/circleshape.h
+
+/Users/akukh/Documents/Projects/Paint/include/shader.h
+string
+-
+
+/Users/akukh/Documents/Projects/Paint/include/vector3.hpp
+
+/Users/akukh/Documents/Projects/Paint/include/vertexbuffer.h
+cstddef
+-
+../include/defines.hpp
+/Users/akukh/Documents/Projects/Paint/include/defines.hpp
 
 /Users/akukh/Documents/Projects/Paint/src/keyhandler.cpp
 ../include/keyhandler.h
 /Users/akukh/Documents/Projects/Paint/include/keyhandler.h
+../include/renderwindow.h
+/Users/akukh/Documents/Projects/Paint/include/renderwindow.h
 iostream
 -
 
