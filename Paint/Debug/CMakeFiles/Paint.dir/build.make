@@ -57,9 +57,22 @@ include CMakeFiles/Paint.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Paint.dir/flags.make
 
+CMakeFiles/Paint.dir/src/camera2d.cpp.o: CMakeFiles/Paint.dir/flags.make
+CMakeFiles/Paint.dir/src/camera2d.cpp.o: ../src/camera2d.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Paint.dir/src/camera2d.cpp.o"
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Paint.dir/src/camera2d.cpp.o -c /Users/akukh/Documents/Projects/Paint/src/camera2d.cpp
+
+CMakeFiles/Paint.dir/src/camera2d.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Paint.dir/src/camera2d.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/akukh/Documents/Projects/Paint/src/camera2d.cpp > CMakeFiles/Paint.dir/src/camera2d.cpp.i
+
+CMakeFiles/Paint.dir/src/camera2d.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Paint.dir/src/camera2d.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/akukh/Documents/Projects/Paint/src/camera2d.cpp -o CMakeFiles/Paint.dir/src/camera2d.cpp.s
+
 CMakeFiles/Paint.dir/src/circleshape.cpp.o: CMakeFiles/Paint.dir/flags.make
 CMakeFiles/Paint.dir/src/circleshape.cpp.o: ../src/circleshape.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Paint.dir/src/circleshape.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Paint.dir/src/circleshape.cpp.o"
 	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Paint.dir/src/circleshape.cpp.o -c /Users/akukh/Documents/Projects/Paint/src/circleshape.cpp
 
 CMakeFiles/Paint.dir/src/circleshape.cpp.i: cmake_force
@@ -72,7 +85,7 @@ CMakeFiles/Paint.dir/src/circleshape.cpp.s: cmake_force
 
 CMakeFiles/Paint.dir/src/drawmode.cpp.o: CMakeFiles/Paint.dir/flags.make
 CMakeFiles/Paint.dir/src/drawmode.cpp.o: ../src/drawmode.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Paint.dir/src/drawmode.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Paint.dir/src/drawmode.cpp.o"
 	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Paint.dir/src/drawmode.cpp.o -c /Users/akukh/Documents/Projects/Paint/src/drawmode.cpp
 
 CMakeFiles/Paint.dir/src/drawmode.cpp.i: cmake_force
@@ -85,7 +98,7 @@ CMakeFiles/Paint.dir/src/drawmode.cpp.s: cmake_force
 
 CMakeFiles/Paint.dir/src/keyhandler.cpp.o: CMakeFiles/Paint.dir/flags.make
 CMakeFiles/Paint.dir/src/keyhandler.cpp.o: ../src/keyhandler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Paint.dir/src/keyhandler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Paint.dir/src/keyhandler.cpp.o"
 	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Paint.dir/src/keyhandler.cpp.o -c /Users/akukh/Documents/Projects/Paint/src/keyhandler.cpp
 
 CMakeFiles/Paint.dir/src/keyhandler.cpp.i: cmake_force
@@ -98,7 +111,7 @@ CMakeFiles/Paint.dir/src/keyhandler.cpp.s: cmake_force
 
 CMakeFiles/Paint.dir/src/main.cpp.o: CMakeFiles/Paint.dir/flags.make
 CMakeFiles/Paint.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Paint.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Paint.dir/src/main.cpp.o"
 	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Paint.dir/src/main.cpp.o -c /Users/akukh/Documents/Projects/Paint/src/main.cpp
 
 CMakeFiles/Paint.dir/src/main.cpp.i: cmake_force
@@ -111,7 +124,7 @@ CMakeFiles/Paint.dir/src/main.cpp.s: cmake_force
 
 CMakeFiles/Paint.dir/src/renderwindow.cpp.o: CMakeFiles/Paint.dir/flags.make
 CMakeFiles/Paint.dir/src/renderwindow.cpp.o: ../src/renderwindow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Paint.dir/src/renderwindow.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Paint.dir/src/renderwindow.cpp.o"
 	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Paint.dir/src/renderwindow.cpp.o -c /Users/akukh/Documents/Projects/Paint/src/renderwindow.cpp
 
 CMakeFiles/Paint.dir/src/renderwindow.cpp.i: cmake_force
@@ -124,7 +137,7 @@ CMakeFiles/Paint.dir/src/renderwindow.cpp.s: cmake_force
 
 CMakeFiles/Paint.dir/src/shader.cpp.o: CMakeFiles/Paint.dir/flags.make
 CMakeFiles/Paint.dir/src/shader.cpp.o: ../src/shader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Paint.dir/src/shader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Paint.dir/src/shader.cpp.o"
 	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Paint.dir/src/shader.cpp.o -c /Users/akukh/Documents/Projects/Paint/src/shader.cpp
 
 CMakeFiles/Paint.dir/src/shader.cpp.i: cmake_force
@@ -137,7 +150,7 @@ CMakeFiles/Paint.dir/src/shader.cpp.s: cmake_force
 
 CMakeFiles/Paint.dir/src/texture.cpp.o: CMakeFiles/Paint.dir/flags.make
 CMakeFiles/Paint.dir/src/texture.cpp.o: ../src/texture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Paint.dir/src/texture.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Paint.dir/src/texture.cpp.o"
 	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Paint.dir/src/texture.cpp.o -c /Users/akukh/Documents/Projects/Paint/src/texture.cpp
 
 CMakeFiles/Paint.dir/src/texture.cpp.i: cmake_force
@@ -150,7 +163,7 @@ CMakeFiles/Paint.dir/src/texture.cpp.s: cmake_force
 
 CMakeFiles/Paint.dir/src/vertex.cpp.o: CMakeFiles/Paint.dir/flags.make
 CMakeFiles/Paint.dir/src/vertex.cpp.o: ../src/vertex.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Paint.dir/src/vertex.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Paint.dir/src/vertex.cpp.o"
 	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Paint.dir/src/vertex.cpp.o -c /Users/akukh/Documents/Projects/Paint/src/vertex.cpp
 
 CMakeFiles/Paint.dir/src/vertex.cpp.i: cmake_force
@@ -163,7 +176,7 @@ CMakeFiles/Paint.dir/src/vertex.cpp.s: cmake_force
 
 CMakeFiles/Paint.dir/src/vertexbuffer.cpp.o: CMakeFiles/Paint.dir/flags.make
 CMakeFiles/Paint.dir/src/vertexbuffer.cpp.o: ../src/vertexbuffer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Paint.dir/src/vertexbuffer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Paint.dir/src/vertexbuffer.cpp.o"
 	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Paint.dir/src/vertexbuffer.cpp.o -c /Users/akukh/Documents/Projects/Paint/src/vertexbuffer.cpp
 
 CMakeFiles/Paint.dir/src/vertexbuffer.cpp.i: cmake_force
@@ -176,6 +189,7 @@ CMakeFiles/Paint.dir/src/vertexbuffer.cpp.s: cmake_force
 
 # Object files for target Paint
 Paint_OBJECTS = \
+"CMakeFiles/Paint.dir/src/camera2d.cpp.o" \
 "CMakeFiles/Paint.dir/src/circleshape.cpp.o" \
 "CMakeFiles/Paint.dir/src/drawmode.cpp.o" \
 "CMakeFiles/Paint.dir/src/keyhandler.cpp.o" \
@@ -189,6 +203,7 @@ Paint_OBJECTS = \
 # External object files for target Paint
 Paint_EXTERNAL_OBJECTS =
 
+bin/Paint: CMakeFiles/Paint.dir/src/camera2d.cpp.o
 bin/Paint: CMakeFiles/Paint.dir/src/circleshape.cpp.o
 bin/Paint: CMakeFiles/Paint.dir/src/drawmode.cpp.o
 bin/Paint: CMakeFiles/Paint.dir/src/keyhandler.cpp.o
@@ -201,7 +216,7 @@ bin/Paint: CMakeFiles/Paint.dir/src/vertexbuffer.cpp.o
 bin/Paint: CMakeFiles/Paint.dir/build.make
 bin/Paint: libGLAD.a
 bin/Paint: CMakeFiles/Paint.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable bin/Paint"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable bin/Paint"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Paint.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

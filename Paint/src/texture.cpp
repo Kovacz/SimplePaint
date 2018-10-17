@@ -35,6 +35,8 @@ Texture::Texture() : m_textureID(0)
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 	// Generate tex
 	glGenTextures(1, &m_textureID);
+
+    this->setTexParametri();
 }
 
 Texture::~Texture()

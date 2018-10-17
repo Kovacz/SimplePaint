@@ -12,9 +12,10 @@ public:
 
     void update() const;
 	void generate() const;
-	void setTexParametri() const;
 	unsigned getNativeHandle() const noexcept;
 	static void bind(const Texture* texture);
+protected:
+    void setTexParametri() const;
 private:
 	unsigned	m_textureID;
 	float		m_vertices[32] =

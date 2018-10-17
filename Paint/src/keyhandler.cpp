@@ -1,6 +1,6 @@
 #include "../include/keyhandler.h"
 #include "../include/renderwindow.h"
-
+#include "../include/camera2d.h"
 #include <iostream>
 
 namespace mlg
@@ -80,16 +80,19 @@ void KeyHandler::mouseButtonCallback(GLFWwindow* window
 	}
 }
 
+void KeyHandler::startKeysTrack(const RenderWindow& window)
+{
+    glfwSetMouseButtonCallback(window.m_window, KeyHandler::mouseButtonCallback);
+    glfwSetKeyCallback(window.m_window, KeyHandler::keyboardCallback);
+}
 void KeyHandler::startBoardTrack(const RenderWindow& window)
 {
 	glfwSetKeyCallback(window.m_window, KeyHandler::keyboardCallback);
 }
-
 void KeyHandler::startMouseTrack(const RenderWindow& window, void(*mouseCallback)(GLFWwindow*, int, int, int))
 {
 	glfwSetMouseButtonCallback(window.m_window, mouseCallback);
 }
-
 void KeyHandler::startMouseTrack(const RenderWindow& window)
 {
 	glfwSetMouseButtonCallback(window.m_window, KeyHandler::mouseButtonCallback);

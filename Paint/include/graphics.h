@@ -13,5 +13,6 @@
 #include "../include/drawmode.h"
 #include "../include/texture.h"
 #include "../include/circleshape.h"
+#include "../include/camera2d.h"
 
 #endif // GRAPHICS_H

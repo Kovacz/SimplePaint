@@ -30,7 +30,7 @@ public:
 	void setBgColor(const float& r, const float& g, const float& b, const float& a) const noexcept;
 protected:
 	bool gladLoad() const;
-private:
+public:
 	int             m_width;
 	int             m_height;
 	const char*     m_cWindowName;

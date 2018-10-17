@@ -116,6 +116,12 @@ void Shader::setVector4f(const char *name, float x, float y, float z, float w, b
         this->use();
     glUniform4f(glGetUniformLocation(this->m_shaderProgramID, name), x, y, z, w);
 }
+void Shader::setMat4(const char* name, const glm::mat4& matrix, bool useShader /* = false */)
+{
+    if (useShader)
+        this->use();
+    glUniformMatrix4fv(glGetUniformLocation(this->m_shaderProgramID, name), 1, GL_FALSE, glm::value_ptr(matrix));
+}
 void Shader::checkCompileErrors(unsigned object, const std::string& type)
 {
     GLint success;
