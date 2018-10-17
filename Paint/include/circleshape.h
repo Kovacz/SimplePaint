@@ -14,6 +14,7 @@ public:
 //    void createSquareForCircle();
     void setAttribs();
     void onPaint(const Vector3f& view, const float& radius);
+	void redraw();
 private:
     unsigned    m_circleVBO;
     unsigned    m_circleVAO;

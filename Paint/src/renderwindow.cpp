@@ -4,7 +4,7 @@
 #include "../include/vertex.h"
 #include "../include/keyhandler.h"
 #include "../include/texture.h"
-
+#include "../include/camera2d.h"
 
 namespace mlg
 {
@@ -91,7 +91,6 @@ void RenderWindow::draw(const Texture& texture, CircleShape& circle) const
         glBindVertexArray(drawableVAO);
 		glDrawArrays(GL_LINES, 0, g_vertices.size());
         glBindVertexArray(0);
-
 	}
 	else if (singleDrawMode.getModeState() == DrawMode::LINES_STRIP_MODE)
 	{
@@ -110,10 +109,10 @@ void RenderWindow::draw(const Texture& texture, CircleShape& circle) const
             g_Y1 = static_cast<float>(-(ypos - (this->m_height / 2)) / (this->m_height / 2));
             g_vertices.push_back(Vector3f(g_X1, g_Y1, 0.f));
 		}
-		else
-		{
-			g_vertices.clear();
-		}
+// 		else
+// 		{
+// 			g_vertices.clear();
+// 		}
         glBindVertexArray(drawableVAO);
 		glDrawArrays(GL_LINE_STRIP_ADJACENCY, 0, g_vertices.size());
         glBindVertexArray(0);
@@ -127,10 +126,6 @@ void RenderWindow::draw(const Texture& texture, CircleShape& circle) const
                               , g_vertices[g_vertices.size() - 1])
                     );
         }
-
-
-
-
 	}
 }
 

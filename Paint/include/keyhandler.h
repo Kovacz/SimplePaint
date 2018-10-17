@@ -22,7 +22,7 @@ private:
 // 	static Vector2f sMouseCoordsRelease;
 	static void  keyboardCallback(GLFWwindow* window, int key, int scancode, int action, int mods);
 	static void  mouseButtonCallback(GLFWwindow* window, int scancode, int action, int mods);
-
+	static void  mouseScrollCallback(GLFWwindow* window, double xOffset, double yOffset);
 };
 
 } // namespace mlg

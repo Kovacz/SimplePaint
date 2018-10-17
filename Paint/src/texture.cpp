@@ -1,19 +1,60 @@
 #include "glad/glad.h"
 #include "../include/texture.h"
 #include "../include/defines.hpp"
+#define STB_IMAGE_IMPLEMENTATION
+#include "stb_image.h"
+#include <iostream>
 
 namespace mlg
 {
 unsigned textureVAO;
 GLuint VBO, EBO;
-Texture::Texture() : m_textureID(0)
+Texture::Texture() : m_data(nullptr), m_width(0), m_height(0), m_nrChannels(0), m_textureID(0)
 {
+	this->create();
+    this->setTexParametri();
+}
 
-    glGenVertexArrays(1, &textureVAO);
+Texture::Texture(const char* texture_path) : m_data(nullptr), m_width(0), m_height(0), m_nrChannels(0), m_textureID(0)
+{
+	this->create();
+	this->setTexParametri();
+	stbi_set_flip_vertically_on_load(true);
+	this->m_data = stbi_load(texture_path, &this->m_width, &this->m_height, &this->m_nrChannels, 0);
+	if (this->m_data)
+	{
+		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, this->m_width, this->m_height, 0, GL_RGB, GL_UNSIGNED_BYTE, this->m_data);
+		glGenerateMipmap(GL_TEXTURE_2D);
+	}
+	else
+	{
+		std::cout << "Failed to load texture" << std::endl;
+	}
+}
+
+Texture::~Texture()
+{
+	if (this->m_data != nullptr)
+		stbi_image_free(this->m_data);
+}
+
+unsigned Texture::getWidth() const noexcept
+{
+	return this->m_width;
+}
+
+unsigned Texture::getHeight() const noexcept
+{
+	return this->m_height;
+}
+
+void Texture::create()
+{
+	glGenVertexArrays(1, &textureVAO);
 	glGenBuffers(1, &VBO);
 	glGenBuffers(1, &EBO);
 
-    glBindVertexArray(textureVAO);
+	glBindVertexArray(textureVAO);
 
 	glBindBuffer(GL_ARRAY_BUFFER, VBO);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(this->m_vertices), this->m_vertices, GL_STATIC_DRAW);
@@ -30,18 +71,9 @@ Texture::Texture() : m_textureID(0)
 	// TexCoord attribute
 	glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(GLfloat), (GLvoid*)(6 * sizeof(GLfloat)));
 	glEnableVertexAttribArray(2);
-	
-    glBindVertexArray(0);
+
+	glBindVertexArray(0);
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
-	// Generate tex
-	glGenTextures(1, &m_textureID);
-
-    this->setTexParametri();
-}
-
-Texture::~Texture()
-{
-	//
 }
 
 void Texture::update() const
@@ -60,8 +92,11 @@ void Texture::generate() const
 	glGenerateMipmap(GL_TEXTURE_2D);
 }
 
-void Texture::setTexParametri() const
+void Texture::setTexParametri()
 {
+	// Generate texture
+	glGenTextures(1, &this->m_textureID);
+	glBindTexture(GL_TEXTURE_2D, this->m_textureID);
 	// Set the texture wrapping parameters
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);	// Set texture wrapping to GL_REPEAT (usually basic wrapping method)
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);

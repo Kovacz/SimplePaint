@@ -11,8 +11,8 @@
 
 const static int WIDTH = 800;
 const static int HEIGHT = 600;
-const static char* VERTEX_SHADER_PATH   = "../../src/texture_vert_shader.vert";
-const static char* FRAGMENT_SHADER_PATH = "../../src/texture_frag_shader.frag";
+const static char* VERTEX_SHADER_PATH   = "../src/shaders/texture_vert_shader.vert";
+const static char* FRAGMENT_SHADER_PATH = "../src/shaders/texture_frag_shader.frag";
 
 namespace mlg
 {
@@ -37,7 +37,7 @@ inline void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 	glViewport(0, 0, width, height);
 }
 
-inline const float& vecDistance(const Vector3f& vec1, const Vector3f& vec2)
+inline float vecDistance(const Vector3f& vec1, const Vector3f& vec2)
 {
     Vector3f substract;
     substract.x = vec1.x - vec2.x;

@@ -84,6 +84,16 @@ void KeyHandler::startKeysTrack(const RenderWindow& window)
 {
     glfwSetMouseButtonCallback(window.m_window, KeyHandler::mouseButtonCallback);
     glfwSetKeyCallback(window.m_window, KeyHandler::keyboardCallback);
+	glfwSetScrollCallback(window.m_window, KeyHandler::mouseScrollCallback);
+}
+void KeyHandler::mouseScrollCallback(GLFWwindow* window, double xOffset, double yOffset)
+{
+	if (Camera2d::zoom >= 1.f && Camera2d::zoom <= 45.f)
+		Camera2d::zoom -= static_cast<float>(yOffset);
+	else if (Camera2d::zoom <= 1.f)
+		Camera2d::zoom = 1.f;
+	else if (Camera2d::zoom >= 45.f)
+		Camera2d::zoom = 45.f;
 }
 void KeyHandler::startBoardTrack(const RenderWindow& window)
 {

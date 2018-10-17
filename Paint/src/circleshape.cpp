@@ -14,6 +14,17 @@ CircleShape::CircleShape()
 
 }
 
+void CircleShape::redraw()
+{
+	if (g_vertices.size() > 0)
+	{
+		this->onPaint(g_vertices[g_vertices.size() - 2],
+			vecDistance(g_vertices[g_vertices.size() - 2]
+				, g_vertices[g_vertices.size() - 1])
+		);
+	}
+}
+
 void CircleShape::onPaint(const Vector3f& view, const float& radius)
 {
     for (int i = 0; i <= 100; ++i)

@@ -21,6 +21,7 @@ public:
     // Utility functions
     void    setFloat    (const char* name, float value, bool useShader = false);
     void    setInteger  (const char* name, int value, bool useShader = false);
+	void    setVector2f (const char* name, const glm::vec2& vec, bool useShader = false);
     void    setVector2f (const char* name, float x, float y, bool useShader = false);
     void    setVector3f (const char* name, float x, float y, float z, bool useShader = false);
     void    setVector4f (const char* name, float x, float y, float z, float w, bool useShader = false);
