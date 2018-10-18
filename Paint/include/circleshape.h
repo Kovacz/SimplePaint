@@ -12,7 +12,7 @@ public:
     CircleShape();
 
 //    void createSquareForCircle();
-    void setAttribs();
+    void bindBuffers();
     void onPaint(const Vector3f& view, const float& radius);
 	void redraw();
 private:

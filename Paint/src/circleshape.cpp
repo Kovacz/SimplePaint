@@ -16,13 +16,13 @@ CircleShape::CircleShape()
 
 void CircleShape::redraw()
 {
-	if (g_vertices.size() > 0)
-	{
-		this->onPaint(g_vertices[g_vertices.size() - 2],
-			vecDistance(g_vertices[g_vertices.size() - 2]
-				, g_vertices[g_vertices.size() - 1])
-		);
-	}
+    if (g_circleVert.size() > 0)
+    {
+        this->onPaint(g_circleVert[g_circleVert.size() - 2],
+            vecDistance(g_circleVert[g_circleVert.size() - 2]
+                , g_circleVert[g_circleVert.size() - 1])
+        );
+    }
 }
 
 void CircleShape::onPaint(const Vector3f& view, const float& radius)
@@ -36,7 +36,7 @@ void CircleShape::onPaint(const Vector3f& view, const float& radius)
 
         this->m_circleVert.push_back(mlg::Vector3f(x + view.x, y + view.y, 0.f));
     }
-    this->setAttribs();
+    this->bindBuffers();
     glBindVertexArray(this->m_circleVAO);
     glDrawArrays(GL_LINE_LOOP, 0, this->m_circleVert.size());
     glBindVertexArray(0);
@@ -44,7 +44,7 @@ void CircleShape::onPaint(const Vector3f& view, const float& radius)
     this->m_circleVert.clear();
 }
 
-void CircleShape::setAttribs()
+void CircleShape::bindBuffers()
 {
     // setup vertex array object
     glGenVertexArrays(1, &this->m_circleVAO);

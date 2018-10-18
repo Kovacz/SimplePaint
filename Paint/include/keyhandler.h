@@ -12,6 +12,7 @@ class KeyHandler
 {
 public:
 	static bool  mouseClicked;
+    static bool  mouseRelease;
 //	static std::pair<Vector2f, Vector2f> getLocalMouseCoords(const Vector2f& screenCoords);
     static void	 startMouseTrack(const RenderWindow& window);
 	static void	 startMouseTrack(const RenderWindow& window, void(*mouseCallback)(GLFWwindow*, int, int, int));

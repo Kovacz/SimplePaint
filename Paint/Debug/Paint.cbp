@@ -44,6 +44,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/Users/akukh/Documents/Projects/Paint/libs/stb_image"/>
 					<Add directory="/Users/akukh/Documents/Projects/Paint/libs/glad/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
@@ -67,6 +68,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/Users/akukh/Documents/Projects/Paint/libs/stb_image"/>
 					<Add directory="/Users/akukh/Documents/Projects/Paint/libs/glad/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
@@ -91,6 +93,7 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/Users/akukh/Documents/Projects/Paint/src"/>
+					<Add directory="/Users/akukh/Documents/Projects/Paint/libs/stb_image"/>
 					<Add directory="/Users/akukh/Documents/Projects/Paint/libs/glad/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
@@ -115,6 +118,7 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/Users/akukh/Documents/Projects/Paint/src"/>
+					<Add directory="/Users/akukh/Documents/Projects/Paint/libs/stb_image"/>
 					<Add directory="/Users/akukh/Documents/Projects/Paint/libs/glad/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
@@ -177,19 +181,10 @@
 		<Unit filename="/Users/akukh/Documents/Projects/Paint/src/camera2d.cpp">
 			<Option target="Paint"/>
 		</Unit>
-		<Unit filename="/Users/akukh/Documents/Projects/Paint/src/circle_frag_shader.frag">
-			<Option target="Paint"/>
-		</Unit>
-		<Unit filename="/Users/akukh/Documents/Projects/Paint/src/circle_vert_shader.vert">
-			<Option target="Paint"/>
-		</Unit>
 		<Unit filename="/Users/akukh/Documents/Projects/Paint/src/circleshape.cpp">
 			<Option target="Paint"/>
 		</Unit>
 		<Unit filename="/Users/akukh/Documents/Projects/Paint/src/drawmode.cpp">
-			<Option target="Paint"/>
-		</Unit>
-		<Unit filename="/Users/akukh/Documents/Projects/Paint/src/frag_shader.frag">
 			<Option target="Paint"/>
 		</Unit>
 		<Unit filename="/Users/akukh/Documents/Projects/Paint/src/keyhandler.cpp">
@@ -211,9 +206,6 @@
 			<Option target="Paint"/>
 		</Unit>
 		<Unit filename="/Users/akukh/Documents/Projects/Paint/src/texture_vert_shader.vert">
-			<Option target="Paint"/>
-		</Unit>
-		<Unit filename="/Users/akukh/Documents/Projects/Paint/src/vert_shader.vert">
 			<Option target="Paint"/>
 		</Unit>
 		<Unit filename="/Users/akukh/Documents/Projects/Paint/src/vertex.cpp">

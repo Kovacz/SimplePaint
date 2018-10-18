@@ -15,7 +15,8 @@ public:
     //VertexBuffer(Usage usage);
    ~VertexBuffer();
 
-    unsigned    getBufferHandle() const noexcept;
+    unsigned    getVBOHandle() const noexcept;
+    unsigned    getVAOHandle() const noexcept;
     std::size_t getVertexCount()  const noexcept;
 
 	bool        init(const Vertex* vertices, std::size_t vertexCount);
@@ -25,7 +26,8 @@ public:
 
     static void bind(const VertexBuffer* vertexBuffer);
 private:
-    unsigned    m_bufferHandler;
+    unsigned    m_VboId;
+    unsigned    m_VaoId;
     std::size_t m_bufferSize;
 };
 

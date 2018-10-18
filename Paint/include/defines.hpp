@@ -11,8 +11,8 @@
 
 const static int WIDTH = 800;
 const static int HEIGHT = 600;
-const static char* VERTEX_SHADER_PATH   = "../src/shaders/texture_vert_shader.vert";
-const static char* FRAGMENT_SHADER_PATH = "../src/shaders/texture_frag_shader.frag";
+const static char* VERTEX_SHADER_PATH   = "../../src/texture_vert_shader.vert";
+const static char* FRAGMENT_SHADER_PATH = "../../src/texture_frag_shader.frag";
 
 namespace mlg
 {
@@ -27,10 +27,16 @@ extern float	g_X1;
 extern float	g_Y1;
 extern float	g_X2;
 extern float	g_Y2;
-extern Vertex3  g_vertices;
-extern std::size_t index;
+extern Vertex3  g_linesVert;
+extern Vertex3  g_stripVert;
+extern Vertex3  g_brushVert;
+extern Vertex3  g_circleVert;
 extern unsigned textureVAO;
-extern unsigned drawableVAO;
+extern char     g_bgMode;
+extern char     g_linesMode;
+extern char     g_circleMode;
+extern char     g_brushMode;
+extern char     g_stripMode;
 
 inline void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {

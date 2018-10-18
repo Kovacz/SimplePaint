@@ -11,6 +11,7 @@ namespace mlg
 class  KeyHandler;
 struct Vertex;
 class  Texture;
+class  Camera2d;
 
 class RenderWindow
 {
@@ -37,7 +38,7 @@ public:
 	GLFWmonitor*    m_monitor;
 	GLFWwindow*     m_share;
 	GLFWwindow*     m_window;
-	VertexBuffer	m_vbo;
+    std::vector<VertexBuffer> m_buff;
 };
 
 } // namespace mlg

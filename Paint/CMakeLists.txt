@@ -12,9 +12,13 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 file(GLOB SOURCES "${SRC_DIR}/*.cpp" "${SRC_DIR}/*.vert" "${SRC_DIR}/*.frag")
 file(GLOB HEADERS "${INCLUDE_DIR}/*.h" "${INCLUDE_DIR}/*.hpp")
+file(GLOB EXTERNAL "${LIBS_DIR}/*.h" "${LIBS_DIR}/*.hpp")
 
 add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS})
 target_include_directories(${PROJECT_NAME} PRIVATE "${SRC_DIR}")
+
+include_directories(${LIBS_DIR}/stb_image)
+link_directories(${LIBS_DIR}/stb_image)
 
 # glad
 set(GLAD_DIR "${LIBS_DIR}/glad")

@@ -29,8 +29,6 @@ CMakeFiles/Paint.dir/src/keyhandler.cpp.o: ../include/vector3.hpp
 CMakeFiles/Paint.dir/src/keyhandler.cpp.o: ../include/vertexbuffer.h
 CMakeFiles/Paint.dir/src/keyhandler.cpp.o: ../src/keyhandler.cpp
 
-CMakeFiles/Paint.dir/src/main.cpp.o: ../libs/glad/include/KHR/khrplatform.h
-CMakeFiles/Paint.dir/src/main.cpp.o: ../libs/glad/include/glad/glad.h
 CMakeFiles/Paint.dir/src/main.cpp.o: ../include/camera2d.h
 CMakeFiles/Paint.dir/src/main.cpp.o: ../include/circleshape.h
 CMakeFiles/Paint.dir/src/main.cpp.o: ../include/defines.hpp
@@ -48,6 +46,7 @@ CMakeFiles/Paint.dir/src/main.cpp.o: ../src/main.cpp
 
 CMakeFiles/Paint.dir/src/renderwindow.cpp.o: ../libs/glad/include/KHR/khrplatform.h
 CMakeFiles/Paint.dir/src/renderwindow.cpp.o: ../libs/glad/include/glad/glad.h
+CMakeFiles/Paint.dir/src/renderwindow.cpp.o: ../include/camera2d.h
 CMakeFiles/Paint.dir/src/renderwindow.cpp.o: ../include/circleshape.h
 CMakeFiles/Paint.dir/src/renderwindow.cpp.o: ../include/defines.hpp
 CMakeFiles/Paint.dir/src/renderwindow.cpp.o: ../include/drawmode.h
@@ -72,6 +71,7 @@ CMakeFiles/Paint.dir/src/texture.cpp.o: ../include/defines.hpp
 CMakeFiles/Paint.dir/src/texture.cpp.o: ../include/drawmode.h
 CMakeFiles/Paint.dir/src/texture.cpp.o: ../include/texture.h
 CMakeFiles/Paint.dir/src/texture.cpp.o: ../include/vector3.hpp
+CMakeFiles/Paint.dir/src/texture.cpp.o: ../libs/stb_image.h
 CMakeFiles/Paint.dir/src/texture.cpp.o: ../src/texture.cpp
 
 CMakeFiles/Paint.dir/src/vertex.cpp.o: ../include/vector2.hpp

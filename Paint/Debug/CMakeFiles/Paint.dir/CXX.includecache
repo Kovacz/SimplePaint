@@ -6,34 +6,6 @@
 
 #IncludeRegexTransform: 
 
-../libs/glad/include/KHR/khrplatform.h
-stdint.h
--
-inttypes.h
--
-stdint.h
--
-
-../libs/glad/include/glad/glad.h
-windows.h
--
-stddef.h
--
-KHR/khrplatform.h
--
-inttypes.h
--
-inttypes.h
--
-inttypes.h
--
-stdint.h
--
-stdint.h
--
-inttypes.h
--
-
 /Users/akukh/Documents/Projects/Paint/include/camera2d.h
 ../include/vector2.hpp
 /Users/akukh/Documents/Projects/Paint/include/vector2.hpp
@@ -140,15 +112,5 @@ glm/gtc/matrix_transform.hpp
 glm/gtx/transform2.hpp
 -
 glm/gtc/type_ptr.hpp
--
-glad/glad.h
--
-GLFW/glfw3.h
--
-../include/graphics.h
--
-vector
--
-cmath
 -
 

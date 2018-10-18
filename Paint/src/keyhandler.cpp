@@ -8,6 +8,7 @@ namespace mlg
 // Vector2f KeyHandler::sMouseCoordsPress(0.f, 0.f);
 // Vector2f KeyHandler::sMouseCoordsRelease(0.f, 0.f);
 bool KeyHandler::mouseClicked = false;
+bool KeyHandler::mouseRelease = false;
 
 void KeyHandler::keyboardCallback(GLFWwindow* window
 		, int key
@@ -18,27 +19,32 @@ void KeyHandler::keyboardCallback(GLFWwindow* window
 {
 	if (key == GLFW_KEY_L && action == GLFW_PRESS)
 	{
-		g_vertices.clear();
+        //g_linesVert.clear();
+        g_linesMode = 1;
 		singleDrawMode.setMode(DrawMode::LINES_MODE);
 	}
 	else if (key == GLFW_KEY_S && action == GLFW_PRESS)
 	{
-		g_vertices.clear();
+        //g_stripVert.clear();
+        g_stripMode = 1;
 		singleDrawMode.setMode(DrawMode::LINES_STRIP_MODE);
 	}
 	else if (key == GLFW_KEY_B && action == GLFW_PRESS)
 	{
-		g_vertices.clear();
+        //g_brushVert.clear();
+        g_brushMode = 1;
 		singleDrawMode.setMode(DrawMode::BRUSH_MODE);
 	}
 	else if (key == GLFW_KEY_C && action == GLFW_PRESS)
 	{
-		g_vertices.clear();
+        //g_circleVert.clear();
+        g_circleMode = 1;
 		singleDrawMode.setMode(DrawMode::CIRCLE_MODE);
 	}
     else if (key == GLFW_KEY_N && action == GLFW_PRESS)
     {
-        g_vertices.clear();
+        //g_vertices.clear();
+        g_bgMode = 1;
         singleDrawMode.setMode(DrawMode::LOAD_BG_MODE);
     }
 }
@@ -56,6 +62,8 @@ void KeyHandler::mouseButtonCallback(GLFWwindow* window
 	if (scancode == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS)
 	{
 		mouseClicked = true;
+        mouseRelease = false;
+
         if (singleDrawMode.getModeState() != DrawMode::BRUSH_MODE)
         {
             g_X1 = static_cast<float>( (xpos - (width  / 2)) / (width  / 2));
@@ -65,18 +73,29 @@ void KeyHandler::mouseButtonCallback(GLFWwindow* window
     else if (action == GLFW_RELEASE)
 	{
 		mouseClicked = false;
-        if (singleDrawMode.getModeState() != DrawMode::LINES_MODE
-         || singleDrawMode.getModeState() != DrawMode::CIRCLE_MODE)
-		{
-			singleDrawMode.setDrawFlag(true);
 
-            g_X2 = static_cast<float>((xpos - (width / 2)) / (width / 2));
-			g_Y2 = static_cast<float>(-(ypos - (height / 2)) / (height / 2));
+        singleDrawMode.setDrawFlag(true);
 
-			g_vertices.push_back(Vector3f(g_X1, g_Y1, 0.f));
-			g_vertices.push_back(Vector3f(g_X2, g_Y2, 0.f));
-		}
 
+        g_X2 = static_cast<float>( (xpos - (width  / 2)) / (width  / 2));
+        g_Y2 = static_cast<float>(-(ypos - (height / 2)) / (height / 2));
+
+        if (singleDrawMode.getModeState() == DrawMode::LINES_MODE)
+        {
+            g_linesVert.push_back(Vector3f(g_X1, g_Y1, 0.f));
+            g_linesVert.push_back(Vector3f(g_X2, g_Y2, 0.f));
+        }
+        else if (singleDrawMode.getModeState() == DrawMode::LINES_STRIP_MODE)
+        {
+            g_stripVert.push_back(Vector3f(g_X1, g_Y1, 0.f));
+        }
+        else if (singleDrawMode.getModeState() == DrawMode::CIRCLE_MODE)
+        {
+            g_circleVert.push_back(Vector3f(g_X1, g_Y1, 0.f));
+            g_circleVert.push_back(Vector3f(g_X2, g_Y2, 0.f));
+        }
+
+        mouseRelease = true;
 	}
 }
 

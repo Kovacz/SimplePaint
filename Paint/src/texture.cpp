@@ -2,7 +2,7 @@
 #include "../include/texture.h"
 #include "../include/defines.hpp"
 #define STB_IMAGE_IMPLEMENTATION
-#include "stb_image.h"
+#include "../libs/stb_image.h"
 #include <iostream>
 
 namespace mlg

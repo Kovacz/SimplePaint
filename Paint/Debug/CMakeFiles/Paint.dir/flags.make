@@ -6,5 +6,5 @@ CXX_FLAGS =  -std=c++17 -g
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/akukh/Documents/Projects/Paint/src -I/Users/akukh/Documents/Projects/Paint/libs/glad/include 
+CXX_INCLUDES = -I/Users/akukh/Documents/Projects/Paint/src -I/Users/akukh/Documents/Projects/Paint/libs/stb_image -I/Users/akukh/Documents/Projects/Paint/libs/glad/include 
 

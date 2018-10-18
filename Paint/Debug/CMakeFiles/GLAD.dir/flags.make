@@ -6,5 +6,5 @@ C_FLAGS = -g
 
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/akukh/Documents/Projects/Paint/libs/glad/include 
+C_INCLUDES = -I/Users/akukh/Documents/Projects/Paint/libs/stb_image -I/Users/akukh/Documents/Projects/Paint/libs/glad/include 
 
