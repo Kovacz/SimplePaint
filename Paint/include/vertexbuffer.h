@@ -19,10 +19,10 @@ public:
     unsigned    getVAOHandle() const noexcept;
     std::size_t getVertexCount()  const noexcept;
 
-	bool        init(const Vertex* vertices, std::size_t vertexCount);
-	bool        init(const Vertex3& vertices);
-	void		update(const Vertex* vertices, std::size_t vertexCount) const;
-	void		update(const Vertex3& vertices) const;
+    bool        init(const Vertex* vertices, std::size_t vertexCount);
+    bool        init(const VertexArray3f& vertices);
+    void		update(const Vertex* vertices, std::size_t vertexCount) const;
+    void		update(const VertexArray3f& vertices) const;
 
     static void bind(const VertexBuffer* vertexBuffer);
 private:

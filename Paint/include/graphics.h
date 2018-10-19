@@ -14,5 +14,6 @@
 #include "../include/texture.h"
 #include "../include/circleshape.h"
 #include "../include/camera2d.h"
+#include "../include/brush.h"
 
 #endif // GRAPHICS_H

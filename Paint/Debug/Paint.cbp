@@ -136,6 +136,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/akukh/Documents/Projects/Paint/include/brush.h">
+			<Option target="Paint"/>
+		</Unit>
 		<Unit filename="/Users/akukh/Documents/Projects/Paint/include/camera2d.h">
 			<Option target="Paint"/>
 		</Unit>
@@ -177,6 +180,9 @@
 		</Unit>
 		<Unit filename="/Users/akukh/Documents/Projects/Paint/libs/glad/src/glad.c">
 			<Option target="GLAD"/>
+		</Unit>
+		<Unit filename="/Users/akukh/Documents/Projects/Paint/src/brush.cpp">
+			<Option target="Paint"/>
 		</Unit>
 		<Unit filename="/Users/akukh/Documents/Projects/Paint/src/camera2d.cpp">
 			<Option target="Paint"/>

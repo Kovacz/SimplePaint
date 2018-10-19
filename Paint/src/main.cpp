@@ -26,6 +26,7 @@ int main()
     shaderProg.setInteger("ourTexture", 0);
 
     mlg::CircleShape circle;
+    mlg::Brush       brush;
 
 	while (myWindow.isOpen())
 	{
@@ -34,7 +35,7 @@ int main()
 		mlg::Texture::bind(&texture);
         shaderProg.use();
         shaderProg.setMat4("model", camera.getModelMat());
-        myWindow.draw(texture, circle);
+        myWindow.draw(texture, circle, brush);
 		myWindow.display();
 	}
 

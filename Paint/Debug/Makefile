@@ -163,6 +163,33 @@ libs/glad/src/glad.c.s:
 	$(MAKE) -f CMakeFiles/GLAD.dir/build.make CMakeFiles/GLAD.dir/libs/glad/src/glad.c.s
 .PHONY : libs/glad/src/glad.c.s
 
+src/brush.o: src/brush.cpp.o
+
+.PHONY : src/brush.o
+
+# target to build an object file
+src/brush.cpp.o:
+	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/brush.cpp.o
+.PHONY : src/brush.cpp.o
+
+src/brush.i: src/brush.cpp.i
+
+.PHONY : src/brush.i
+
+# target to preprocess a source file
+src/brush.cpp.i:
+	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/brush.cpp.i
+.PHONY : src/brush.cpp.i
+
+src/brush.s: src/brush.cpp.s
+
+.PHONY : src/brush.s
+
+# target to generate assembly for a file
+src/brush.cpp.s:
+	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/brush.cpp.s
+.PHONY : src/brush.cpp.s
+
 src/camera2d.o: src/camera2d.cpp.o
 
 .PHONY : src/camera2d.o
@@ -446,6 +473,9 @@ help:
 	@echo "... libs/glad/src/glad.o"
 	@echo "... libs/glad/src/glad.i"
 	@echo "... libs/glad/src/glad.s"
+	@echo "... src/brush.o"
+	@echo "... src/brush.i"
+	@echo "... src/brush.s"
 	@echo "... src/camera2d.o"
 	@echo "... src/camera2d.i"
 	@echo "... src/camera2d.s"

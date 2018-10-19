@@ -52,7 +52,7 @@ void CircleShape::bindBuffers()
     // upload vertex data
     glGenBuffers(1, &this->m_circleVBO);
     glBindBuffer(GL_ARRAY_BUFFER, this->m_circleVBO);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(Vertex3) * this->m_circleVert.size(), &this->m_circleVert[0], GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(VertexArray3f) * this->m_circleVert.size(), &this->m_circleVert[0], GL_STATIC_DRAW);
 
     glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);

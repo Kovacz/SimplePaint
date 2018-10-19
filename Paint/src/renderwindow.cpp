@@ -14,10 +14,10 @@ float		g_X1 = 0.f;
 float		g_Y1 = 0.f;
 float		g_X2 = 0.f;
 float		g_Y2 = 0.f;
-Vertex3     g_linesVert;
-Vertex3     g_stripVert;
-Vertex3     g_brushVert;
-Vertex3     g_circleVert;
+VertexArray3f     g_linesVert;
+VertexArray3f     g_stripVert;
+VertexArray3f     g_brushVert;
+VertexArray3f     g_circleVert;
 DrawMode&   singleDrawMode = DrawMode::getInstance();
 char        g_bgMode        = -1;
 char        g_linesMode     = -1;
@@ -80,7 +80,7 @@ void RenderWindow::draw()
 //	}
 }
 
-void RenderWindow::draw(const Texture& texture, CircleShape& circle) const
+void RenderWindow::draw(const Texture& texture, CircleShape& circle, Brush& brush)
 {
 	if (singleDrawMode.getDrawFlagState())
 	{
@@ -90,7 +90,7 @@ void RenderWindow::draw(const Texture& texture, CircleShape& circle) const
         }
         if (singleDrawMode.getModeState() == DrawMode::BRUSH_MODE)
         {
-            this->m_buff[1].update(g_brushVert);
+            brush.update();
         }
         if (singleDrawMode.getModeState() == DrawMode::LINES_STRIP_MODE)
         {
@@ -121,32 +121,29 @@ void RenderWindow::draw(const Texture& texture, CircleShape& circle) const
         glDrawArrays(GL_LINE_STRIP_ADJACENCY, 0, g_stripVert.size());
         glBindVertexArray(0);
     }
-    if (singleDrawMode.getModeState() == DrawMode::BRUSH_MODE || g_brushMode == 1)
-    {
-        if (KeyHandler::mouseClicked && singleDrawMode.getModeState() == DrawMode::BRUSH_MODE)
-        {
-            singleDrawMode.setDrawFlag(true);
-            double xpos = 0.f, ypos = 0.f;
-            glfwGetCursorPos(this->m_window, &xpos, &ypos);
-            g_X1 = static_cast<float>( (xpos - (this->m_width  / 2)) / (this->m_width  / 2));
-            g_Y1 = static_cast<float>(-(ypos - (this->m_height / 2)) / (this->m_height / 2));
-            g_brushVert.push_back(Vector3f(g_X1, g_Y1, 0.f));
-        }
 
-//        else
+    brush.startDraw(*this);
+
+//    if (singleDrawMode.getModeState() == DrawMode::BRUSH_MODE || g_brushMode == 1)
+//    {
+//        if (KeyHandler::mouseClicked && singleDrawMode.getModeState() == DrawMode::BRUSH_MODE)
 //        {
-//            g_brushVert.clear();
+//            singleDrawMode.setDrawFlag(true);
+//            double xpos = 0.f, ypos = 0.f;
+//            glfwGetCursorPos(this->m_window, &xpos, &ypos);
+//            g_X1 = static_cast<float>( (xpos - (this->m_width  / 2)) / (this->m_width  / 2));
+//            g_Y1 = static_cast<float>(-(ypos - (this->m_height / 2)) / (this->m_height / 2));
+//            g_brushVert.push_back(Vector3f(g_X1, g_Y1, 0.f));
 //        }
-        glBindVertexArray(this->m_buff[1].getVAOHandle());
-        glDrawArrays(GL_LINE_STRIP_ADJACENCY, 0, g_brushVert.size());
-        glBindVertexArray(0);
 
-        if (KeyHandler::mouseRelease)
-        {
-            //g_brushVert.clear();
-        }
+//        glBindVertexArray(this->m_buff[1].getVAOHandle());
+//        glDrawArrays(GL_LINE_STRIP_ADJACENCY, 0, g_brushVert.size());
+//        glBindVertexArray(0);
+//    }
 
-    }
+
+
+
     if (singleDrawMode.getModeState() == DrawMode::CIRCLE_MODE || g_circleMode == 1)
     {
         circle.redraw();

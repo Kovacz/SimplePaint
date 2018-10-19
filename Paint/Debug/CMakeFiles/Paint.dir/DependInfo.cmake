@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/Users/akukh/Documents/Projects/Paint/src/brush.cpp" "/Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles/Paint.dir/src/brush.cpp.o"
   "/Users/akukh/Documents/Projects/Paint/src/camera2d.cpp" "/Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles/Paint.dir/src/camera2d.cpp.o"
   "/Users/akukh/Documents/Projects/Paint/src/circleshape.cpp" "/Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles/Paint.dir/src/circleshape.cpp.o"
   "/Users/akukh/Documents/Projects/Paint/src/drawmode.cpp" "/Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles/Paint.dir/src/drawmode.cpp.o"

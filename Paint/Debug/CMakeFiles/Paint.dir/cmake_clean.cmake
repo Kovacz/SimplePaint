@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Paint.dir/src/brush.cpp.o"
   "CMakeFiles/Paint.dir/src/camera2d.cpp.o"
   "CMakeFiles/Paint.dir/src/circleshape.cpp.o"
   "CMakeFiles/Paint.dir/src/drawmode.cpp.o"

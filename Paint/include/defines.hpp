@@ -18,7 +18,7 @@ namespace mlg
 {
 //class DrawMode;
 
-typedef std::vector<Vector3f> Vertex3;
+typedef std::vector<Vector3f> VertexArray3f;
 
 extern DrawMode& singleDrawMode;
 
@@ -27,10 +27,10 @@ extern float	g_X1;
 extern float	g_Y1;
 extern float	g_X2;
 extern float	g_Y2;
-extern Vertex3  g_linesVert;
-extern Vertex3  g_stripVert;
-extern Vertex3  g_brushVert;
-extern Vertex3  g_circleVert;
+extern VertexArray3f  g_linesVert;
+extern VertexArray3f  g_stripVert;
+extern VertexArray3f  g_brushVert;
+extern VertexArray3f  g_circleVert;
 extern unsigned textureVAO;
 extern char     g_bgMode;
 extern char     g_linesMode;

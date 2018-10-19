@@ -19,14 +19,15 @@ VertexBuffer::~VertexBuffer()
 	}
 }
 
-bool VertexBuffer::init(const Vertex3& vertices)
+bool VertexBuffer::init(const VertexArray3f& vertices)
 {
     glGenVertexArrays(1, &this->m_VaoId);
     glGenBuffers(1, &this->m_VboId);
-    glBindVertexArray(this->m_VaoId);
 
+    glBindVertexArray(this->m_VaoId);
     glBindBuffer(GL_ARRAY_BUFFER, this->m_VboId);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(Vertex3), &vertices[0], GL_STATIC_DRAW);
+
+    glBufferData(GL_ARRAY_BUFFER, sizeof(VertexArray3f), &vertices[0], GL_STATIC_DRAW);
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), reinterpret_cast<void*>(0));
     glEnableVertexAttribArray(0);
 
@@ -65,10 +66,10 @@ std::size_t VertexBuffer::getVertexCount() const noexcept
 	return this->m_bufferSize;
 }
 
-void VertexBuffer::update(const Vertex3& vertices) const
+void VertexBuffer::update(const VertexArray3f& vertices) const
 {
     glBindBuffer(GL_ARRAY_BUFFER, this->m_VboId);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(Vertex3) * vertices.size(), &vertices[0], GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(VertexArray3f) * vertices.size(), &vertices[0], GL_STATIC_DRAW);
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), reinterpret_cast<void*>(0));
     glEnableVertexAttribArray(0);
     glBindBuffer(GL_ARRAY_BUFFER, 0);

@@ -4,6 +4,7 @@
 
 #include "../include/vertexbuffer.h"
 #include "../include/circleshape.h"
+#include "../include/brush.h"
 
 namespace mlg
 {
@@ -16,13 +17,14 @@ class  Camera2d;
 class RenderWindow
 {
 	friend KeyHandler;
+    friend Brush;
 
 public:
 	RenderWindow(int width, int height, const char* wndName, GLFWmonitor *monitor = nullptr, GLFWwindow *share = nullptr);
 	~RenderWindow();
 
 	void draw();
-    void draw(const Texture& texture, CircleShape& circle) const;
+    void draw(const Texture& texture, CircleShape& circle, Brush& brush);
 	void draw(const Vertex* vertices) const;
 	void close() const;
 	void create();
