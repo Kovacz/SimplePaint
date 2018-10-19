@@ -59,10 +59,10 @@ RM = /usr/local/Cellar/cmake/3.12.3/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/akukh/Documents/Projects/Paint
+CMAKE_SOURCE_DIR = /Users/akukh/Documents/Projects/HelloWorld
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/akukh/Documents/Projects/Paint/Debug
+CMAKE_BINARY_DIR = /Users/akukh/Documents/Projects/HelloWorld/Debug
 
 #=============================================================================
 # Target rules for target CMakeFiles/GLAD.dir
@@ -71,7 +71,7 @@ CMAKE_BINARY_DIR = /Users/akukh/Documents/Projects/Paint/Debug
 CMakeFiles/GLAD.dir/all:
 	$(MAKE) -f CMakeFiles/GLAD.dir/build.make CMakeFiles/GLAD.dir/depend
 	$(MAKE) -f CMakeFiles/GLAD.dir/build.make CMakeFiles/GLAD.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles --progress-num=1,2 "Built target GLAD"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/akukh/Documents/Projects/HelloWorld/Debug/CMakeFiles --progress-num=1,2 "Built target GLAD"
 .PHONY : CMakeFiles/GLAD.dir/all
 
 # Include target in all.
@@ -81,9 +81,9 @@ all: CMakeFiles/GLAD.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/GLAD.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/akukh/Documents/Projects/HelloWorld/Debug/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/GLAD.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/akukh/Documents/Projects/HelloWorld/Debug/CMakeFiles 0
 .PHONY : CMakeFiles/GLAD.dir/rule
 
 # Convenience name for target.
@@ -102,39 +102,39 @@ clean: CMakeFiles/GLAD.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/Paint.dir
+# Target rules for target CMakeFiles/TestOpenGL.dir
 
 # All Build rule for target.
-CMakeFiles/Paint.dir/all: CMakeFiles/GLAD.dir/all
-	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/depend
-	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11,12,13 "Built target Paint"
-.PHONY : CMakeFiles/Paint.dir/all
+CMakeFiles/TestOpenGL.dir/all: CMakeFiles/GLAD.dir/all
+	$(MAKE) -f CMakeFiles/TestOpenGL.dir/build.make CMakeFiles/TestOpenGL.dir/depend
+	$(MAKE) -f CMakeFiles/TestOpenGL.dir/build.make CMakeFiles/TestOpenGL.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/akukh/Documents/Projects/HelloWorld/Debug/CMakeFiles --progress-num=3,4,5 "Built target TestOpenGL"
+.PHONY : CMakeFiles/TestOpenGL.dir/all
 
 # Include target in all.
-all: CMakeFiles/Paint.dir/all
+all: CMakeFiles/TestOpenGL.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/Paint.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles 13
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Paint.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles 0
-.PHONY : CMakeFiles/Paint.dir/rule
+CMakeFiles/TestOpenGL.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/akukh/Documents/Projects/HelloWorld/Debug/CMakeFiles 5
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/TestOpenGL.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/akukh/Documents/Projects/HelloWorld/Debug/CMakeFiles 0
+.PHONY : CMakeFiles/TestOpenGL.dir/rule
 
 # Convenience name for target.
-Paint: CMakeFiles/Paint.dir/rule
+TestOpenGL: CMakeFiles/TestOpenGL.dir/rule
 
-.PHONY : Paint
-
-# clean rule for target.
-CMakeFiles/Paint.dir/clean:
-	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/clean
-.PHONY : CMakeFiles/Paint.dir/clean
+.PHONY : TestOpenGL
 
 # clean rule for target.
-clean: CMakeFiles/Paint.dir/clean
+CMakeFiles/TestOpenGL.dir/clean:
+	$(MAKE) -f CMakeFiles/TestOpenGL.dir/build.make CMakeFiles/TestOpenGL.dir/clean
+.PHONY : CMakeFiles/TestOpenGL.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/TestOpenGL.dir/clean
 
 .PHONY : clean
 

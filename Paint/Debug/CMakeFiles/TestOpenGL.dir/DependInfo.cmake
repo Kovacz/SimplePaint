@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/akukh/Documents/Projects/HelloWorld/src/main.cpp" "/Users/akukh/Documents/Projects/HelloWorld/Debug/CMakeFiles/Paint.dir/src/main.cpp.o"
-  "/Users/akukh/Documents/Projects/HelloWorld/src/shader.cpp" "/Users/akukh/Documents/Projects/HelloWorld/Debug/CMakeFiles/Paint.dir/src/shader.cpp.o"
+  "/Users/akukh/Documents/Projects/HelloWorld/src/main.cpp" "/Users/akukh/Documents/Projects/HelloWorld/Debug/CMakeFiles/TestOpenGL.dir/src/main.cpp.o"
+  "/Users/akukh/Documents/Projects/HelloWorld/src/shader.cpp" "/Users/akukh/Documents/Projects/HelloWorld/Debug/CMakeFiles/TestOpenGL.dir/src/shader.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

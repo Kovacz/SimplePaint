@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6"/>
 	<Project>
-		<Option title="Paint"/>
+		<Option title="TestOpenGL"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
 		<Option virtualFolders="CMake Files\;"/>
@@ -83,8 +83,8 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/HelloWorld/Debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="Paint">
-				<Option output="/Users/akukh/Documents/Projects/HelloWorld/Debug/bin/Paint" prefix_auto="0" extension_auto="0"/>
+			<Target title="TestOpenGL">
+				<Option output="/Users/akukh/Documents/Projects/HelloWorld/Debug/bin/TestOpenGL" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/akukh/Documents/Projects/HelloWorld/Debug/bin"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -101,14 +101,14 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/HelloWorld/Debug/Makefile&quot;  VERBOSE=1 Paint"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/HelloWorld/Debug/Makefile&quot;  VERBOSE=1 TestOpenGL"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/HelloWorld/Debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/HelloWorld/Debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/HelloWorld/Debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="Paint/fast">
-				<Option output="/Users/akukh/Documents/Projects/HelloWorld/Debug/bin/Paint" prefix_auto="0" extension_auto="0"/>
+			<Target title="TestOpenGL/fast">
+				<Option output="/Users/akukh/Documents/Projects/HelloWorld/Debug/bin/TestOpenGL" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/akukh/Documents/Projects/HelloWorld/Debug/bin"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -125,30 +125,33 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/HelloWorld/Debug/Makefile&quot;  VERBOSE=1 Paint/fast"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/HelloWorld/Debug/Makefile&quot;  VERBOSE=1 TestOpenGL/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/HelloWorld/Debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/HelloWorld/Debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/HelloWorld/Debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/akukh/Documents/Projects/HelloWorld/include/defines.h">
+			<Option target="TestOpenGL"/>
+		</Unit>
 		<Unit filename="/Users/akukh/Documents/Projects/HelloWorld/include/shader.h">
-			<Option target="Paint"/>
+			<Option target="TestOpenGL"/>
 		</Unit>
 		<Unit filename="/Users/akukh/Documents/Projects/HelloWorld/libs/glad/src/glad.c">
 			<Option target="GLAD"/>
 		</Unit>
 		<Unit filename="/Users/akukh/Documents/Projects/HelloWorld/src/frag_shader.frag">
-			<Option target="Paint"/>
+			<Option target="TestOpenGL"/>
 		</Unit>
 		<Unit filename="/Users/akukh/Documents/Projects/HelloWorld/src/main.cpp">
-			<Option target="Paint"/>
+			<Option target="TestOpenGL"/>
 		</Unit>
 		<Unit filename="/Users/akukh/Documents/Projects/HelloWorld/src/shader.cpp">
-			<Option target="Paint"/>
+			<Option target="TestOpenGL"/>
 		</Unit>
 		<Unit filename="/Users/akukh/Documents/Projects/HelloWorld/src/vert_shader.vert">
-			<Option target="Paint"/>
+			<Option target="TestOpenGL"/>
 		</Unit>
 		<Unit filename="/Users/akukh/Documents/Projects/HelloWorld/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

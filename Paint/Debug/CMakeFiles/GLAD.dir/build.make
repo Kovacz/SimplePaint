@@ -43,10 +43,10 @@ RM = /usr/local/Cellar/cmake/3.12.3/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/akukh/Documents/Projects/Paint
+CMAKE_SOURCE_DIR = /Users/akukh/Documents/Projects/HelloWorld
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/akukh/Documents/Projects/Paint/Debug
+CMAKE_BINARY_DIR = /Users/akukh/Documents/Projects/HelloWorld/Debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/GLAD.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/GLAD.dir/flags.make
 
 CMakeFiles/GLAD.dir/libs/glad/src/glad.c.o: CMakeFiles/GLAD.dir/flags.make
 CMakeFiles/GLAD.dir/libs/glad/src/glad.c.o: ../libs/glad/src/glad.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/GLAD.dir/libs/glad/src/glad.c.o"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/GLAD.dir/libs/glad/src/glad.c.o   -c /Users/akukh/Documents/Projects/Paint/libs/glad/src/glad.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/akukh/Documents/Projects/HelloWorld/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/GLAD.dir/libs/glad/src/glad.c.o"
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/GLAD.dir/libs/glad/src/glad.c.o   -c /Users/akukh/Documents/Projects/HelloWorld/libs/glad/src/glad.c
 
 CMakeFiles/GLAD.dir/libs/glad/src/glad.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/GLAD.dir/libs/glad/src/glad.c.i"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/akukh/Documents/Projects/Paint/libs/glad/src/glad.c > CMakeFiles/GLAD.dir/libs/glad/src/glad.c.i
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/akukh/Documents/Projects/HelloWorld/libs/glad/src/glad.c > CMakeFiles/GLAD.dir/libs/glad/src/glad.c.i
 
 CMakeFiles/GLAD.dir/libs/glad/src/glad.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/GLAD.dir/libs/glad/src/glad.c.s"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/akukh/Documents/Projects/Paint/libs/glad/src/glad.c -o CMakeFiles/GLAD.dir/libs/glad/src/glad.c.s
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/akukh/Documents/Projects/HelloWorld/libs/glad/src/glad.c -o CMakeFiles/GLAD.dir/libs/glad/src/glad.c.s
 
 # Object files for target GLAD
 GLAD_OBJECTS = \
@@ -80,7 +80,7 @@ GLAD_EXTERNAL_OBJECTS =
 libGLAD.a: CMakeFiles/GLAD.dir/libs/glad/src/glad.c.o
 libGLAD.a: CMakeFiles/GLAD.dir/build.make
 libGLAD.a: CMakeFiles/GLAD.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libGLAD.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/akukh/Documents/Projects/HelloWorld/Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libGLAD.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/GLAD.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GLAD.dir/link.txt --verbose=$(VERBOSE)
 
@@ -94,6 +94,6 @@ CMakeFiles/GLAD.dir/clean:
 .PHONY : CMakeFiles/GLAD.dir/clean
 
 CMakeFiles/GLAD.dir/depend:
-	cd /Users/akukh/Documents/Projects/Paint/Debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/akukh/Documents/Projects/Paint /Users/akukh/Documents/Projects/Paint /Users/akukh/Documents/Projects/Paint/Debug /Users/akukh/Documents/Projects/Paint/Debug /Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles/GLAD.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/akukh/Documents/Projects/HelloWorld/Debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/akukh/Documents/Projects/HelloWorld /Users/akukh/Documents/Projects/HelloWorld /Users/akukh/Documents/Projects/HelloWorld/Debug /Users/akukh/Documents/Projects/HelloWorld/Debug /Users/akukh/Documents/Projects/HelloWorld/Debug/CMakeFiles/GLAD.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/GLAD.dir/depend
 

@@ -1,57 +1,56 @@
 #ifndef DEFINES_HPP
 #define DEFINES_HPP
 
+#include <glad/glad.h>
 #include <GLFW/glfw3.h>
+
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
+
+#include <iostream>
 #include <vector>
-#include <cmath>
-#include "../include/vector3.hpp"
-#include "../include/drawmode.h"
 
-#define COLOR_WHITE 1.f, 1.f, 1.f
+#define SIZE 1024
 
-const static int WIDTH = 800;
-const static int HEIGHT = 600;
-const static char* VERTEX_SHADER_PATH   = "../../src/texture_vert_shader.vert";
-const static char* FRAGMENT_SHADER_PATH = "../../src/texture_frag_shader.frag";
+const unsigned int WIDTH  = 800;
+const unsigned int HEIGHT = 600;
 
-namespace mlg
-{
-//class DrawMode;
-
-typedef std::vector<Vector3f> Vertex3;
-
-extern DrawMode& singleDrawMode;
-
-//extern bool		g_drawFlag;
-extern float	g_X1;
-extern float	g_Y1;
-extern float	g_X2;
-extern float	g_Y2;
-extern Vertex3  g_linesVert;
-extern Vertex3  g_stripVert;
-extern Vertex3  g_brushVert;
-extern Vertex3  g_circleVert;
-extern unsigned textureVAO;
-extern char     g_bgMode;
-extern char     g_linesMode;
-extern char     g_circleMode;
-extern char     g_brushMode;
-extern char     g_stripMode;
+extern std::vector<float>       g_vertices;
+extern std::vector<unsigned>    g_indexes;
+extern bool                     g_mouseClicked;
+extern bool                     g_mouseReleased;
+extern float                    g_X1;
+extern float                    g_Y1;
+extern float                    g_X2;
+extern float                    g_Y2;
 
 inline void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
-	glViewport(0, 0, width, height);
+    glViewport(0, 0, width, height);
 }
 
-inline float vecDistance(const Vector3f& vec1, const Vector3f& vec2)
+inline void mouseButtonCallback(GLFWwindow* window, int scancode, int action, int mods	)
 {
-    Vector3f substract;
-    substract.x = vec1.x - vec2.x;
-    substract.y = vec1.y - vec2.y;
-    substract.z = vec1.z - vec2.z;
-    return sqrt(pow(substract.x, 2) + pow(substract.y, 2) + pow(substract.z, 2));
-}
+    double		xpos  = .0, ypos  = .0;
+    int			width = 0,  height = 0;
+    glfwGetCursorPos(window, &xpos, &ypos);
+    glfwGetWindowSize(window, &width, &height);
+    if (scancode == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS)
+    {
+        g_mouseClicked  = true;
+        g_mouseReleased = false;
 
-} // namespace mlg
+        g_X1 = static_cast<float>( (xpos - (width  / 2)) / (width  / 2));
+        g_Y1 = static_cast<float>(-(ypos - (height / 2)) / (height / 2));
+        g_vertices.push_back(g_X1);
+        g_vertices.push_back(g_Y1);
+        g_vertices.push_back(0.f);
+    }
+    else if (action == GLFW_RELEASE)
+    {
+        g_mouseClicked  = false;
+    }
+}
 
 #endif // DEFINES_HPP

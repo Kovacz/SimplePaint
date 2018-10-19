@@ -48,10 +48,10 @@ RM = /usr/local/Cellar/cmake/3.12.3/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/akukh/Documents/Projects/Paint
+CMAKE_SOURCE_DIR = /Users/akukh/Documents/Projects/HelloWorld
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/akukh/Documents/Projects/Paint/Debug
+CMAKE_BINARY_DIR = /Users/akukh/Documents/Projects/HelloWorld/Debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles /Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/akukh/Documents/Projects/HelloWorld/Debug/CMakeFiles /Users/akukh/Documents/Projects/HelloWorld/Debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/akukh/Documents/Projects/HelloWorld/Debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -124,17 +124,17 @@ GLAD/fast:
 .PHONY : GLAD/fast
 
 #=============================================================================
-# Target rules for targets named Paint
+# Target rules for targets named TestOpenGL
 
 # Build rule for target.
-Paint: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Paint
-.PHONY : Paint
+TestOpenGL: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TestOpenGL
+.PHONY : TestOpenGL
 
 # fast build rule for target.
-Paint/fast:
-	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/build
-.PHONY : Paint/fast
+TestOpenGL/fast:
+	$(MAKE) -f CMakeFiles/TestOpenGL.dir/build.make CMakeFiles/TestOpenGL.dir/build
+.PHONY : TestOpenGL/fast
 
 libs/glad/src/glad.o: libs/glad/src/glad.c.o
 
@@ -163,121 +163,13 @@ libs/glad/src/glad.c.s:
 	$(MAKE) -f CMakeFiles/GLAD.dir/build.make CMakeFiles/GLAD.dir/libs/glad/src/glad.c.s
 .PHONY : libs/glad/src/glad.c.s
 
-src/camera2d.o: src/camera2d.cpp.o
-
-.PHONY : src/camera2d.o
-
-# target to build an object file
-src/camera2d.cpp.o:
-	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/camera2d.cpp.o
-.PHONY : src/camera2d.cpp.o
-
-src/camera2d.i: src/camera2d.cpp.i
-
-.PHONY : src/camera2d.i
-
-# target to preprocess a source file
-src/camera2d.cpp.i:
-	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/camera2d.cpp.i
-.PHONY : src/camera2d.cpp.i
-
-src/camera2d.s: src/camera2d.cpp.s
-
-.PHONY : src/camera2d.s
-
-# target to generate assembly for a file
-src/camera2d.cpp.s:
-	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/camera2d.cpp.s
-.PHONY : src/camera2d.cpp.s
-
-src/circleshape.o: src/circleshape.cpp.o
-
-.PHONY : src/circleshape.o
-
-# target to build an object file
-src/circleshape.cpp.o:
-	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/circleshape.cpp.o
-.PHONY : src/circleshape.cpp.o
-
-src/circleshape.i: src/circleshape.cpp.i
-
-.PHONY : src/circleshape.i
-
-# target to preprocess a source file
-src/circleshape.cpp.i:
-	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/circleshape.cpp.i
-.PHONY : src/circleshape.cpp.i
-
-src/circleshape.s: src/circleshape.cpp.s
-
-.PHONY : src/circleshape.s
-
-# target to generate assembly for a file
-src/circleshape.cpp.s:
-	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/circleshape.cpp.s
-.PHONY : src/circleshape.cpp.s
-
-src/drawmode.o: src/drawmode.cpp.o
-
-.PHONY : src/drawmode.o
-
-# target to build an object file
-src/drawmode.cpp.o:
-	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/drawmode.cpp.o
-.PHONY : src/drawmode.cpp.o
-
-src/drawmode.i: src/drawmode.cpp.i
-
-.PHONY : src/drawmode.i
-
-# target to preprocess a source file
-src/drawmode.cpp.i:
-	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/drawmode.cpp.i
-.PHONY : src/drawmode.cpp.i
-
-src/drawmode.s: src/drawmode.cpp.s
-
-.PHONY : src/drawmode.s
-
-# target to generate assembly for a file
-src/drawmode.cpp.s:
-	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/drawmode.cpp.s
-.PHONY : src/drawmode.cpp.s
-
-src/keyhandler.o: src/keyhandler.cpp.o
-
-.PHONY : src/keyhandler.o
-
-# target to build an object file
-src/keyhandler.cpp.o:
-	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/keyhandler.cpp.o
-.PHONY : src/keyhandler.cpp.o
-
-src/keyhandler.i: src/keyhandler.cpp.i
-
-.PHONY : src/keyhandler.i
-
-# target to preprocess a source file
-src/keyhandler.cpp.i:
-	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/keyhandler.cpp.i
-.PHONY : src/keyhandler.cpp.i
-
-src/keyhandler.s: src/keyhandler.cpp.s
-
-.PHONY : src/keyhandler.s
-
-# target to generate assembly for a file
-src/keyhandler.cpp.s:
-	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/keyhandler.cpp.s
-.PHONY : src/keyhandler.cpp.s
-
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/main.cpp.o
+	$(MAKE) -f CMakeFiles/TestOpenGL.dir/build.make CMakeFiles/TestOpenGL.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -286,7 +178,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/main.cpp.i
+	$(MAKE) -f CMakeFiles/TestOpenGL.dir/build.make CMakeFiles/TestOpenGL.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -295,35 +187,8 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/main.cpp.s
+	$(MAKE) -f CMakeFiles/TestOpenGL.dir/build.make CMakeFiles/TestOpenGL.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
-
-src/renderwindow.o: src/renderwindow.cpp.o
-
-.PHONY : src/renderwindow.o
-
-# target to build an object file
-src/renderwindow.cpp.o:
-	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/renderwindow.cpp.o
-.PHONY : src/renderwindow.cpp.o
-
-src/renderwindow.i: src/renderwindow.cpp.i
-
-.PHONY : src/renderwindow.i
-
-# target to preprocess a source file
-src/renderwindow.cpp.i:
-	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/renderwindow.cpp.i
-.PHONY : src/renderwindow.cpp.i
-
-src/renderwindow.s: src/renderwindow.cpp.s
-
-.PHONY : src/renderwindow.s
-
-# target to generate assembly for a file
-src/renderwindow.cpp.s:
-	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/renderwindow.cpp.s
-.PHONY : src/renderwindow.cpp.s
 
 src/shader.o: src/shader.cpp.o
 
@@ -331,7 +196,7 @@ src/shader.o: src/shader.cpp.o
 
 # target to build an object file
 src/shader.cpp.o:
-	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/shader.cpp.o
+	$(MAKE) -f CMakeFiles/TestOpenGL.dir/build.make CMakeFiles/TestOpenGL.dir/src/shader.cpp.o
 .PHONY : src/shader.cpp.o
 
 src/shader.i: src/shader.cpp.i
@@ -340,7 +205,7 @@ src/shader.i: src/shader.cpp.i
 
 # target to preprocess a source file
 src/shader.cpp.i:
-	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/shader.cpp.i
+	$(MAKE) -f CMakeFiles/TestOpenGL.dir/build.make CMakeFiles/TestOpenGL.dir/src/shader.cpp.i
 .PHONY : src/shader.cpp.i
 
 src/shader.s: src/shader.cpp.s
@@ -349,89 +214,8 @@ src/shader.s: src/shader.cpp.s
 
 # target to generate assembly for a file
 src/shader.cpp.s:
-	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/shader.cpp.s
+	$(MAKE) -f CMakeFiles/TestOpenGL.dir/build.make CMakeFiles/TestOpenGL.dir/src/shader.cpp.s
 .PHONY : src/shader.cpp.s
-
-src/texture.o: src/texture.cpp.o
-
-.PHONY : src/texture.o
-
-# target to build an object file
-src/texture.cpp.o:
-	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/texture.cpp.o
-.PHONY : src/texture.cpp.o
-
-src/texture.i: src/texture.cpp.i
-
-.PHONY : src/texture.i
-
-# target to preprocess a source file
-src/texture.cpp.i:
-	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/texture.cpp.i
-.PHONY : src/texture.cpp.i
-
-src/texture.s: src/texture.cpp.s
-
-.PHONY : src/texture.s
-
-# target to generate assembly for a file
-src/texture.cpp.s:
-	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/texture.cpp.s
-.PHONY : src/texture.cpp.s
-
-src/vertex.o: src/vertex.cpp.o
-
-.PHONY : src/vertex.o
-
-# target to build an object file
-src/vertex.cpp.o:
-	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/vertex.cpp.o
-.PHONY : src/vertex.cpp.o
-
-src/vertex.i: src/vertex.cpp.i
-
-.PHONY : src/vertex.i
-
-# target to preprocess a source file
-src/vertex.cpp.i:
-	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/vertex.cpp.i
-.PHONY : src/vertex.cpp.i
-
-src/vertex.s: src/vertex.cpp.s
-
-.PHONY : src/vertex.s
-
-# target to generate assembly for a file
-src/vertex.cpp.s:
-	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/vertex.cpp.s
-.PHONY : src/vertex.cpp.s
-
-src/vertexbuffer.o: src/vertexbuffer.cpp.o
-
-.PHONY : src/vertexbuffer.o
-
-# target to build an object file
-src/vertexbuffer.cpp.o:
-	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/vertexbuffer.cpp.o
-.PHONY : src/vertexbuffer.cpp.o
-
-src/vertexbuffer.i: src/vertexbuffer.cpp.i
-
-.PHONY : src/vertexbuffer.i
-
-# target to preprocess a source file
-src/vertexbuffer.cpp.i:
-	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/vertexbuffer.cpp.i
-.PHONY : src/vertexbuffer.cpp.i
-
-src/vertexbuffer.s: src/vertexbuffer.cpp.s
-
-.PHONY : src/vertexbuffer.s
-
-# target to generate assembly for a file
-src/vertexbuffer.cpp.s:
-	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/vertexbuffer.cpp.s
-.PHONY : src/vertexbuffer.cpp.s
 
 # Help Target
 help:
@@ -442,40 +226,16 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... GLAD"
-	@echo "... Paint"
+	@echo "... TestOpenGL"
 	@echo "... libs/glad/src/glad.o"
 	@echo "... libs/glad/src/glad.i"
 	@echo "... libs/glad/src/glad.s"
-	@echo "... src/camera2d.o"
-	@echo "... src/camera2d.i"
-	@echo "... src/camera2d.s"
-	@echo "... src/circleshape.o"
-	@echo "... src/circleshape.i"
-	@echo "... src/circleshape.s"
-	@echo "... src/drawmode.o"
-	@echo "... src/drawmode.i"
-	@echo "... src/drawmode.s"
-	@echo "... src/keyhandler.o"
-	@echo "... src/keyhandler.i"
-	@echo "... src/keyhandler.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/renderwindow.o"
-	@echo "... src/renderwindow.i"
-	@echo "... src/renderwindow.s"
 	@echo "... src/shader.o"
 	@echo "... src/shader.i"
 	@echo "... src/shader.s"
-	@echo "... src/texture.o"
-	@echo "... src/texture.i"
-	@echo "... src/texture.s"
-	@echo "... src/vertex.o"
-	@echo "... src/vertex.i"
-	@echo "... src/vertex.s"
-	@echo "... src/vertexbuffer.o"
-	@echo "... src/vertexbuffer.i"
-	@echo "... src/vertexbuffer.s"
 .PHONY : help
 
 

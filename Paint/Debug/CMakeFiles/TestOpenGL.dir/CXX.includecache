@@ -60,3 +60,15 @@ iostream
 ../include/shader.h
 /Users/akukh/Documents/Projects/HelloWorld/include/shader.h
 
+/Users/akukh/Documents/Projects/HelloWorld/src/shader.cpp
+glad/glad.h
+-
+iostream
+-
+fstream
+-
+sstream
+-
+../include/shader.h
+/Users/akukh/Documents/Projects/HelloWorld/include/shader.h
+

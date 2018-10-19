@@ -34,7 +34,7 @@ stdint.h
 inttypes.h
 -
 
-/Users/akukh/Documents/Projects/Paint/libs/glad/src/glad.c
+/Users/akukh/Documents/Projects/HelloWorld/libs/glad/src/glad.c
 stdio.h
 -
 stdlib.h
