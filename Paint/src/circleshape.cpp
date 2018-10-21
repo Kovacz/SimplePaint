@@ -1,62 +1,58 @@
 #include "glad/glad.h"
-#include "GLFW/glfw3.h"
+#include "../include/keyhandler.h"
 #include "../include/circleshape.h"
 #include "../include/defines.hpp"
+
 #include <cmath>
+#include <unordered_set>
 
 namespace mlg
 {
 
-CircleShape::CircleShape()
-    : m_circleVBO(0)
-    , m_circleVAO(0)
+CircleShape::CircleShape() 
+{
+	this->m_mulBuff.generate();
+	this->m_mulBuff.init();
+}
+CircleShape::~CircleShape()
 {
 
 }
-
-void CircleShape::redraw()
+void CircleShape::updateBuffers()
 {
-    if (g_circleVert.size() > 0)
-    {
-        this->onPaint(g_circleVert[g_circleVert.size() - 2],
-            vecDistance(g_circleVert[g_circleVert.size() - 2]
-                , g_circleVert[g_circleVert.size() - 1])
-        );
-    }
+	this->m_mulBuff.update(this->m_vertices, this->m_indexes);
 }
-
-void CircleShape::onPaint(const Vector3f& view, const float& radius)
+void CircleShape::render()
 {
-    for (int i = 0; i <= 100; ++i)
-    {
-        float theta = 2.0f * 3.1415926f * float(i) / float(100);//get the current angle
-
-        float x = radius * cosf(theta);//calculate the x component
-        float y = radius * sinf(theta);//calculate the y component
-
-        this->m_circleVert.push_back(mlg::Vector3f(x + view.x, y + view.y, 0.f));
-    }
-    this->bindBuffers();
-    glBindVertexArray(this->m_circleVAO);
-    glDrawArrays(GL_LINE_LOOP, 0, this->m_circleVert.size());
-    glBindVertexArray(0);
-    glFlush();
-    this->m_circleVert.clear();
+	glBindVertexArray(this->m_mulBuff.getArrayHandle());
+	glEnable(GL_PRIMITIVE_RESTART);
+	glPrimitiveRestartIndex(0xFFFF);
+	glDrawElements(GL_LINE_STRIP, this->m_indexes.size(), GL_UNSIGNED_INT, reinterpret_cast<void*>(0));
+	glDisable(GL_PRIMITIVE_RESTART);
+	glBindVertexArray(0);
 }
-
-void CircleShape::bindBuffers()
+void CircleShape::calculate()
+{	
+	if (KeyHandler::mouseReleased)
+	{
+		this->genCircle(Vector3f(g_X1, g_Y1, .0f),
+			vecDistance(Vector3f(g_X1, g_Y1, .0f), Vector3f(g_X2, g_Y2, .0f))
+		);
+	}
+}
+void CircleShape::genCircle(const Vector3f& view, const float& radius)
 {
-    // setup vertex array object
-    glGenVertexArrays(1, &this->m_circleVAO);
-    glBindVertexArray(this->m_circleVAO);
-    // upload vertex data
-    glGenBuffers(1, &this->m_circleVBO);
-    glBindBuffer(GL_ARRAY_BUFFER, this->m_circleVBO);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(Vertex3) * this->m_circleVert.size(), &this->m_circleVert[0], GL_STATIC_DRAW);
+	for (int i = 0; i <= 100; ++i)
+	{
+		float theta = 2.0f * 3.1415926f * float(i) / float(100); // Get the current angle
 
-    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
-    glEnableVertexAttribArray(0);
-    glBindVertexArray(0);
+		float x = radius * cosf(theta); // Calculate the x component
+		float y = radius * sinf(theta); // Calculate the y component
+
+		this->m_indexes.push_back(this->m_vertices.size());
+		this->m_vertices.push_back(mlg::Vector3f(x + view.x, y + view.y, 0.f));
+	}
+	this->m_indexes.push_back(0xFFFF);
 }
 
 //CircleShape::CircleShape()

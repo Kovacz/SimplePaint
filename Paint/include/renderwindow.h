@@ -2,8 +2,10 @@
 #define RENDERWINDOW_H
 
 
-#include "../include/vertexbuffer.h"
+#include "../include/multibuffer.hpp"
+#include "../include/lineshape.h"
 #include "../include/circleshape.h"
+#include "../include/brush.h"
 
 namespace mlg
 {
@@ -11,34 +13,45 @@ namespace mlg
 class  KeyHandler;
 struct Vertex;
 class  Texture;
-class  Camera2d;
+class  Brush;
 
 class RenderWindow
 {
 	friend KeyHandler;
-
 public:
-	RenderWindow(int width, int height, const char* wndName, GLFWmonitor *monitor = nullptr, GLFWwindow *share = nullptr);
+	 RenderWindow(int width, int height, const char* windowName);
 	~RenderWindow();
 
-	void draw();
-    void draw(const Texture& texture, CircleShape& circle) const;
-	void draw(const Vertex* vertices) const;
-	void close() const;
-	void create();
-	void display() const;
-	bool isOpen() const;
-	void setBgColor(const float& r, const float& g, const float& b, const float& a) const noexcept;
+	 void draw();	 
+	 void close()   const;
+	 void create();
+	 bool isOpen()  const;
+	 void display() const;
+	 
+
+
+
+
+     void draw(const Texture& texture, CircleShape& circle) const;
+	 void draw(const Vertex* vertices) const;
+	 void draw(Brush& brush);
+	 
+
+	 
+	 void setBgColor(const float& r, const float& g, const float& b, const float& a) const noexcept;
+	 GLFWwindow* getGLFWwindow() const noexcept;
 protected:
-	bool gladLoad() const;
+	 bool gladLoad() const;
 public:
-	int             m_width;
-	int             m_height;
-	const char*     m_cWindowName;
-	GLFWmonitor*    m_monitor;
-	GLFWwindow*     m_share;
-	GLFWwindow*     m_window;
-    std::vector<VertexBuffer> m_buff;
+	 int             m_width;
+	 int             m_height;
+	 const char*     m_cWindowName;
+	 GLFWwindow*     m_window;
+
+	 Brush*			 m_brush;
+	 LineShape*		 m_lineShape;
+	 CircleShape*    m_circleShape;
+	//VertexBufferArray	m_vbo;
 };
 
 } // namespace mlg

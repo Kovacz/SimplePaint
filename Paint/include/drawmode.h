@@ -14,7 +14,6 @@ public:
 		BRUSH_MODE,
         CIRCLE_MODE,
         LOAD_BG_MODE,
-        ZOOM_MODE
 	};
 private:
 	DrawMode();
