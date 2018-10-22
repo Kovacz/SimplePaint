@@ -108,7 +108,7 @@ clean: CMakeFiles/GLAD.dir/clean
 CMakeFiles/Paint.dir/all: CMakeFiles/GLAD.dir/all
 	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/depend
 	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11,12,13,14 "Built target Paint"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11,12,13,14,15 "Built target Paint"
 .PHONY : CMakeFiles/Paint.dir/all
 
 # Include target in all.
@@ -118,7 +118,7 @@ all: CMakeFiles/Paint.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Paint.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles 15
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Paint.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles 0
 .PHONY : CMakeFiles/Paint.dir/rule

@@ -205,6 +205,15 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Include for OpenGL on OS X
+OPENGL_INCLUDE_DIR:PATH=/System/Library/Frameworks/OpenGL.framework
+
+//OpenGL library for OS X
+OPENGL_gl_LIBRARY:FILEPATH=/System/Library/Frameworks/OpenGL.framework
+
+//GLU library for OS X (usually same as OpenGL library)
+OPENGL_glu_LIBRARY:FILEPATH=/System/Library/Frameworks/OpenGL.framework
+
 //Value Computed by CMake
 Paint_BINARY_DIR:STATIC=/Users/akukh/Documents/Projects/Paint/Debug
 
@@ -216,6 +225,21 @@ ProcessorCount_cmd_sysctl:FILEPATH=/usr/sbin/sysctl
 
 //No help, variable specified on the command line.
 QT_QMAKE_EXECUTABLE:STRING=
+
+//Path to a library.
+SOIL:FILEPATH=SOIL-NOTFOUND
+
+//Path to a library.
+SOIL2:FILEPATH=SOIL2-NOTFOUND
+
+//Path to a file.
+SOIL_INCLUDE_DIR:PATH=SOIL_INCLUDE_DIR-NOTFOUND
+
+//Path to a library.
+SOIL_LIBRARY:FILEPATH=SOIL_LIBRARY-NOTFOUND
+
+//Dependencies for the target
+SOIL_LIB_DEPENDS:STATIC=general;/System/Library/Frameworks/OpenGL.framework;general;/System/Library/Frameworks/OpenGL.framework;general;-framework CoreFoundation;
 
 
 ########################
@@ -359,6 +383,18 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding OpenGL
+FIND_PACKAGE_MESSAGE_DETAILS_OpenGL:INTERNAL=[/System/Library/Frameworks/OpenGL.framework][/System/Library/Frameworks/OpenGL.framework][c ][v()]
+//ADVANCED property for variable: OPENGL_INCLUDE_DIR
+OPENGL_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENGL_gl_LIBRARY
+OPENGL_gl_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENGL_glu_LIBRARY
+OPENGL_glu_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: ProcessorCount_cmd_sysctl
 ProcessorCount_cmd_sysctl-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SOIL_INCLUDE_DIR
+SOIL_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SOIL_LIBRARY
+SOIL_LIBRARY-ADVANCED:INTERNAL=1
 

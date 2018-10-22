@@ -9,10 +9,10 @@ CMakeFiles/Paint.dir/src/brush.cpp.o
  /Users/akukh/Documents/Projects/Paint/include/defines.hpp
  /Users/akukh/Documents/Projects/Paint/include/drawmode.h
  /Users/akukh/Documents/Projects/Paint/include/keyhandler.h
+ /Users/akukh/Documents/Projects/Paint/include/lineshape.h
+ /Users/akukh/Documents/Projects/Paint/include/multibuffer.hpp
  /Users/akukh/Documents/Projects/Paint/include/renderwindow.h
- /Users/akukh/Documents/Projects/Paint/include/shader.h
  /Users/akukh/Documents/Projects/Paint/include/vector3.hpp
- /Users/akukh/Documents/Projects/Paint/include/vertexbuffer.h
  /Users/akukh/Documents/Projects/Paint/src/brush.cpp
 CMakeFiles/Paint.dir/src/camera2d.cpp.o
  /Users/akukh/Documents/Projects/Paint/include/camera2d.h
@@ -24,26 +24,41 @@ CMakeFiles/Paint.dir/src/circleshape.cpp.o
  /Users/akukh/Documents/Projects/Paint/include/circleshape.h
  /Users/akukh/Documents/Projects/Paint/include/defines.hpp
  /Users/akukh/Documents/Projects/Paint/include/drawmode.h
- /Users/akukh/Documents/Projects/Paint/include/shader.h
+ /Users/akukh/Documents/Projects/Paint/include/keyhandler.h
+ /Users/akukh/Documents/Projects/Paint/include/multibuffer.hpp
  /Users/akukh/Documents/Projects/Paint/include/vector3.hpp
  /Users/akukh/Documents/Projects/Paint/src/circleshape.cpp
 CMakeFiles/Paint.dir/src/drawmode.cpp.o
  /Users/akukh/Documents/Projects/Paint/include/drawmode.h
  /Users/akukh/Documents/Projects/Paint/src/drawmode.cpp
 CMakeFiles/Paint.dir/src/keyhandler.cpp.o
+ ../libs/glad/include/KHR/khrplatform.h
+ ../libs/glad/include/glad/glad.h
  /Users/akukh/Documents/Projects/Paint/include/brush.h
  /Users/akukh/Documents/Projects/Paint/include/camera2d.h
  /Users/akukh/Documents/Projects/Paint/include/circleshape.h
  /Users/akukh/Documents/Projects/Paint/include/defines.hpp
  /Users/akukh/Documents/Projects/Paint/include/drawmode.h
  /Users/akukh/Documents/Projects/Paint/include/keyhandler.h
+ /Users/akukh/Documents/Projects/Paint/include/lineshape.h
+ /Users/akukh/Documents/Projects/Paint/include/multibuffer.hpp
  /Users/akukh/Documents/Projects/Paint/include/renderwindow.h
- /Users/akukh/Documents/Projects/Paint/include/shader.h
  /Users/akukh/Documents/Projects/Paint/include/vector2.hpp
  /Users/akukh/Documents/Projects/Paint/include/vector3.hpp
- /Users/akukh/Documents/Projects/Paint/include/vertexbuffer.h
  /Users/akukh/Documents/Projects/Paint/src/keyhandler.cpp
+CMakeFiles/Paint.dir/src/lineshape.cpp.o
+ ../libs/glad/include/KHR/khrplatform.h
+ ../libs/glad/include/glad/glad.h
+ /Users/akukh/Documents/Projects/Paint/include/defines.hpp
+ /Users/akukh/Documents/Projects/Paint/include/drawmode.h
+ /Users/akukh/Documents/Projects/Paint/include/keyhandler.h
+ /Users/akukh/Documents/Projects/Paint/include/lineshape.h
+ /Users/akukh/Documents/Projects/Paint/include/multibuffer.hpp
+ /Users/akukh/Documents/Projects/Paint/include/vector3.hpp
+ /Users/akukh/Documents/Projects/Paint/src/lineshape.cpp
 CMakeFiles/Paint.dir/src/main.cpp.o
+ ../libs/glad/include/KHR/khrplatform.h
+ ../libs/glad/include/glad/glad.h
  /Users/akukh/Documents/Projects/Paint/include/brush.h
  /Users/akukh/Documents/Projects/Paint/include/camera2d.h
  /Users/akukh/Documents/Projects/Paint/include/circleshape.h
@@ -51,14 +66,17 @@ CMakeFiles/Paint.dir/src/main.cpp.o
  /Users/akukh/Documents/Projects/Paint/include/drawmode.h
  /Users/akukh/Documents/Projects/Paint/include/graphics.h
  /Users/akukh/Documents/Projects/Paint/include/keyhandler.h
+ /Users/akukh/Documents/Projects/Paint/include/lineshape.h
+ /Users/akukh/Documents/Projects/Paint/include/multibuffer.hpp
  /Users/akukh/Documents/Projects/Paint/include/renderwindow.h
  /Users/akukh/Documents/Projects/Paint/include/shader.h
  /Users/akukh/Documents/Projects/Paint/include/texture.h
  /Users/akukh/Documents/Projects/Paint/include/vector2.hpp
  /Users/akukh/Documents/Projects/Paint/include/vector3.hpp
  /Users/akukh/Documents/Projects/Paint/include/vertex.h
- /Users/akukh/Documents/Projects/Paint/include/vertexbuffer.h
  /Users/akukh/Documents/Projects/Paint/src/main.cpp
+CMakeFiles/Paint.dir/src/multibuffer.cpp.o
+ /Users/akukh/Documents/Projects/Paint/src/multibuffer.cpp
 CMakeFiles/Paint.dir/src/renderwindow.cpp.o
  ../libs/glad/include/KHR/khrplatform.h
  ../libs/glad/include/glad/glad.h
@@ -68,13 +86,13 @@ CMakeFiles/Paint.dir/src/renderwindow.cpp.o
  /Users/akukh/Documents/Projects/Paint/include/defines.hpp
  /Users/akukh/Documents/Projects/Paint/include/drawmode.h
  /Users/akukh/Documents/Projects/Paint/include/keyhandler.h
+ /Users/akukh/Documents/Projects/Paint/include/lineshape.h
+ /Users/akukh/Documents/Projects/Paint/include/multibuffer.hpp
  /Users/akukh/Documents/Projects/Paint/include/renderwindow.h
- /Users/akukh/Documents/Projects/Paint/include/shader.h
  /Users/akukh/Documents/Projects/Paint/include/texture.h
  /Users/akukh/Documents/Projects/Paint/include/vector2.hpp
  /Users/akukh/Documents/Projects/Paint/include/vector3.hpp
  /Users/akukh/Documents/Projects/Paint/include/vertex.h
- /Users/akukh/Documents/Projects/Paint/include/vertexbuffer.h
  /Users/akukh/Documents/Projects/Paint/src/renderwindow.cpp
 CMakeFiles/Paint.dir/src/shader.cpp.o
  ../libs/glad/include/KHR/khrplatform.h
@@ -88,20 +106,10 @@ CMakeFiles/Paint.dir/src/texture.cpp.o
  /Users/akukh/Documents/Projects/Paint/include/drawmode.h
  /Users/akukh/Documents/Projects/Paint/include/texture.h
  /Users/akukh/Documents/Projects/Paint/include/vector3.hpp
- /Users/akukh/Documents/Projects/Paint/libs/stb_image.h
+ /Users/akukh/Documents/Projects/Paint/libs/SOIL/inc/SOIL/SOIL.h
  /Users/akukh/Documents/Projects/Paint/src/texture.cpp
 CMakeFiles/Paint.dir/src/vertex.cpp.o
  /Users/akukh/Documents/Projects/Paint/include/vector2.hpp
  /Users/akukh/Documents/Projects/Paint/include/vector3.hpp
  /Users/akukh/Documents/Projects/Paint/include/vertex.h
  /Users/akukh/Documents/Projects/Paint/src/vertex.cpp
-CMakeFiles/Paint.dir/src/vertexbuffer.cpp.o
- ../libs/glad/include/KHR/khrplatform.h
- ../libs/glad/include/glad/glad.h
- /Users/akukh/Documents/Projects/Paint/include/defines.hpp
- /Users/akukh/Documents/Projects/Paint/include/drawmode.h
- /Users/akukh/Documents/Projects/Paint/include/vector2.hpp
- /Users/akukh/Documents/Projects/Paint/include/vector3.hpp
- /Users/akukh/Documents/Projects/Paint/include/vertex.h
- /Users/akukh/Documents/Projects/Paint/include/vertexbuffer.h
- /Users/akukh/Documents/Projects/Paint/src/vertexbuffer.cpp

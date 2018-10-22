@@ -1,14 +1,14 @@
 #include "../include/keyhandler.h"
 #include "../include/renderwindow.h"
 #include "../include/camera2d.h"
+#include "../include/defines.hpp"
 #include <iostream>
 
 namespace mlg
 {
-// Vector2f KeyHandler::sMouseCoordsPress(0.f, 0.f);
-// Vector2f KeyHandler::sMouseCoordsRelease(0.f, 0.f);
-bool KeyHandler::mouseClicked = false;
-bool KeyHandler::mouseRelease = false;
+
+bool KeyHandler::mouseClicked  = false;
+bool KeyHandler::mouseReleased = false;
 
 void KeyHandler::keyboardCallback(GLFWwindow* window
 		, int key
@@ -19,33 +19,35 @@ void KeyHandler::keyboardCallback(GLFWwindow* window
 {
 	if (key == GLFW_KEY_L && action == GLFW_PRESS)
 	{
-        //g_linesVert.clear();
-        g_linesMode = 1;
+        singleDrawMode.lines_mode = true;
 		singleDrawMode.setMode(DrawMode::LINES_MODE);
 	}
 	else if (key == GLFW_KEY_S && action == GLFW_PRESS)
 	{
-        //g_stripVert.clear();
-        g_stripMode = 1;
 		singleDrawMode.setMode(DrawMode::LINES_STRIP_MODE);
 	}
 	else if (key == GLFW_KEY_B && action == GLFW_PRESS)
 	{
-        //g_brushVert.clear();
-        g_brushMode = 1;
+        KeyHandler::mouseClicked  = false;
+        KeyHandler::mouseReleased = false;
+        singleDrawMode.brush_mode = true;
 		singleDrawMode.setMode(DrawMode::BRUSH_MODE);
 	}
 	else if (key == GLFW_KEY_C && action == GLFW_PRESS)
 	{
-        //g_circleVert.clear();
-        g_circleMode = 1;
+        KeyHandler::mouseClicked  = false;
+        KeyHandler::mouseReleased = false;
+        singleDrawMode.circle_mode = true;
 		singleDrawMode.setMode(DrawMode::CIRCLE_MODE);
 	}
     else if (key == GLFW_KEY_N && action == GLFW_PRESS)
     {
-        //g_vertices.clear();
-        g_bgMode = 1;
+        singleDrawMode.texture_mode = true;
         singleDrawMode.setMode(DrawMode::LOAD_BG_MODE);
+    }
+    else if (key == GLFW_KEY_F1 && action == GLFW_PRESS)
+    {
+        singleDrawMode.setMode(DrawMode::SAVE_MODE);
     }
 }
 
@@ -55,51 +57,42 @@ void KeyHandler::mouseButtonCallback(GLFWwindow* window
 		, int mods
 		)
 {
-	double		xpos  = 0, ypos   = 0;
-	int			width = 0, height = 0;
+	double xpos = .0, ypos = .0;
 	glfwGetCursorPos(window, &xpos, &ypos);
-	glfwGetWindowSize(window, &width, &height);
 	if (scancode == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS)
 	{
-		mouseClicked = true;
-        mouseRelease = false;
-
-        if (singleDrawMode.getModeState() != DrawMode::BRUSH_MODE)
+		KeyHandler::mouseClicked  = true;
+		KeyHandler::mouseReleased = false;
+        if (singleDrawMode.getModeState() != DrawMode::BRUSH_MODE
+		 && singleDrawMode.getModeState() != DrawMode::LOAD_BG_MODE)
         {
-            g_X1 = static_cast<float>( (xpos - (width  / 2)) / (width  / 2));
-            g_Y1 = static_cast<float>(-(ypos - (height / 2)) / (height / 2));
+            g_X1 = static_cast<float>( (xpos - (WIDTH  / 2)) / (WIDTH  / 2));
+            g_Y1 = static_cast<float>(-(ypos - (HEIGHT / 2)) / (HEIGHT / 2));
         }
     }
     else if (action == GLFW_RELEASE)
 	{
-		mouseClicked = false;
+		KeyHandler::mouseClicked  = false;
+		KeyHandler::mouseReleased = true;
 
-        singleDrawMode.setDrawFlag(true);
+		singleDrawMode.setDrawFlag(true);
 
+		if (singleDrawMode.getModeState() != DrawMode::BRUSH_MODE
+		 && singleDrawMode.getModeState() != DrawMode::LOAD_BG_MODE)
+		{
+			g_X2 = static_cast<float>( (xpos - (WIDTH  / 2)) / (WIDTH  / 2));
+			g_Y2 = static_cast<float>(-(ypos - (HEIGHT / 2)) / (HEIGHT / 2));
+		}
+		if (singleDrawMode.getModeState() == DrawMode::LINES_MODE)
+		{
+			g_vertices.push_back(Vector3f(g_X1, g_Y1, 0.f));
+			g_vertices.push_back(Vector3f(g_X2, g_Y2, 0.f));
+		}
 
-        g_X2 = static_cast<float>( (xpos - (width  / 2)) / (width  / 2));
-        g_Y2 = static_cast<float>(-(ypos - (height / 2)) / (height / 2));
-
-        if (singleDrawMode.getModeState() == DrawMode::LINES_MODE)
-        {
-            g_linesVert.push_back(Vector3f(g_X1, g_Y1, 0.f));
-            g_linesVert.push_back(Vector3f(g_X2, g_Y2, 0.f));
-        }
-        else if (singleDrawMode.getModeState() == DrawMode::LINES_STRIP_MODE)
-        {
-            g_stripVert.push_back(Vector3f(g_X1, g_Y1, 0.f));
-        }
-        else if (singleDrawMode.getModeState() == DrawMode::CIRCLE_MODE)
-        {
-            g_circleVert.push_back(Vector3f(g_X1, g_Y1, 0.f));
-            g_circleVert.push_back(Vector3f(g_X2, g_Y2, 0.f));
-        }
-
-        mouseRelease = true;
 	}
 }
 
-void KeyHandler::startKeysTrack(const RenderWindow& window)
+void KeyHandler::startTrack(const RenderWindow& window)
 {
     glfwSetMouseButtonCallback(window.m_window, KeyHandler::mouseButtonCallback);
     glfwSetKeyCallback(window.m_window, KeyHandler::keyboardCallback);

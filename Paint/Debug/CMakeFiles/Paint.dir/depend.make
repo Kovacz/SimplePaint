@@ -8,10 +8,10 @@ CMakeFiles/Paint.dir/src/brush.cpp.o: ../include/circleshape.h
 CMakeFiles/Paint.dir/src/brush.cpp.o: ../include/defines.hpp
 CMakeFiles/Paint.dir/src/brush.cpp.o: ../include/drawmode.h
 CMakeFiles/Paint.dir/src/brush.cpp.o: ../include/keyhandler.h
+CMakeFiles/Paint.dir/src/brush.cpp.o: ../include/lineshape.h
+CMakeFiles/Paint.dir/src/brush.cpp.o: ../include/multibuffer.hpp
 CMakeFiles/Paint.dir/src/brush.cpp.o: ../include/renderwindow.h
-CMakeFiles/Paint.dir/src/brush.cpp.o: ../include/shader.h
 CMakeFiles/Paint.dir/src/brush.cpp.o: ../include/vector3.hpp
-CMakeFiles/Paint.dir/src/brush.cpp.o: ../include/vertexbuffer.h
 CMakeFiles/Paint.dir/src/brush.cpp.o: ../src/brush.cpp
 
 CMakeFiles/Paint.dir/src/camera2d.cpp.o: ../include/camera2d.h
@@ -23,26 +23,41 @@ CMakeFiles/Paint.dir/src/circleshape.cpp.o: ../libs/glad/include/glad/glad.h
 CMakeFiles/Paint.dir/src/circleshape.cpp.o: ../include/circleshape.h
 CMakeFiles/Paint.dir/src/circleshape.cpp.o: ../include/defines.hpp
 CMakeFiles/Paint.dir/src/circleshape.cpp.o: ../include/drawmode.h
-CMakeFiles/Paint.dir/src/circleshape.cpp.o: ../include/shader.h
+CMakeFiles/Paint.dir/src/circleshape.cpp.o: ../include/keyhandler.h
+CMakeFiles/Paint.dir/src/circleshape.cpp.o: ../include/multibuffer.hpp
 CMakeFiles/Paint.dir/src/circleshape.cpp.o: ../include/vector3.hpp
 CMakeFiles/Paint.dir/src/circleshape.cpp.o: ../src/circleshape.cpp
 
 CMakeFiles/Paint.dir/src/drawmode.cpp.o: ../include/drawmode.h
 CMakeFiles/Paint.dir/src/drawmode.cpp.o: ../src/drawmode.cpp
 
+CMakeFiles/Paint.dir/src/keyhandler.cpp.o: ../libs/glad/include/KHR/khrplatform.h
+CMakeFiles/Paint.dir/src/keyhandler.cpp.o: ../libs/glad/include/glad/glad.h
 CMakeFiles/Paint.dir/src/keyhandler.cpp.o: ../include/brush.h
 CMakeFiles/Paint.dir/src/keyhandler.cpp.o: ../include/camera2d.h
 CMakeFiles/Paint.dir/src/keyhandler.cpp.o: ../include/circleshape.h
 CMakeFiles/Paint.dir/src/keyhandler.cpp.o: ../include/defines.hpp
 CMakeFiles/Paint.dir/src/keyhandler.cpp.o: ../include/drawmode.h
 CMakeFiles/Paint.dir/src/keyhandler.cpp.o: ../include/keyhandler.h
+CMakeFiles/Paint.dir/src/keyhandler.cpp.o: ../include/lineshape.h
+CMakeFiles/Paint.dir/src/keyhandler.cpp.o: ../include/multibuffer.hpp
 CMakeFiles/Paint.dir/src/keyhandler.cpp.o: ../include/renderwindow.h
-CMakeFiles/Paint.dir/src/keyhandler.cpp.o: ../include/shader.h
 CMakeFiles/Paint.dir/src/keyhandler.cpp.o: ../include/vector2.hpp
 CMakeFiles/Paint.dir/src/keyhandler.cpp.o: ../include/vector3.hpp
-CMakeFiles/Paint.dir/src/keyhandler.cpp.o: ../include/vertexbuffer.h
 CMakeFiles/Paint.dir/src/keyhandler.cpp.o: ../src/keyhandler.cpp
 
+CMakeFiles/Paint.dir/src/lineshape.cpp.o: ../libs/glad/include/KHR/khrplatform.h
+CMakeFiles/Paint.dir/src/lineshape.cpp.o: ../libs/glad/include/glad/glad.h
+CMakeFiles/Paint.dir/src/lineshape.cpp.o: ../include/defines.hpp
+CMakeFiles/Paint.dir/src/lineshape.cpp.o: ../include/drawmode.h
+CMakeFiles/Paint.dir/src/lineshape.cpp.o: ../include/keyhandler.h
+CMakeFiles/Paint.dir/src/lineshape.cpp.o: ../include/lineshape.h
+CMakeFiles/Paint.dir/src/lineshape.cpp.o: ../include/multibuffer.hpp
+CMakeFiles/Paint.dir/src/lineshape.cpp.o: ../include/vector3.hpp
+CMakeFiles/Paint.dir/src/lineshape.cpp.o: ../src/lineshape.cpp
+
+CMakeFiles/Paint.dir/src/main.cpp.o: ../libs/glad/include/KHR/khrplatform.h
+CMakeFiles/Paint.dir/src/main.cpp.o: ../libs/glad/include/glad/glad.h
 CMakeFiles/Paint.dir/src/main.cpp.o: ../include/brush.h
 CMakeFiles/Paint.dir/src/main.cpp.o: ../include/camera2d.h
 CMakeFiles/Paint.dir/src/main.cpp.o: ../include/circleshape.h
@@ -50,14 +65,17 @@ CMakeFiles/Paint.dir/src/main.cpp.o: ../include/defines.hpp
 CMakeFiles/Paint.dir/src/main.cpp.o: ../include/drawmode.h
 CMakeFiles/Paint.dir/src/main.cpp.o: ../include/graphics.h
 CMakeFiles/Paint.dir/src/main.cpp.o: ../include/keyhandler.h
+CMakeFiles/Paint.dir/src/main.cpp.o: ../include/lineshape.h
+CMakeFiles/Paint.dir/src/main.cpp.o: ../include/multibuffer.hpp
 CMakeFiles/Paint.dir/src/main.cpp.o: ../include/renderwindow.h
 CMakeFiles/Paint.dir/src/main.cpp.o: ../include/shader.h
 CMakeFiles/Paint.dir/src/main.cpp.o: ../include/texture.h
 CMakeFiles/Paint.dir/src/main.cpp.o: ../include/vector2.hpp
 CMakeFiles/Paint.dir/src/main.cpp.o: ../include/vector3.hpp
 CMakeFiles/Paint.dir/src/main.cpp.o: ../include/vertex.h
-CMakeFiles/Paint.dir/src/main.cpp.o: ../include/vertexbuffer.h
 CMakeFiles/Paint.dir/src/main.cpp.o: ../src/main.cpp
+
+CMakeFiles/Paint.dir/src/multibuffer.cpp.o: ../src/multibuffer.cpp
 
 CMakeFiles/Paint.dir/src/renderwindow.cpp.o: ../libs/glad/include/KHR/khrplatform.h
 CMakeFiles/Paint.dir/src/renderwindow.cpp.o: ../libs/glad/include/glad/glad.h
@@ -67,13 +85,13 @@ CMakeFiles/Paint.dir/src/renderwindow.cpp.o: ../include/circleshape.h
 CMakeFiles/Paint.dir/src/renderwindow.cpp.o: ../include/defines.hpp
 CMakeFiles/Paint.dir/src/renderwindow.cpp.o: ../include/drawmode.h
 CMakeFiles/Paint.dir/src/renderwindow.cpp.o: ../include/keyhandler.h
+CMakeFiles/Paint.dir/src/renderwindow.cpp.o: ../include/lineshape.h
+CMakeFiles/Paint.dir/src/renderwindow.cpp.o: ../include/multibuffer.hpp
 CMakeFiles/Paint.dir/src/renderwindow.cpp.o: ../include/renderwindow.h
-CMakeFiles/Paint.dir/src/renderwindow.cpp.o: ../include/shader.h
 CMakeFiles/Paint.dir/src/renderwindow.cpp.o: ../include/texture.h
 CMakeFiles/Paint.dir/src/renderwindow.cpp.o: ../include/vector2.hpp
 CMakeFiles/Paint.dir/src/renderwindow.cpp.o: ../include/vector3.hpp
 CMakeFiles/Paint.dir/src/renderwindow.cpp.o: ../include/vertex.h
-CMakeFiles/Paint.dir/src/renderwindow.cpp.o: ../include/vertexbuffer.h
 CMakeFiles/Paint.dir/src/renderwindow.cpp.o: ../src/renderwindow.cpp
 
 CMakeFiles/Paint.dir/src/shader.cpp.o: ../libs/glad/include/KHR/khrplatform.h
@@ -87,21 +105,11 @@ CMakeFiles/Paint.dir/src/texture.cpp.o: ../include/defines.hpp
 CMakeFiles/Paint.dir/src/texture.cpp.o: ../include/drawmode.h
 CMakeFiles/Paint.dir/src/texture.cpp.o: ../include/texture.h
 CMakeFiles/Paint.dir/src/texture.cpp.o: ../include/vector3.hpp
-CMakeFiles/Paint.dir/src/texture.cpp.o: ../libs/stb_image.h
+CMakeFiles/Paint.dir/src/texture.cpp.o: ../libs/SOIL/inc/SOIL/SOIL.h
 CMakeFiles/Paint.dir/src/texture.cpp.o: ../src/texture.cpp
 
 CMakeFiles/Paint.dir/src/vertex.cpp.o: ../include/vector2.hpp
 CMakeFiles/Paint.dir/src/vertex.cpp.o: ../include/vector3.hpp
 CMakeFiles/Paint.dir/src/vertex.cpp.o: ../include/vertex.h
 CMakeFiles/Paint.dir/src/vertex.cpp.o: ../src/vertex.cpp
-
-CMakeFiles/Paint.dir/src/vertexbuffer.cpp.o: ../libs/glad/include/KHR/khrplatform.h
-CMakeFiles/Paint.dir/src/vertexbuffer.cpp.o: ../libs/glad/include/glad/glad.h
-CMakeFiles/Paint.dir/src/vertexbuffer.cpp.o: ../include/defines.hpp
-CMakeFiles/Paint.dir/src/vertexbuffer.cpp.o: ../include/drawmode.h
-CMakeFiles/Paint.dir/src/vertexbuffer.cpp.o: ../include/vector2.hpp
-CMakeFiles/Paint.dir/src/vertexbuffer.cpp.o: ../include/vector3.hpp
-CMakeFiles/Paint.dir/src/vertexbuffer.cpp.o: ../include/vertex.h
-CMakeFiles/Paint.dir/src/vertexbuffer.cpp.o: ../include/vertexbuffer.h
-CMakeFiles/Paint.dir/src/vertexbuffer.cpp.o: ../src/vertexbuffer.cpp
 

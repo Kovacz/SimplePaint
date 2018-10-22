@@ -1,28 +1,27 @@
 #ifndef CIRCLESHAPE_H
 #define CIRCLESHAPE_H
-#include "../include/shader.h"
-#include "../include/vector3.hpp"
-#include <vector>
+
+#include "../include/defines.hpp"
+#include "../include/multibuffer.hpp"
+
 namespace mlg
 {
 
 class CircleShape
 {
 public:
-    CircleShape();
-
+     CircleShape();
+	~CircleShape();
 //    void createSquareForCircle();
-    void bindBuffers();
-    void onPaint(const Vector3f& view, const float& radius);
-	void redraw();
+	 void render();
+	 void calculate();
+     void updateBuffers();
+protected:
+     void genCircle(const Vector3f& view, const float& radius);	
 private:
-    unsigned    m_circleVBO;
-    unsigned    m_circleVAO;
-    std::vector<Vector3f> m_circleVert;
-//    unsigned    m_circleEBO;
-//    int         m_circleOuterRadius;
-//    int         m_viewDimensions;
-//    Shader      m_circleShaderProgram;
+	 VertexArray  m_vertices;
+	 IndexesArray m_indexes;
+	 MultiBuffer<VBO, VAO, EBO> m_mulBuff;
 };
 
 } // namespace mlg

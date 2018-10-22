@@ -9,7 +9,7 @@ DrawMode &DrawMode::getInstance()
 	return instance;
 }
 
-DrawMode::DrawMode() : m_state(LINES_MODE), m_drawFlag(false)
+DrawMode::DrawMode() : m_state(UNDEFINED), m_drawFlag(false)
 {
 	/*...*/
 }

@@ -298,6 +298,33 @@ src/keyhandler.cpp.s:
 	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/keyhandler.cpp.s
 .PHONY : src/keyhandler.cpp.s
 
+src/lineshape.o: src/lineshape.cpp.o
+
+.PHONY : src/lineshape.o
+
+# target to build an object file
+src/lineshape.cpp.o:
+	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/lineshape.cpp.o
+.PHONY : src/lineshape.cpp.o
+
+src/lineshape.i: src/lineshape.cpp.i
+
+.PHONY : src/lineshape.i
+
+# target to preprocess a source file
+src/lineshape.cpp.i:
+	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/lineshape.cpp.i
+.PHONY : src/lineshape.cpp.i
+
+src/lineshape.s: src/lineshape.cpp.s
+
+.PHONY : src/lineshape.s
+
+# target to generate assembly for a file
+src/lineshape.cpp.s:
+	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/lineshape.cpp.s
+.PHONY : src/lineshape.cpp.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -324,6 +351,33 @@ src/main.s: src/main.cpp.s
 src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
+
+src/multibuffer.o: src/multibuffer.cpp.o
+
+.PHONY : src/multibuffer.o
+
+# target to build an object file
+src/multibuffer.cpp.o:
+	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/multibuffer.cpp.o
+.PHONY : src/multibuffer.cpp.o
+
+src/multibuffer.i: src/multibuffer.cpp.i
+
+.PHONY : src/multibuffer.i
+
+# target to preprocess a source file
+src/multibuffer.cpp.i:
+	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/multibuffer.cpp.i
+.PHONY : src/multibuffer.cpp.i
+
+src/multibuffer.s: src/multibuffer.cpp.s
+
+.PHONY : src/multibuffer.s
+
+# target to generate assembly for a file
+src/multibuffer.cpp.s:
+	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/multibuffer.cpp.s
+.PHONY : src/multibuffer.cpp.s
 
 src/renderwindow.o: src/renderwindow.cpp.o
 
@@ -433,33 +487,6 @@ src/vertex.cpp.s:
 	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/vertex.cpp.s
 .PHONY : src/vertex.cpp.s
 
-src/vertexbuffer.o: src/vertexbuffer.cpp.o
-
-.PHONY : src/vertexbuffer.o
-
-# target to build an object file
-src/vertexbuffer.cpp.o:
-	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/vertexbuffer.cpp.o
-.PHONY : src/vertexbuffer.cpp.o
-
-src/vertexbuffer.i: src/vertexbuffer.cpp.i
-
-.PHONY : src/vertexbuffer.i
-
-# target to preprocess a source file
-src/vertexbuffer.cpp.i:
-	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/vertexbuffer.cpp.i
-.PHONY : src/vertexbuffer.cpp.i
-
-src/vertexbuffer.s: src/vertexbuffer.cpp.s
-
-.PHONY : src/vertexbuffer.s
-
-# target to generate assembly for a file
-src/vertexbuffer.cpp.s:
-	$(MAKE) -f CMakeFiles/Paint.dir/build.make CMakeFiles/Paint.dir/src/vertexbuffer.cpp.s
-.PHONY : src/vertexbuffer.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -488,9 +515,15 @@ help:
 	@echo "... src/keyhandler.o"
 	@echo "... src/keyhandler.i"
 	@echo "... src/keyhandler.s"
+	@echo "... src/lineshape.o"
+	@echo "... src/lineshape.i"
+	@echo "... src/lineshape.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/multibuffer.o"
+	@echo "... src/multibuffer.i"
+	@echo "... src/multibuffer.s"
 	@echo "... src/renderwindow.o"
 	@echo "... src/renderwindow.i"
 	@echo "... src/renderwindow.s"
@@ -503,9 +536,6 @@ help:
 	@echo "... src/vertex.o"
 	@echo "... src/vertex.i"
 	@echo "... src/vertex.s"
-	@echo "... src/vertexbuffer.o"
-	@echo "... src/vertexbuffer.i"
-	@echo "... src/vertexbuffer.s"
 .PHONY : help
 
 

@@ -9,12 +9,13 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/akukh/Documents/Projects/Paint/src/circleshape.cpp" "/Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles/Paint.dir/src/circleshape.cpp.o"
   "/Users/akukh/Documents/Projects/Paint/src/drawmode.cpp" "/Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles/Paint.dir/src/drawmode.cpp.o"
   "/Users/akukh/Documents/Projects/Paint/src/keyhandler.cpp" "/Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles/Paint.dir/src/keyhandler.cpp.o"
+  "/Users/akukh/Documents/Projects/Paint/src/lineshape.cpp" "/Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles/Paint.dir/src/lineshape.cpp.o"
   "/Users/akukh/Documents/Projects/Paint/src/main.cpp" "/Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles/Paint.dir/src/main.cpp.o"
+  "/Users/akukh/Documents/Projects/Paint/src/multibuffer.cpp" "/Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles/Paint.dir/src/multibuffer.cpp.o"
   "/Users/akukh/Documents/Projects/Paint/src/renderwindow.cpp" "/Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles/Paint.dir/src/renderwindow.cpp.o"
   "/Users/akukh/Documents/Projects/Paint/src/shader.cpp" "/Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles/Paint.dir/src/shader.cpp.o"
   "/Users/akukh/Documents/Projects/Paint/src/texture.cpp" "/Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles/Paint.dir/src/texture.cpp.o"
   "/Users/akukh/Documents/Projects/Paint/src/vertex.cpp" "/Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles/Paint.dir/src/vertex.cpp.o"
-  "/Users/akukh/Documents/Projects/Paint/src/vertexbuffer.cpp" "/Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles/Paint.dir/src/vertexbuffer.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
@@ -22,6 +23,7 @@ set(CMAKE_CXX_COMPILER_ID "AppleClang")
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../src"
   "../libs/stb_image"
+  "../libs/SOIL/inc"
   "../libs/glad/include"
   )
 

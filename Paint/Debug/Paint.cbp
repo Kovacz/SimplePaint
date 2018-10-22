@@ -45,6 +45,7 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/Users/akukh/Documents/Projects/Paint/libs/stb_image"/>
+					<Add directory="/Users/akukh/Documents/Projects/Paint/libs/SOIL/inc"/>
 					<Add directory="/Users/akukh/Documents/Projects/Paint/libs/glad/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
@@ -69,6 +70,7 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/Users/akukh/Documents/Projects/Paint/libs/stb_image"/>
+					<Add directory="/Users/akukh/Documents/Projects/Paint/libs/SOIL/inc"/>
 					<Add directory="/Users/akukh/Documents/Projects/Paint/libs/glad/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
@@ -94,6 +96,7 @@
 				<Compiler>
 					<Add directory="/Users/akukh/Documents/Projects/Paint/src"/>
 					<Add directory="/Users/akukh/Documents/Projects/Paint/libs/stb_image"/>
+					<Add directory="/Users/akukh/Documents/Projects/Paint/libs/SOIL/inc"/>
 					<Add directory="/Users/akukh/Documents/Projects/Paint/libs/glad/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
@@ -119,6 +122,7 @@
 				<Compiler>
 					<Add directory="/Users/akukh/Documents/Projects/Paint/src"/>
 					<Add directory="/Users/akukh/Documents/Projects/Paint/libs/stb_image"/>
+					<Add directory="/Users/akukh/Documents/Projects/Paint/libs/SOIL/inc"/>
 					<Add directory="/Users/akukh/Documents/Projects/Paint/libs/glad/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
@@ -157,6 +161,12 @@
 		<Unit filename="/Users/akukh/Documents/Projects/Paint/include/keyhandler.h">
 			<Option target="Paint"/>
 		</Unit>
+		<Unit filename="/Users/akukh/Documents/Projects/Paint/include/lineshape.h">
+			<Option target="Paint"/>
+		</Unit>
+		<Unit filename="/Users/akukh/Documents/Projects/Paint/include/multibuffer.hpp">
+			<Option target="Paint"/>
+		</Unit>
 		<Unit filename="/Users/akukh/Documents/Projects/Paint/include/renderwindow.h">
 			<Option target="Paint"/>
 		</Unit>
@@ -173,9 +183,6 @@
 			<Option target="Paint"/>
 		</Unit>
 		<Unit filename="/Users/akukh/Documents/Projects/Paint/include/vertex.h">
-			<Option target="Paint"/>
-		</Unit>
-		<Unit filename="/Users/akukh/Documents/Projects/Paint/include/vertexbuffer.h">
 			<Option target="Paint"/>
 		</Unit>
 		<Unit filename="/Users/akukh/Documents/Projects/Paint/libs/glad/src/glad.c">
@@ -196,7 +203,13 @@
 		<Unit filename="/Users/akukh/Documents/Projects/Paint/src/keyhandler.cpp">
 			<Option target="Paint"/>
 		</Unit>
+		<Unit filename="/Users/akukh/Documents/Projects/Paint/src/lineshape.cpp">
+			<Option target="Paint"/>
+		</Unit>
 		<Unit filename="/Users/akukh/Documents/Projects/Paint/src/main.cpp">
+			<Option target="Paint"/>
+		</Unit>
+		<Unit filename="/Users/akukh/Documents/Projects/Paint/src/multibuffer.cpp">
 			<Option target="Paint"/>
 		</Unit>
 		<Unit filename="/Users/akukh/Documents/Projects/Paint/src/renderwindow.cpp">
@@ -215,9 +228,6 @@
 			<Option target="Paint"/>
 		</Unit>
 		<Unit filename="/Users/akukh/Documents/Projects/Paint/src/vertex.cpp">
-			<Option target="Paint"/>
-		</Unit>
-		<Unit filename="/Users/akukh/Documents/Projects/Paint/src/vertexbuffer.cpp">
 			<Option target="Paint"/>
 		</Unit>
 		<Unit filename="/Users/akukh/Documents/Projects/Paint/CMakeLists.txt">

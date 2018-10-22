@@ -14,7 +14,8 @@ public:
 		BRUSH_MODE,
         CIRCLE_MODE,
         LOAD_BG_MODE,
-        ZOOM_MODE
+        SAVE_MODE,
+        UNDEFINED,
 	};
 private:
 	DrawMode();
@@ -31,6 +32,11 @@ public:
 private:
 	Mods   m_state;
 	bool   m_drawFlag;
+public:
+    bool   lines_mode   = false;
+    bool   brush_mode   = false;
+    bool   circle_mode  = false;
+    bool   texture_mode = false;
 };
 
 } // namespace mlg
