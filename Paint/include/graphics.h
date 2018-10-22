@@ -1,7 +1,6 @@
 #ifndef GRAPHICS_H
 #define GRAPHICS_H
 
-#include <GLFW/glfw3.h>
 
 #include "../include/vertex.h"
 #include "../include/shader.h"
@@ -10,7 +9,7 @@
 #include "../include/renderwindow.h"
 #include "../include/multibuffer.hpp"
 #include "../include/vector2.hpp"
-#include "../include/drawmode.h"
+#include "../include/globaldefines.h"
 #include "../include/texture.h"
 #include "../include/circleshape.h"
 #include "../include/camera2d.h"

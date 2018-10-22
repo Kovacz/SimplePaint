@@ -34,7 +34,7 @@ int main()
 		mlg::Texture::bind(&texture);
         shaderProg.use();		
         shaderProg.setMat4("model", camera.getModelMat());
-        myWindow.draw();
+        myWindow.draw(texture);
 		myWindow.display();
 	}
 

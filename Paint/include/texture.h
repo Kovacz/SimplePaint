@@ -6,14 +6,16 @@ namespace mlg
 
 class Texture
 {
-	typedef unsigned char byte;
+    typedef unsigned char byte;
 public:
 	Texture();
 	Texture(const char* texture_path);
    ~Texture();
 
     void update() const;
-	void generate() const;
+    void generate();
+    void render() const;
+    void save();
 	unsigned getNativeHandle() const noexcept;
 	unsigned getWidth() const noexcept;
 	unsigned getHeight() const noexcept;
@@ -27,6 +29,9 @@ private:
 	int			m_height;
 	int			m_nrChannels;
 	unsigned	m_textureID;
+    unsigned    m_VAO = 0,
+                m_VBO = 0,
+                m_EBO = 0;
 	float		m_vertices[32] =
 	{
 		 // Positions         // Colors           // Texture Coords

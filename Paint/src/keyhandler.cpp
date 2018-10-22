@@ -1,7 +1,8 @@
 #include "../include/keyhandler.h"
 #include "../include/renderwindow.h"
-#include "../include/camera2d.h"
+#include "../include/globaldefines.h"
 #include "../include/defines.hpp"
+#include "../include/camera2d.h"
 #include <iostream>
 
 namespace mlg
@@ -19,23 +20,35 @@ void KeyHandler::keyboardCallback(GLFWwindow* window
 {
 	if (key == GLFW_KEY_L && action == GLFW_PRESS)
 	{
-		singleDrawMode.setMode(DrawMode::LINES_MODE);
+        singleGlobalDefines.lines_mode = true;
+		singleGlobalDefines.setMode(GlobalDefines::LINES_MODE);
 	}
 	else if (key == GLFW_KEY_S && action == GLFW_PRESS)
 	{
-		singleDrawMode.setMode(DrawMode::LINES_STRIP_MODE);
+		singleGlobalDefines.setMode(GlobalDefines::LINES_STRIP_MODE);
 	}
 	else if (key == GLFW_KEY_B && action == GLFW_PRESS)
 	{
-		singleDrawMode.setMode(DrawMode::BRUSH_MODE);
+        KeyHandler::mouseClicked  = false;
+        KeyHandler::mouseReleased = false;
+        singleGlobalDefines.brush_mode = true;
+		singleGlobalDefines.setMode(GlobalDefines::BRUSH_MODE);
 	}
 	else if (key == GLFW_KEY_C && action == GLFW_PRESS)
 	{
-		singleDrawMode.setMode(DrawMode::CIRCLE_MODE);
+        KeyHandler::mouseClicked  = false;
+        KeyHandler::mouseReleased = false;
+        singleGlobalDefines.circle_mode = true;
+		singleGlobalDefines.setMode(GlobalDefines::CIRCLE_MODE);
 	}
     else if (key == GLFW_KEY_N && action == GLFW_PRESS)
     {
-        singleDrawMode.setMode(DrawMode::LOAD_BG_MODE);
+        singleGlobalDefines.texture_mode = true;
+        singleGlobalDefines.setMode(GlobalDefines::LOAD_BG_MODE);
+    }
+    else if (key == GLFW_KEY_F1 && action == GLFW_PRESS)
+    {
+        singleGlobalDefines.setMode(GlobalDefines::SAVE_MODE);
     }
 }
 
@@ -51,11 +64,10 @@ void KeyHandler::mouseButtonCallback(GLFWwindow* window
 	{
 		KeyHandler::mouseClicked  = true;
 		KeyHandler::mouseReleased = false;
-        if (singleDrawMode.getModeState() != DrawMode::BRUSH_MODE
-		 && singleDrawMode.getModeState() != DrawMode::LOAD_BG_MODE)
+        if (singleGlobalDefines.getModeState() != GlobalDefines::BRUSH_MODE
+		 && singleGlobalDefines.getModeState() != GlobalDefines::LOAD_BG_MODE)
         {
-            g_X1 = static_cast<float>( (xpos - (WIDTH  / 2)) / (WIDTH  / 2));
-            g_Y1 = static_cast<float>(-(ypos - (HEIGHT / 2)) / (HEIGHT / 2));
+			singleGlobalDefines.mouseClickedCoords = get_2d_ndc_coord(xpos, ypos);
         }
     }
     else if (action == GLFW_RELEASE)
@@ -63,23 +75,18 @@ void KeyHandler::mouseButtonCallback(GLFWwindow* window
 		KeyHandler::mouseClicked  = false;
 		KeyHandler::mouseReleased = true;
 
-// 		if (singleDrawMode.getModeState() != DrawMode::LINES_MODE
-// 		 || singleDrawMode.getModeState() != DrawMode::CIRCLE_MODE)
-// 		{
-		singleDrawMode.setDrawFlag(true);
+		singleGlobalDefines.setDrawFlag(true);
 
-		if (singleDrawMode.getModeState() != DrawMode::BRUSH_MODE
-		 && singleDrawMode.getModeState() != DrawMode::LOAD_BG_MODE)
+		if (singleGlobalDefines.getModeState() != GlobalDefines::BRUSH_MODE
+		 && singleGlobalDefines.getModeState() != GlobalDefines::LOAD_BG_MODE)
 		{
-			g_X2 = static_cast<float>( (xpos - (WIDTH  / 2)) / (WIDTH  / 2));
-			g_Y2 = static_cast<float>(-(ypos - (HEIGHT / 2)) / (HEIGHT / 2));
+			singleGlobalDefines.mouseReleasedCoords = get_2d_ndc_coord(xpos, ypos);
 		}
-		if (singleDrawMode.getModeState() == DrawMode::LINES_MODE)
+		if (singleGlobalDefines.getModeState() == GlobalDefines::LINES_MODE)
 		{
-			g_vertices.push_back(Vector3f(g_X1, g_Y1, 0.f));
-			g_vertices.push_back(Vector3f(g_X2, g_Y2, 0.f));
+			singleGlobalDefines.linesVertArray.push_back(singleGlobalDefines.mouseClickedCoords);
+			singleGlobalDefines.linesVertArray.push_back(singleGlobalDefines.mouseReleasedCoords);
 		}
-
 	}
 }
 
@@ -110,13 +117,5 @@ void KeyHandler::startMouseTrack(const RenderWindow& window)
 {
 	glfwSetMouseButtonCallback(window.m_window, KeyHandler::mouseButtonCallback);
 }
-
-// std::pair<Vector2f, Vector2f> KeyHandler::getLocalMouseCoords(const Vector2f& screenCoords)
-// {
-// 	return std::make_pair(Vector2f((sMouseCoordsPress.x - (screenCoords.x / 2)) / (screenCoords.x / 2),
-// 				                   (sMouseCoordsPress.y - (screenCoords.y / 2)) / (screenCoords.y / 2)),
-// 					      Vector2f((sMouseCoordsRelease.x - (screenCoords.x / 2)) / (screenCoords.x / 2),
-// 							       (sMouseCoordsRelease.y - (screenCoords.y / 2)) / (screenCoords.y / 2)));
-// }
 
 }

@@ -1,12 +1,14 @@
 #ifndef MULTIBUFFER_HPP
 #define MULTIBUFFER_HPP
 
-//#include <glad/glad.h>
-#include <cstddef>
+
+#include <glad/glad.h>
 #include "../include/defines.hpp"
+#include <cstddef>
 
 namespace mlg
 {
+
 struct Vertex;
 
 enum BufferTypes
@@ -47,6 +49,9 @@ private:
 	unsigned m_vertexArrayHandler;
 	unsigned m_elementBuffHandler;
 };
+
+
+
 
 template<BufferTypes T, BufferTypes ...Args>
 MultiBuffer<T, Args...>::MultiBuffer()

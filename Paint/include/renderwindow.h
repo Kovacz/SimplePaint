@@ -22,36 +22,27 @@ public:
 	 RenderWindow(int width, int height, const char* windowName);
 	~RenderWindow();
 
-	 void draw();	 
+     void draw();
+     void draw(Texture& texture);
+     void draw(const Vertex* vertices);
 	 void close()   const;
 	 void create();
 	 bool isOpen()  const;
 	 void display() const;
-	 
-
-
-
-
-     void draw(const Texture& texture, CircleShape& circle) const;
-	 void draw(const Vertex* vertices) const;
-	 void draw(Brush& brush);
-	 
-
-	 
+	 	 
 	 void setBgColor(const float& r, const float& g, const float& b, const float& a) const noexcept;
 	 GLFWwindow* getGLFWwindow() const noexcept;
 protected:
 	 bool gladLoad() const;
-public:
+private:
 	 int             m_width;
 	 int             m_height;
 	 const char*     m_cWindowName;
 	 GLFWwindow*     m_window;
-
+public:
 	 Brush*			 m_brush;
 	 LineShape*		 m_lineShape;
 	 CircleShape*    m_circleShape;
-	//VertexBufferArray	m_vbo;
 };
 
 } // namespace mlg

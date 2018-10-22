@@ -23,7 +23,7 @@ void Brush::pullVertices(GLFWwindow* window)
 {
 	if (KeyHandler::mouseClicked)
 	{
-		singleDrawMode.setDrawFlag(true);
+		singleGlobalDefines.setDrawFlag(true);
 		glfwGetCursorPos(window, &this->m_positionX, &this->m_positionY);
 
 		this->m_indexes.push_back(this->m_vertices.size());

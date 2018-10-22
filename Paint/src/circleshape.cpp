@@ -33,10 +33,10 @@ void CircleShape::render()
 }
 void CircleShape::calculate()
 {	
-	if (KeyHandler::mouseReleased)
+    if (KeyHandler::mouseReleased)
 	{
-		this->genCircle(Vector3f(g_X1, g_Y1, .0f),
-			vecDistance(Vector3f(g_X1, g_Y1, .0f), Vector3f(g_X2, g_Y2, .0f))
+		this->genCircle(singleGlobalDefines.mouseClickedCoords,
+			vecDistance(singleGlobalDefines.mouseClickedCoords, singleGlobalDefines.mouseReleasedCoords)
 		);
 	}
 }

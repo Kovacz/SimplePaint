@@ -1,4 +1,3 @@
-#include "glad/glad.h"
 #include "../include/lineshape.h"
 #include "../include/keyhandler.h"
 
@@ -16,12 +15,12 @@ LineShape::~LineShape()
 }
 void LineShape::updateBuffers()
 {
-	this->m_mulBuff.update(g_vertices);
+	this->m_mulBuff.update(singleGlobalDefines.linesVertArray);
 }
 void LineShape::render() const
 {
 	glBindVertexArray(this->m_mulBuff.getArrayHandle());
-	glDrawArrays(GL_LINES, 0, g_vertices.size());
+	glDrawArrays(GL_LINES, 0, singleGlobalDefines.linesVertArray.size());
 	glBindVertexArray(0);
 }
 
