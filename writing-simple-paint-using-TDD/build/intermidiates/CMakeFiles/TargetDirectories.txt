@@ -1,0 +1,4 @@
+/Users/akukh/Documents/Projects/writing-simple-paint-using-TDD/build/intermidiates/CMakeFiles/rebuild_cache.dir
+/Users/akukh/Documents/Projects/writing-simple-paint-using-TDD/build/intermidiates/CMakeFiles/edit_cache.dir
+/Users/akukh/Documents/Projects/writing-simple-paint-using-TDD/build/intermidiates/CMakeFiles/GLAD.dir
+/Users/akukh/Documents/Projects/writing-simple-paint-using-TDD/build/intermidiates/CMakeFiles/SimplePaint.dir

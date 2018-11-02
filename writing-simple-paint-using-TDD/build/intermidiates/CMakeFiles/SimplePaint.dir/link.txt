@@ -1,0 +1,1 @@
+/usr/bin/g++   -std=c++17 -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -lglfw -framework Cocoa -framework OpenGL -framework IOKit -framework CoreVideo CMakeFiles/SimplePaint.dir/src/main.cpp.o CMakeFiles/SimplePaint.dir/src/renderwindow.cpp.o  -o build/bin/SimplePaint ../../external/SOIL/libsoil.a libGLAD.a 
