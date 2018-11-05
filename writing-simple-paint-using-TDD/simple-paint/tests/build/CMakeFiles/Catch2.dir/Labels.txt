@@ -1,0 +1,14 @@
+# Target labels
+ Catch2
+# Source files and their labels
+/Users/akukh/Documents/Projects/writing-simple-paint-using-TDD/tests/build/CMakeFiles/Catch2
+/Users/akukh/Documents/Projects/writing-simple-paint-using-TDD/tests/build/CMakeFiles/Catch2.rule
+/Users/akukh/Documents/Projects/writing-simple-paint-using-TDD/tests/build/CMakeFiles/Catch2-complete.rule
+/Users/akukh/Documents/Projects/writing-simple-paint-using-TDD/tests/build/Catch2-prefix/src/Catch2-stamp/Catch2-install.rule
+/Users/akukh/Documents/Projects/writing-simple-paint-using-TDD/tests/build/Catch2-prefix/src/Catch2-stamp/Catch2-mkdir.rule
+/Users/akukh/Documents/Projects/writing-simple-paint-using-TDD/tests/build/Catch2-prefix/src/Catch2-stamp/Catch2-download.rule
+/Users/akukh/Documents/Projects/writing-simple-paint-using-TDD/tests/build/Catch2-prefix/src/Catch2-stamp/Catch2-update.rule
+/Users/akukh/Documents/Projects/writing-simple-paint-using-TDD/tests/build/Catch2-prefix/src/Catch2-stamp/Catch2-patch.rule
+/Users/akukh/Documents/Projects/writing-simple-paint-using-TDD/tests/build/Catch2-prefix/src/Catch2-stamp/Catch2-configure.rule
+/Users/akukh/Documents/Projects/writing-simple-paint-using-TDD/tests/build/Catch2-prefix/src/Catch2-stamp/Catch2-build.rule
+/Users/akukh/Documents/Projects/writing-simple-paint-using-TDD/tests/build/Catch2-prefix/src/Catch2-stamp/Catch2-test.rule

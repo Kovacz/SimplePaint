@@ -1,0 +1,2 @@
+/usr/bin/ar qc libOutside.a  CMakeFiles/Outside.dir/__/src/main.cpp.o CMakeFiles/Outside.dir/__/src/renderwindow.cpp.o CMakeFiles/Outside.dir/__/src/opengl.cpp.o
+/usr/bin/ranlib libOutside.a

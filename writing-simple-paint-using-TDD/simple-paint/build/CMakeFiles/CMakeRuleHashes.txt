@@ -1,0 +1,21 @@
+# Hashes of file build rules.
+d85c7c4b696b160b1b768988664c3063 tests/CMakeFiles/Catch2
+33616004772789a837e4baa478ded47c tests/CMakeFiles/Catch2-complete
+d85c7c4b696b160b1b768988664c3063 tests/CMakeFiles/GLM
+2b7544c3660a078fe62ae493f44c0201 tests/CMakeFiles/GLM-complete
+df24c101ec51dc2ffc2b401e5ef995cb tests/Catch2-prefix/src/Catch2-stamp/Catch2-build
+a634154a52c9eb8cc780f9a523b92731 tests/Catch2-prefix/src/Catch2-stamp/Catch2-configure
+f8795c1c54b1ae94b24c0e2d1a58cc4f tests/Catch2-prefix/src/Catch2-stamp/Catch2-download
+92dbaac44a89d04b417eb0b759af43d4 tests/Catch2-prefix/src/Catch2-stamp/Catch2-install
+e51715b33059edd8951701f8e20cdeae tests/Catch2-prefix/src/Catch2-stamp/Catch2-mkdir
+924fbe0f76a967ea16a832f3e807a2ba tests/Catch2-prefix/src/Catch2-stamp/Catch2-patch
+a8a4cff5ada3bde171361ddc34d4bdcf tests/Catch2-prefix/src/Catch2-stamp/Catch2-test
+cececc9e43016697136eec5e64f9d6c1 tests/Catch2-prefix/src/Catch2-stamp/Catch2-update
+6b9e540e37e9b0345000ce86179e4080 tests/GLM-prefix/src/GLM-stamp/GLM-build
+24e4cbb51e61142f558d1c82872d1d33 tests/GLM-prefix/src/GLM-stamp/GLM-configure
+ba2921f4170612f455b8e671d43b6208 tests/GLM-prefix/src/GLM-stamp/GLM-download
+161d6c10106718a4463a554b447c39fa tests/GLM-prefix/src/GLM-stamp/GLM-install
+8bc3d394fb9e20da2f1d033acdef537c tests/GLM-prefix/src/GLM-stamp/GLM-mkdir
+ffceeeb2df40a0e8c5c77ee3bf2107bd tests/GLM-prefix/src/GLM-stamp/GLM-patch
+32d7037e37dc1a57ce168e95d55bb290 tests/GLM-prefix/src/GLM-stamp/GLM-test
+84061a0e2ca5ebcf0349eb6b829357a2 tests/GLM-prefix/src/GLM-stamp/GLM-update

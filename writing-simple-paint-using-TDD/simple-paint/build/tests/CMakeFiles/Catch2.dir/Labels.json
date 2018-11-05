@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/Users/akukh/Documents/Projects/simple-paint/build/tests/CMakeFiles/Catch2"
+		},
+		{
+			"file" : "/Users/akukh/Documents/Projects/simple-paint/build/tests/CMakeFiles/Catch2.rule"
+		},
+		{
+			"file" : "/Users/akukh/Documents/Projects/simple-paint/build/tests/CMakeFiles/Catch2-complete.rule"
+		},
+		{
+			"file" : "/Users/akukh/Documents/Projects/simple-paint/build/tests/Catch2-prefix/src/Catch2-stamp/Catch2-install.rule"
+		},
+		{
+			"file" : "/Users/akukh/Documents/Projects/simple-paint/build/tests/Catch2-prefix/src/Catch2-stamp/Catch2-mkdir.rule"
+		},
+		{
+			"file" : "/Users/akukh/Documents/Projects/simple-paint/build/tests/Catch2-prefix/src/Catch2-stamp/Catch2-download.rule"
+		},
+		{
+			"file" : "/Users/akukh/Documents/Projects/simple-paint/build/tests/Catch2-prefix/src/Catch2-stamp/Catch2-update.rule"
+		},
+		{
+			"file" : "/Users/akukh/Documents/Projects/simple-paint/build/tests/Catch2-prefix/src/Catch2-stamp/Catch2-patch.rule"
+		},
+		{
+			"file" : "/Users/akukh/Documents/Projects/simple-paint/build/tests/Catch2-prefix/src/Catch2-stamp/Catch2-configure.rule"
+		},
+		{
+			"file" : "/Users/akukh/Documents/Projects/simple-paint/build/tests/Catch2-prefix/src/Catch2-stamp/Catch2-build.rule"
+		},
+		{
+			"file" : "/Users/akukh/Documents/Projects/simple-paint/build/tests/Catch2-prefix/src/Catch2-stamp/Catch2-test.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"Catch2"
+		],
+		"name" : "Catch2"
+	}
+}

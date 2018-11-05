@@ -1,0 +1,47 @@
+[
+{
+  "directory": "/Users/akukh/Documents/Projects/simple-paint/build",
+  "command": "/usr/bin/clang  -I/Users/akukh/Documents/Projects/simple-paint/external/glad/include  -g   -o CMakeFiles/GLAD.dir/external/glad/src/glad.c.o   -c /Users/akukh/Documents/Projects/simple-paint/external/glad/src/glad.c",
+  "file": "/Users/akukh/Documents/Projects/simple-paint/external/glad/src/glad.c"
+},
+{
+  "directory": "/Users/akukh/Documents/Projects/simple-paint/build",
+  "command": "/usr/bin/clang++   -I/Users/akukh/Documents/Projects/simple-paint/include -I/Users/akukh/Documents/Projects/simple-paint/tests/../src -I/Users/akukh/Documents/Projects/simple-paint/tests/../external/glm-0.9.4.6 -I/Users/akukh/Documents/Projects/simple-paint/external/glad/include   -std=c++17 -g   -std=gnu++1z -o CMakeFiles/SimplePaint.dir/src/main.cpp.o -c /Users/akukh/Documents/Projects/simple-paint/src/main.cpp",
+  "file": "/Users/akukh/Documents/Projects/simple-paint/src/main.cpp"
+},
+{
+  "directory": "/Users/akukh/Documents/Projects/simple-paint/build",
+  "command": "/usr/bin/clang++   -I/Users/akukh/Documents/Projects/simple-paint/include -I/Users/akukh/Documents/Projects/simple-paint/tests/../src -I/Users/akukh/Documents/Projects/simple-paint/tests/../external/glm-0.9.4.6 -I/Users/akukh/Documents/Projects/simple-paint/external/glad/include   -std=c++17 -g   -std=gnu++1z -o CMakeFiles/SimplePaint.dir/src/opengl.cpp.o -c /Users/akukh/Documents/Projects/simple-paint/src/opengl.cpp",
+  "file": "/Users/akukh/Documents/Projects/simple-paint/src/opengl.cpp"
+},
+{
+  "directory": "/Users/akukh/Documents/Projects/simple-paint/build",
+  "command": "/usr/bin/clang++   -I/Users/akukh/Documents/Projects/simple-paint/include -I/Users/akukh/Documents/Projects/simple-paint/tests/../src -I/Users/akukh/Documents/Projects/simple-paint/tests/../external/glm-0.9.4.6 -I/Users/akukh/Documents/Projects/simple-paint/external/glad/include   -std=c++17 -g   -std=gnu++1z -o CMakeFiles/SimplePaint.dir/src/renderwindow.cpp.o -c /Users/akukh/Documents/Projects/simple-paint/src/renderwindow.cpp",
+  "file": "/Users/akukh/Documents/Projects/simple-paint/src/renderwindow.cpp"
+},
+{
+  "directory": "/Users/akukh/Documents/Projects/simple-paint/build/tests",
+  "command": "/usr/bin/clang++   -I/Users/akukh/Documents/Projects/simple-paint -I/Users/akukh/Documents/Projects/simple-paint/include -I/Users/akukh/Documents/Projects/simple-paint/tests/../external/Catch2-master/single_include   -std=c++17 -g   -o CMakeFiles/SimplePaint_UnitTests.dir/renderwindow_test.cpp.o -c /Users/akukh/Documents/Projects/simple-paint/tests/renderwindow_test.cpp",
+  "file": "/Users/akukh/Documents/Projects/simple-paint/tests/renderwindow_test.cpp"
+},
+{
+  "directory": "/Users/akukh/Documents/Projects/simple-paint/build/tests",
+  "command": "/usr/bin/clang++   -I/Users/akukh/Documents/Projects/simple-paint -I/Users/akukh/Documents/Projects/simple-paint/include -I/Users/akukh/Documents/Projects/simple-paint/tests/../external/Catch2-master/single_include   -std=c++17 -g   -o CMakeFiles/SimplePaint_UnitTests.dir/main.cpp.o -c /Users/akukh/Documents/Projects/simple-paint/tests/main.cpp",
+  "file": "/Users/akukh/Documents/Projects/simple-paint/tests/main.cpp"
+},
+{
+  "directory": "/Users/akukh/Documents/Projects/simple-paint/build/tests",
+  "command": "/usr/bin/clang++   -I/Users/akukh/Documents/Projects/simple-paint -I/Users/akukh/Documents/Projects/simple-paint/include   -std=c++17 -g   -o CMakeFiles/Outside.dir/__/src/main.cpp.o -c /Users/akukh/Documents/Projects/simple-paint/src/main.cpp",
+  "file": "/Users/akukh/Documents/Projects/simple-paint/src/main.cpp"
+},
+{
+  "directory": "/Users/akukh/Documents/Projects/simple-paint/build/tests",
+  "command": "/usr/bin/clang++   -I/Users/akukh/Documents/Projects/simple-paint -I/Users/akukh/Documents/Projects/simple-paint/include   -std=c++17 -g   -o CMakeFiles/Outside.dir/__/src/renderwindow.cpp.o -c /Users/akukh/Documents/Projects/simple-paint/src/renderwindow.cpp",
+  "file": "/Users/akukh/Documents/Projects/simple-paint/src/renderwindow.cpp"
+},
+{
+  "directory": "/Users/akukh/Documents/Projects/simple-paint/build/tests",
+  "command": "/usr/bin/clang++   -I/Users/akukh/Documents/Projects/simple-paint -I/Users/akukh/Documents/Projects/simple-paint/include   -std=c++17 -g   -o CMakeFiles/Outside.dir/__/src/opengl.cpp.o -c /Users/akukh/Documents/Projects/simple-paint/src/opengl.cpp",
+  "file": "/Users/akukh/Documents/Projects/simple-paint/src/opengl.cpp"
+}
+]

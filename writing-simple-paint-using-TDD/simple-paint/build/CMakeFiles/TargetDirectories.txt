@@ -1,0 +1,10 @@
+/Users/akukh/Documents/Projects/simple-paint/build/CMakeFiles/rebuild_cache.dir
+/Users/akukh/Documents/Projects/simple-paint/build/CMakeFiles/edit_cache.dir
+/Users/akukh/Documents/Projects/simple-paint/build/CMakeFiles/GLAD.dir
+/Users/akukh/Documents/Projects/simple-paint/build/CMakeFiles/SimplePaint.dir
+/Users/akukh/Documents/Projects/simple-paint/build/tests/CMakeFiles/SimplePaint_UnitTests.dir
+/Users/akukh/Documents/Projects/simple-paint/build/tests/CMakeFiles/rebuild_cache.dir
+/Users/akukh/Documents/Projects/simple-paint/build/tests/CMakeFiles/Outside.dir
+/Users/akukh/Documents/Projects/simple-paint/build/tests/CMakeFiles/GLM.dir
+/Users/akukh/Documents/Projects/simple-paint/build/tests/CMakeFiles/edit_cache.dir
+/Users/akukh/Documents/Projects/simple-paint/build/tests/CMakeFiles/Catch2.dir
