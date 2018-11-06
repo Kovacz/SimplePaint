@@ -1,1 +1,0 @@
-/usr/bin/clang++   -std=c++17 -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -lglfw -framework Cocoa -framework OpenGL -framework IOKit -framework CoreVideo CMakeFiles/SimplePaint_UnitTests.dir/renderwindow_test.cpp.o CMakeFiles/SimplePaint_UnitTests.dir/main.cpp.o  -o ../bin/SimplePaint_UnitTests libOutside.a 

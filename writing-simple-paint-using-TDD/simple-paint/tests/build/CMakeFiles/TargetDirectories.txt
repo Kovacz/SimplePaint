@@ -1,6 +1,0 @@
-/Users/akukh/Documents/Projects/writing-simple-paint-using-TDD/tests/build/CMakeFiles/rebuild_cache.dir
-/Users/akukh/Documents/Projects/writing-simple-paint-using-TDD/tests/build/CMakeFiles/SimplePaint_UnitTests.dir
-/Users/akukh/Documents/Projects/writing-simple-paint-using-TDD/tests/build/CMakeFiles/Catch2.dir
-/Users/akukh/Documents/Projects/writing-simple-paint-using-TDD/tests/build/CMakeFiles/edit_cache.dir
-/Users/akukh/Documents/Projects/writing-simple-paint-using-TDD/tests/build/CMakeFiles/SimplePaint.dir
-/Users/akukh/Documents/Projects/writing-simple-paint-using-TDD/tests/build/CMakeFiles/GLM.dir
