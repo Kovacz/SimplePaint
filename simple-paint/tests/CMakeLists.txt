@@ -1,8 +1,13 @@
-include_directories(${PROJECT_SOURCE_DIR})
+cmake_minimum_required(VERSION 3.11 FATAL_ERROR)
 
 project(SimplePaint_UnitTests)
+find_package(glfw3 REQUIRED)
+find_package(OpenGL REQUIRED)
+find_library(COCOA_LIBRARY Cocoa)
+find_library(IOKIT_LIBRARY IOKit REQUIRED)
+find_library(COREVID_LIBRARY CoreVideo REQUIRED)
+# This module will be used for downloading third party code.
 include(ExternalProject)
-include_directories(${INCLUDE_DIR})
 
 set(THIRDPARTY "${CMAKE_CURRENT_SOURCE_DIR}/../external")
 
@@ -64,16 +69,25 @@ set(GLM_INCLUDE_DIRS "${THIRDPARTY}/glm-0.9.4.6")
 # Static library, built from project source code.
 ########################################################################################################################
 
-add_library(Outside STATIC
+add_library(SimplePaint STATIC
 
+    "${THIRDPARTY}/glad/src/glad.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/../src/main.cpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/../src/window.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../src/scene.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../src/texture.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../src/shader.cpp"
     )
 
-target_include_directories(SimplePaint
-    PUBLIC
-        "${CMAKE_CURRENT_SOURCE_DIR}/../src"
-        "${GLM_INCLUDE_DIRS}")
+target_include_directories(SimplePaint PUBLIC
+
+#    "${THIRDPARTY}/SOIL/inc/SOIL"
+#    "${THIRDPARTY}/SOIL/src"
+    "${THIRDPARTY}/glad/include"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../include"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../src"
+    "${GLM_INCLUDE_DIRS}"
+    )
 
 target_compile_features(SimplePaint PUBLIC cxx_std_17)
 
@@ -85,14 +99,19 @@ add_dependencies(SimplePaint GLM)
 
 add_executable(${PROJECT_NAME}
 
+    "${CMAKE_CURRENT_SOURCE_DIR}/scene_test.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/shader_test.cpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/window_test.cpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/main.cpp"
     )
 
 target_include_directories(${PROJECT_NAME} PRIVATE ${Catch2_INCLUDE_DIR})
 
-target_link_libraries(${PROJECT_NAME} Outside)
 
-add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD COMMAND "$<TARGET_FILE:${PROJECT_NAME}>")
+set(SOIL "${CMAKE_CURRENT_SOURCE_DIR}/../external/SOIL/libsoil.a")
+target_link_libraries(${PROJECT_NAME} glfw SimplePaint ${SOIL})
+target_link_libraries(${PROJECT_NAME} ${COCOA_LIBRARY} ${OPENGL_LIBRARIES} ${IOKIT_LIBRARY} ${COREVID_LIBRARY})
+
+#add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD COMMAND "$<TARGET_FILE:${PROJECT_NAME}>")
 
 add_dependencies(${PROJECT_NAME} Catch2)

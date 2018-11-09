@@ -1,9 +1,17 @@
-#include "window.h"
+#include "scene.h"
 
-using namespace mlg;
+using namespace mlg::Graphics;
 
 int main()
 {
-    mlg::System::Window window(800, 800, "Paint");
+    auto scene = Scene::make_scene();
+    scene.load();
+
+
+    /*
+    auto renderer = Renderer::make_renderer();
+    renderer.render(scene);
+    */
+
     return 0;
 }

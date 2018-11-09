@@ -1,5 +1,11 @@
 #include "window.h"
+#include <glad/glad.h>
 #include <iostream>
+
+inline void framebuffer_size_callback(GLFWwindow*, int width, int height)
+{
+    glViewport(0, 0, width, height);
+}
 
 namespace mlg
 {
@@ -7,13 +13,13 @@ namespace mlg
 namespace System
 {
 
-Window::Window(unsigned width, unsigned height, char const* name)
+Window::Window(int width, int height, char const* name)
         : m_width(width)
         , m_height(height)
         , m_name(name)
 {
     if (GLFW_FALSE == glfwInit()) {
-        throw "RenderWindow::RenderWindow - glfwInit() function fails";
+        throw "RenderWindow::RenderWindow - glfwInit() function fails\n";
     }
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
@@ -33,17 +39,17 @@ void Window::close() const noexcept
     glfwTerminate();
 }
 
-void Window::create()
+void Window::create() 
 {
     if (!m_width || !m_height || !m_name) {
         glfwTerminate();
-        throw "RenderWindow::create - invalid input parameters";
+        throw "RenderWindow::create - invalid input parameters\n";
     }
 
     m_handle = glfwCreateWindow(m_width, m_height, m_name, nullptr, nullptr);
 	if (nullptr == m_handle) {
 		glfwTerminate();
-        throw "RenderWindow::create - failed to create GLFW window";
+        throw "RenderWindow::create - failed to create GLFW window\n";
 	}
     glfwMakeContextCurrent(m_handle);
 }
@@ -51,6 +57,11 @@ void Window::create()
 bool Window::isOpen() const noexcept
 {
     return !glfwWindowShouldClose(m_handle);
+}
+
+void Window::setFramebufferSizeCallback() const noexcept
+{
+    glfwSetFramebufferSizeCallback(m_handle, framebuffer_size_callback);
 }
 
 Window::handle Window::getHandle() const noexcept
