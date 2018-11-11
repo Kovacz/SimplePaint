@@ -15,7 +15,7 @@ namespace Graphics
 Scene::Scene()
 {    
     try {
-        m_pWindow = new System::Window(800, 800, "Paint");
+        m_pWindow = new System::Window(800, 600, "Paint");
         m_pWindow->create(); 
         m_pWindow->setFramebufferSizeCallback();
         this->gladInit();
@@ -32,6 +32,10 @@ Scene::~Scene() noexcept
 {    
     delete m_pWindow;
     delete m_pTexture;
+}
+Scene::operator bool() const noexcept
+{
+	return m_pWindow->isOpen();
 }
 
 Scene Scene::make_scene()
@@ -65,7 +69,11 @@ bool Scene::load() noexcept
 
 void Scene::onDraw()
 {
-
+	Graphics::Texture::bind(m_pTexture);
+	m_shaderProgram.run();
+	//shaderProg.setMat4("model", camera.getModelMat());
+	//myWindow.draw(texture);
+	//myWindow.display();
 }
 
 void Scene::onUpdate()

@@ -13,10 +13,10 @@ namespace Graphics
 
 class Scene 
 {
-    using resources = std::tuple<System::Window*, Graphics::Texture*>;
 public:
     Scene();
     ~Scene() noexcept;
+	explicit operator bool() const noexcept;
     
     void onDraw();
     void onUpdate();   
@@ -25,10 +25,13 @@ public:
     void display() const noexcept;
     void setBgColor(float const& r, float const& g, float const& b, float const& a) const noexcept;
 public:
+	// smoothly creating
     static Scene make_scene();
-private:    
+private:  
+	// "self use" only
     void gladInit() const;
-private:    
+private: 
+	// here components
     Graphics::Camera m_camera;
     Graphics::ShaderBuilder m_shaderProgram;
     Graphics::Texture* m_pTexture {nullptr};

@@ -1,5 +1,5 @@
 #include "texture.h"
-#include "../external/SOIL/inc/SOIL/SOIL.h"
+#include "SOIL2.h"
 
 namespace mlg
 {

@@ -8,24 +8,30 @@ namespace mlg
 namespace Graphics
 {
 
-class VertexShader 
+class Shader
 {
 public:
-    VertexShader(std::string&& path);
-    ~VertexShader() noexcept = default;
-    std::string&& getCode() noexcept; 
-private:
-    std::string m_code;
+	explicit Shader(std::string&& path);
+	virtual ~Shader() noexcept = default;
+	virtual std::string&& getCode() noexcept = 0;
+protected:
+	std::string m_code;
 };
 
-class FragmentShader 
+class VertexShader : public Shader
 {
 public:
-    FragmentShader(std::string&& path);
-    ~FragmentShader() noexcept = default;
-    std::string&& getCode() noexcept; 
-private:
-    std::string m_code;
+	explicit VertexShader(std::string&& path) noexcept;
+	~VertexShader() noexcept override = default;
+    std::string&& getCode() noexcept override; 
+};
+
+class FragmentShader : public Shader
+{
+public:
+	explicit FragmentShader(std::string&& path) noexcept;
+	~FragmentShader() noexcept override = default;
+    std::string&& getCode() noexcept override;
 };
 
 } // namespace Graphics
