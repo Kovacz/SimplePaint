@@ -1,4 +1,4 @@
-#pragma once 
+#pragma once
 
 namespace mlg
 {
@@ -6,10 +6,9 @@ namespace mlg
 namespace Graphics
 {
 
-class Camera 
+class Camera
 {
 public:
-
 };
 
 } // namespace Graphics

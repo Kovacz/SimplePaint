@@ -13,6 +13,5 @@ int main()
 
 	renderer.render();
 
-
 	return 0;
 }
