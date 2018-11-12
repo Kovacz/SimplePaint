@@ -36,7 +36,7 @@ private:
 	// "self use" only
 	void gladInit() const;
 private:
-	// {camera, shader, texture, window, primitive}
+	// entities
 	System::Window*			m_pWindow {nullptr};
 	Graphics::Texture*		m_pTexture{nullptr};
 
