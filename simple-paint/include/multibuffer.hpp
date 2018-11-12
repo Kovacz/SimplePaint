@@ -26,11 +26,12 @@ public:
 	MultiBuffer();
 	~MultiBuffer() noexcept;
 	// TODO: in future realize this logic
-	MultiBuffer(MultiBuffer &&) = delete;
-	MultiBuffer(MultiBuffer const &) = delete;
-	MultiBuffer &operator=(MultiBuffer &&) = delete;
-	MultiBuffer &operator=(MultiBuffer const &) = delete;
+	MultiBuffer(MultiBuffer&&) = delete;
+	MultiBuffer(MultiBuffer const&) = delete;
+	MultiBuffer& operator=(MultiBuffer&&) = delete;
+	MultiBuffer& operator=(MultiBuffer const&) = delete;
 	// TODO: add more functionality?
+	auto getBufferHandlers() const noexcept;
 	template <typename U>
 	void setBufferData(BufferTypes type, std::vector<U> container) const noexcept;
 	void setAttribPointer(uint32_t index, int size, uint32_t offset) const noexcept;
@@ -44,10 +45,10 @@ private:
 	void generateVao() noexcept;
 	void generateEbo() noexcept;
 public:
-	static void bind(MultiBuffer *p_mBuff);
-	static void unbind(MultiBuffer *p_mBuff);
+	static void bind(MultiBuffer* p_mBuff);
+	static void unbind(MultiBuffer* p_mBuff);
 private:
-	bool m_bindState;
+	bool 	 m_bindState;
 	uint32_t m_vboHandler;
 	uint32_t m_vaoHandler;
 	uint32_t m_eboHandler;
@@ -108,6 +109,14 @@ template <BufferTypes T, BufferTypes... Args>
 inline void MultiBuffer<T, Args...>::generateEbo() noexcept
 {
 	glGenBuffers(1, &m_eboHandler);
+}
+
+template <BufferTypes T, BufferTypes... Args>
+inline auto MultiBuffer<T, Args...>::getBufferHandlers() const noexcept
+{
+	return std::make_tuple(m_vboHandler > 0 ? m_vboHandler : 0,
+						   m_vaoHandler > 0 ? m_vaoHandler : 0,
+						   m_eboHandler > 0 ? m_eboHandler : 0);
 }
 
 template <BufferTypes T, BufferTypes... Args>

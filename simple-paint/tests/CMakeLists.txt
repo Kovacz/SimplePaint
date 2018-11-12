@@ -104,6 +104,7 @@ add_executable(${PROJECT_NAME}
     "${CMAKE_CURRENT_SOURCE_DIR}/shader_test.cpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/texture_test.cpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/window_test.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/multibuffer_test.cpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/main.cpp"
     )
 

@@ -8,18 +8,35 @@ namespace mlg
 namespace Graphics
 {
 
-void Renderer::add(Scene *scene) const noexcept
+Renderer::~Renderer() noexcept
 {
-	m_targets.push_back(scene);
+	assert(m_pScene);
+	m_pScene = nullptr;
+}
+
+Renderer &Renderer::operator()(Scene *scene) noexcept
+{
+	assert(scene);
+	m_pScene = scene;
+	return *this;
+}
+
+void Renderer::add(Primitive *primitive) const noexcept
+{
+	m_targets.push_back(primitive);
 }
 
 void Renderer::render() const noexcept
 {
-	while (m_targets.back()) {
-		m_targets.back()->setBgColor(COLOR_WHITE, 1.f);
-		m_targets.back()->onDraw();
-
-		m_targets.back()->display();
+	while (*m_pScene) {
+		m_pScene->setBgColor(COLOR_WHITE, 1.f);
+		m_pScene->onDraw();
+		/*  expects:
+         *  for (auto it = m_targets.rbegin(); it != m_targets.rend(); ++it) {
+         *      *it->onDraw();
+         *  }
+         */
+		m_pScene->display();
 	}
 }
 
