@@ -16,9 +16,15 @@ class Texture
 public:
     Texture();
     ~Texture() noexcept;
+    // TODO: in future realize this logic
+    Texture(Texture&&) = delete;
+    Texture(Texture const&) = delete;
+    Texture& operator=(Texture&&) = delete;
+    Texture& operator=(Texture const&) = delete;
+    // TODO: make sure about all noexcept here
     void generate() noexcept;
     bool loadFromFile(char const* path) noexcept;
-    //
+    // more getters...
     info  getInfo() const noexcept;
     byte* getImage() const noexcept;
     unsigned getHandle() const noexcept;

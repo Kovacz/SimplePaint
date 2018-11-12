@@ -23,6 +23,14 @@ private:
     void deleteShaders();
     bool link() noexcept;
 public:
+    ShaderBuilder() noexcept = default;
+    ~ShaderBuilder() noexcept = default;
+    // delete unused functionality
+    ShaderBuilder(ShaderBuilder&&) = delete;
+    ShaderBuilder(ShaderBuilder const&) = delete;
+    ShaderBuilder& operator=(ShaderBuilder&&) = delete;
+    ShaderBuilder& operator=(ShaderBuilder const&) = delete;
+    // TODO: Geometry shader
     bool build(VertexShader&& vert, FragmentShader&& frag) noexcept;
     void run();
     uint32_t getShaderHandle() const noexcept;

@@ -25,15 +25,21 @@ class MultiBuffer final
 public:
     MultiBuffer();
     ~MultiBuffer() noexcept;
-    //
-    template <BufferTypes ...Other>
-    void initialize() noexcept;
-    void initialize(BufferTypes types) noexcept;
-    //
+    // TODO: in future realize this logic
+    MultiBuffer(MultiBuffer&&) = delete;
+    MultiBuffer(MultiBuffer const&) = delete;
+    MultiBuffer& operator=(MultiBuffer&&) = delete;
+    MultiBuffer& operator=(MultiBuffer const&) = delete;
+    // TODO: add more functionality?
     template <typename U>
     void setBufferData(BufferTypes type, std::vector<U> container) const noexcept;
     void setAttribPointer(uint32_t index, int size, uint32_t offset) const noexcept;
-private:
+private:    
+    // inherit call
+    template <BufferTypes ...Other>
+    void initialize() noexcept;
+    void initialize(BufferTypes types) noexcept;
+    // generating only chosen buffers
     void generateVbo() noexcept;
     void generateVao() noexcept;
     void generateEbo() noexcept;

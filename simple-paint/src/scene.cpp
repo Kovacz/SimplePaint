@@ -46,22 +46,22 @@ Scene Scene::make_scene()
 void Scene::gladInit() const
 {
     if (!gladLoadGLLoader(reinterpret_cast<GLADloadproc>(glfwGetProcAddress))) {
-        throw "Scene::gladInit - failed to load GLAD\n";
+        throw "ERROR::SCENE::GLAD_INIT 'failed to load GLAD'\n";
     }
 }
 
 bool Scene::load() noexcept
 {
     if (!m_pTexture) {
-        std::cerr << "Scene::load - texture was not created" << std::endl;
+        std::cerr << "ERROR::SCENE::LOAD 'texture was not created'" << std::endl;
         return false;
     }
     if (!m_pTexture->loadFromFile("../../windows.jpg")) {
-        std::cerr << "Scene::load - failed to load texture from file" << std::endl;
+        std::cerr << "ERROR::SCENE::LOAD 'failed to load texture from file'" << std::endl;
         return false;
     }
     if (!m_shaderProgram.build(VertexShader(VERTEX_SHADER_PATH), FragmentShader(FRAGMENT_SHADER_PATH))) {
-        std::cerr << "Scene::load - failed to build shaders" << std::endl;
+        std::cerr << "ERROR::SCENE::LOAD 'failed to build shaders'" << std::endl;
         return false;
     }
 	return true;

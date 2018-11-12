@@ -26,7 +26,7 @@ Shader::Shader(std::string&& path)
         m_code = shaderStream.str();
     }
     catch (std::ifstream::failure e) {
-        std::cerr << "ERROR::VERTEX_SHADER::FILE_NOT_SUCCESFULLY_READ" << std::endl;
+        std::cerr << "ERROR::SHADER::FILE_NOT_SUCCESFULLY_READ" << std::endl;
     }
 }
 

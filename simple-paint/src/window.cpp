@@ -43,13 +43,13 @@ void Window::create()
 {
     if (!m_width || !m_height || !m_name) {
         glfwTerminate();
-        throw "RenderWindow::create - invalid input parameters\n";
+        throw "ERROR::WINDOW::CREATE 'invalid input parameters'\n";
     }
 
     m_handle = glfwCreateWindow(m_width, m_height, m_name, nullptr, nullptr);
 	if (nullptr == m_handle) {
 		glfwTerminate();
-        throw "RenderWindow::create - failed to create GLFW window\n";
+        throw "ERROR::WINDOW::CREATE 'failed to create GLFW window'\n";
 	}
     glfwMakeContextCurrent(m_handle);
 }

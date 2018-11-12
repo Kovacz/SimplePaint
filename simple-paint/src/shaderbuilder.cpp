@@ -17,7 +17,7 @@ void ShaderBuilder::checkOnErrors(uint32_t const& handle, std::string&& type) co
         glGetShaderiv(handle, GL_COMPILE_STATUS, &success);
         if (!success) {
             glGetShaderInfoLog(handle, 1024, nullptr, infoLog);
-            std::cerr << "| ERROR::SHADER: Compile-time error: Type: " << type << "\n"
+            std::cerr << "ERROR::SHADER_BUILDER 'compile-time error' | Type: " << type << "\n"
                 << infoLog << "\n -- --------------------------------------------------- -- "
                 << std::endl;
             throw "Compile-time error";
@@ -27,7 +27,7 @@ void ShaderBuilder::checkOnErrors(uint32_t const& handle, std::string&& type) co
         glGetProgramiv(handle, GL_LINK_STATUS, &success);
         if (!success) {
             glGetProgramInfoLog(handle, 1024, nullptr, infoLog);
-            std::cerr << "| ERROR::Shader: Link-time error: Type: " << type << "\n"
+            std::cerr << "ERROR::SHADER_BUILDER 'link-time error' | Type: " << type << "\n"
                 << infoLog << "\n -- --------------------------------------------------- -- "
                 << std::endl;
             throw "Link-time error";

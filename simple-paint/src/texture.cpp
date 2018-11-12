@@ -1,5 +1,6 @@
 #include "texture.h"
-#include "SOIL2.h"
+#include "SOIL.h"
+#include <iostream>
 
 namespace mlg
 {
@@ -7,7 +8,12 @@ namespace mlg
 namespace Graphics
 {
 
-Texture::Texture() : m_data(nullptr), m_width(0), m_height(0), m_nrChannels(0)
+Texture::Texture()
+    : m_data(nullptr)
+    , m_width(0)
+    , m_height(0)
+    , m_nrChannels(0)
+    , m_handle(0)
 {
     MultiBuffer<VBO, VAO, EBO>::bind(&m_buff);
         m_buff.setBufferData(VBO, m_vertices);
@@ -43,6 +49,7 @@ bool Texture::loadFromFile(char const* path) noexcept
 {
     m_data = SOIL_load_image(path, &m_width, &m_height, &m_nrChannels, 0);
 	if (!m_data) {
+        std::cerr << "ERROR::TEXTURE 'failed to load texture'" << std::endl;
 		return false;
 	}
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, m_width, m_height, 0, GL_RGB, GL_UNSIGNED_BYTE, m_data);

@@ -77,11 +77,12 @@ add_library(SimplePaint STATIC
     "${CMAKE_CURRENT_SOURCE_DIR}/../src/scene.cpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/../src/texture.cpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/../src/shader.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../src/shaderbuilder.cpp"
     )
 
 target_include_directories(SimplePaint PUBLIC
 
-#    "${THIRDPARTY}/SOIL/inc/SOIL"
+    "${THIRDPARTY}/SOIL/inc/SOIL"
 #    "${THIRDPARTY}/SOIL/src"
     "${THIRDPARTY}/glad/include"
     "${CMAKE_CURRENT_SOURCE_DIR}/../include"
@@ -101,6 +102,7 @@ add_executable(${PROJECT_NAME}
 
     "${CMAKE_CURRENT_SOURCE_DIR}/scene_test.cpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/shader_test.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/texture_test.cpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/window_test.cpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/main.cpp"
     )

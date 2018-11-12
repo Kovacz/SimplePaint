@@ -20,6 +20,7 @@ public:
     // delete unused functionality
     Scene(Scene&&) = delete;
     Scene(Scene const&) = delete;
+    Scene& operator=(Scene&&) = delete;
     Scene& operator=(Scene const&) = delete;
     // TODO: drawing and updating here?
 	void onDraw();
