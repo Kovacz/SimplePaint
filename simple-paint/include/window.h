@@ -12,8 +12,8 @@ namespace System
 
 class Window
 {
-	using info   = std::tuple<unsigned, unsigned, char const *>;
-	using handle = GLFWwindow *;
+	using info   = std::tuple<unsigned, unsigned, char const*>;
+	using handle = GLFWwindow*;
 public:
 	Window(int width, int height, char const *name);
 	~Window() noexcept;
@@ -28,8 +28,8 @@ public:
 private:
 	int m_width{0u};
 	int m_height{0u};
-	char const *m_name{nullptr};
-	GLFWwindow *m_handle{nullptr};
+	char const* m_name{nullptr};
+	GLFWwindow* m_handle{nullptr};
 };
 
 } // namespace System

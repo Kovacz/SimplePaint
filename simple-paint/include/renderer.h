@@ -28,7 +28,7 @@ public:
 	static Renderer make_renderer();
 private:
 	// TODO: think and then think one more time
-	mutable std::vector<Scene *> m_targets;
+	mutable std::vector<Scene*> m_targets;
 };
 
 } // namespace Graphics

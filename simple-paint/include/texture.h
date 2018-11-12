@@ -31,25 +31,25 @@ public:
 public:
 	static void bind(Texture const *texture);
 private:
-	byte *m_data;
-	int m_width;
-	int m_height;
-	int m_nrChannels;
-	unsigned m_handle;
+	byte* 		m_data;
+	int 		m_width;
+	int 		m_height;
+	int 		m_nrChannels;
+	unsigned 	m_handle;
+	// buffers
+	Graphics::MultiBuffer<VBO, VAO, EBO> m_buff;
 private:
+	// containers
 	std::vector<float> m_vertices{
-		// Positions          // Colors           // Texture Coords
-		-1.0f, 1.0f, 0.0f, 1.0f, 1.0f, 1.0f, 0.0f, 1.0f,
-		-1.0f, -1.0f, 0.0f, 1.0f, 1.0f, 1.0f, 0.0f, 0.0f,
-		1.0f, -1.0f, 0.0f, 1.0f, 1.0f, 1.0f, 1.0f, 0.0f,
-		1.0f, 1.0f, 0.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f};
+		// Positions            // Colors           // Texture Coords
+		-1.0f,  1.0f, 0.0f, 	1.0f, 1.0f, 1.0f, 	0.0f, 1.0f,
+		-1.0f, -1.0f, 0.0f, 	1.0f, 1.0f, 1.0f, 	0.0f, 0.0f,
+		 1.0f, -1.0f, 0.0f, 	1.0f, 1.0f, 1.0f, 	1.0f, 0.0f,
+		 1.0f,  1.0f, 0.0f, 	1.0f, 1.0f, 1.0f, 	1.0f, 1.0f};
 	std::vector<uint8_t> m_indexes{
 		0, 1, 3, // First Triangle
 		1, 2, 3  // Second Triangle
 	};
-private:
-	// VAO, VBO, EBO
-	Graphics::MultiBuffer<VBO, VAO, EBO> m_buff;
 };
 
 } // namespace Graphics

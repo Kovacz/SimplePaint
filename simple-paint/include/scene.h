@@ -36,10 +36,11 @@ private:
 	void gladInit() const;
 private:
 	// {camera, shader, texture, window, primitive}
-	Graphics::Camera m_camera;
+	Graphics::Camera 		m_camera;
 	Graphics::ShaderBuilder m_shaderProgram;
-	Graphics::Texture *m_pTexture{nullptr};
-	System::Window *m_pWindow{nullptr};
+
+	Graphics::Texture*	m_pTexture{nullptr};
+	System::Window*		m_pWindow{nullptr};
 };
 
 } // namespace Graphics
