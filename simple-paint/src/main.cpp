@@ -8,8 +8,8 @@ int main()
 	auto scene = Scene::make_scene();
 	scene.load();
 
-    auto renderer = Renderer::make_renderer();
-    renderer(&scene).render();
+	auto renderer = Renderer::make_renderer();
+	renderer(&scene).render();
 
 	return 0;
 }
