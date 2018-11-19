@@ -9,17 +9,26 @@ namespace mlg
 namespace Core
 {
 
+class Event;
 class Component;
+class EntityManager;
+class GraphicSystem;
 
 class Entity
 {
+friend class EntityManager;
+protected:
+	explicit Entity(size_t handle) noexcept;
+	virtual ~Entity() noexcept = 0;
 public:
-	explicit Entity(int16_t id);
-	virtual ~Entity() noexcept;
+	size_t getID() const noexcept;
+	Component *getComponent() const noexcept;
 
-	int getID() const noexcept;
+	void attach(Component *comp) noexcept;
+	virtual void onPaintEvent(Event const &ev, GraphicSystem &gsys) = 0;
 private:
-	int16_t m_id;
+	size_t 		m_id;
+	Component 	*m_component;
 };
 
 } // namespace Core

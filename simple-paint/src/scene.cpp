@@ -1,7 +1,8 @@
 #include "scene.h"
+#include "shader.h"
+#include "event.h"
 #include <glad/glad.h>
 #include <iostream>
-#include "shader.h"
 
 const static char *VERTEX_SHADER_PATH = "../../shaders/texture_vert_shader.vert";
 const static char *FRAGMENT_SHADER_PATH = "../../shaders/texture_frag_shader.frag";
@@ -12,6 +13,9 @@ namespace mlg
 namespace Graphics
 {
 
+Core::Brush* Scene::brush = nullptr;
+std::deque<Event*> Scene::events_pool;
+
 Scene::Scene()
 {
 	try	{
@@ -19,12 +23,18 @@ Scene::Scene()
 		m_pWindow->create();
 		m_pWindow->setFramebufferSizeCallback();
 		this->gladInit();
+
+        brush = m_emanager.create<Core::Brush>();
+
+		glfwSetKeyCallback(m_pWindow->getHandle(), Scene::keyCallback);
+		glfwSetMouseButtonCallback(m_pWindow->getHandle(), Scene::mouseCallback);
+		glfwSetScrollCallback(m_pWindow->getHandle(), Scene::scrollCallback);
 	}
 	catch (char const *e) {
 		std::cerr << e << std::endl;
 	}
-	m_pTexture = new Graphics::Texture;
-	m_pTexture->generate();
+	// m_pTexture = new Graphics::Texture;
+	// m_pTexture->generate();
 }
 
 Scene::~Scene() noexcept
@@ -32,14 +42,10 @@ Scene::~Scene() noexcept
 	delete m_pWindow;
 	delete m_pTexture;
 }
+
 Scene::operator bool() const noexcept
 {
 	return m_pWindow->isOpen();
-}
-
-Scene Scene::make_scene()
-{
-	return Scene();
 }
 
 void Scene::gladInit() const
@@ -47,6 +53,53 @@ void Scene::gladInit() const
 	if (!gladLoadGLLoader(reinterpret_cast<GLADloadproc>(glfwGetProcAddress))) {
 		throw "ERROR::SCENE::GLAD_INIT 'failed to load GLAD'\n";
 	}
+}
+
+void Scene::keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods)
+{
+
+	if (key == GLFW_KEY_L && action == GLFW_PRESS)
+	{
+
+	}
+	else if (key == GLFW_KEY_S && action == GLFW_PRESS)
+	{
+
+	}
+	else if (key == GLFW_KEY_B && action == GLFW_PRESS)
+	{
+
+	}
+	else if (key == GLFW_KEY_C && action == GLFW_PRESS)
+	{
+
+	}
+    else if (key == GLFW_KEY_N && action == GLFW_PRESS)
+    {
+
+    }
+    else if (key == GLFW_KEY_F1 && action == GLFW_PRESS)
+    {
+
+    }
+}
+
+void Scene::mouseCallback(GLFWwindow* window, int button, int action, int mods)
+{
+    Core::Event* mouseEvent = new Core::Event(brush);
+    if (button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS) {
+        mouseEvent->set<Core::MouseAction>(Core::EventType::MOUSE_BUTTON_LEFT_PRESSED, button, mods);
+        events_pool.emplace_back(mouseEvent);
+    }
+    else if (button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_RELEASE) {
+        mouseEvent->set<Core::MouseAction>(Core::EventType::MOUSE_BUTTON_LEFT_RELEASED, button, mods);
+        events_pool.emplace_back(mouseEvent);
+    }
+}
+
+void Scene::scrollCallback(GLFWwindow* window, double x, double y)
+{
+
 }
 
 bool Scene::load() noexcept

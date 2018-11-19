@@ -1,5 +1,5 @@
 #include "componentmanager.h"
-#include "component.h"
+#include "entity.h"
 #include <algorithm>
 
 namespace mlg
@@ -8,25 +8,26 @@ namespace mlg
 namespace Core
 {
 
-bool ComponentManager::addComponent(Component* pComponent) noexcept
+template <typename T>
+auto ComponentManager::exists() const noexcept
 {
-	auto result = std::find_if(m_components.begin(), m_components.end(), [&](auto const& element) {
-			return element.second == pComponent;
-		});
-	if (m_components.end() != result) {
-		++m_newID;
-		m_components.insert(std::make_pair(m_newID, pComponent));
-		return true;
+	if (auto f = m_components.find(typeid(T*).name()); m_components.end() != f) {
+		return f;
 	}
-	return false;
+	return m_components.end();
 }
 
-ComponentManager::shared_component ComponentManager::getComponent(int id) const noexcept
+template <typename T>
+Component* ComponentManager::createAndSign(Entity* entity) noexcept
 {
-	if (auto result = m_components.find(id); m_components.end() != result) {
-		return result->second;
+	if (m_components.end() != exists<T*>()) {
+		return nullptr;
 	}
-	return nullptr;
+
+	T* new_component = new T;
+	m_components.insert({typeid(T*).name(), new_component});
+	entity->attach(new_component);
+	return new_component;
 }
 
 } // namespace Core

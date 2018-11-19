@@ -1,7 +1,7 @@
 #pragma once
 
-#include <map>
-#include <memory>
+#include <unordered_map>
+#include <string>
 
 namespace mlg
 {
@@ -9,20 +9,24 @@ namespace mlg
 namespace Core
 {
 
+class Entity;
 class Component;
 
 class ComponentManager final
 {
-	using shared_component = std::shared_ptr<Component>;
+	using components_pool = std::unordered_map<std::string, Component *>;
 public:
 	ComponentManager() noexcept = default;
 	~ComponentManager() noexcept = default;
 
-	bool addComponent(Component* pComponent) noexcept;
-	shared_component getComponent(int id) const noexcept;
+	template <typename T>
+	Component *createAndSign(Entity *entity) noexcept;
+
+	// get component from our pool
+	template <typename T>
+	auto exists() const noexcept;
 private:
-	int m_newID {0};
-	std::map<int, shared_component> m_components;
+	components_pool m_components;
 };
 
 } // namespace Core

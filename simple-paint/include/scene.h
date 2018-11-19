@@ -4,6 +4,10 @@
 #include "camera.h"
 #include "texture.h"
 #include "shaderbuilder.h"
+#include "brush.h"
+#include "entitymanager.h"
+
+#include <deque>
 
 namespace mlg
 {
@@ -11,7 +15,9 @@ namespace mlg
 namespace Graphics
 {
 
-class Scene
+class Event;
+
+class Scene final
 {
 public:
 	Scene();
@@ -29,14 +35,19 @@ public:
 	bool load() noexcept;
 	void display() const noexcept;
 	void setBgColor(float const& r, float const& g, float const& b, float const& a) const noexcept;
-public:
-	// smoothly creating
-	static Scene make_scene();
 private:
 	// "self use" only
 	void gladInit() const;
+	static void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods);
+	static void mouseCallback(GLFWwindow* window, int button, int action, int mods);
+	static void scrollCallback(GLFWwindow* window, double x, double y);
 private:
-	// entities
+
+    static Core::Brush* brush;
+    Core::EntityManager m_emanager;
+
+    static std::deque<Event*> events_pool;
+
 	System::Window*			m_pWindow {nullptr};
 	Graphics::Texture*		m_pTexture{nullptr};
 
