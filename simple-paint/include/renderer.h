@@ -29,7 +29,7 @@ public:
 	// smoothly creating
 	static Renderer make_renderer();
 private:
-	Scene* m_pScene{nullptr};
+	// Scene* m_pScene{nullptr};
 	// TODO: think and then think one more time
 	mutable std::vector<Primitive*> m_targets;
 };

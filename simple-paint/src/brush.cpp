@@ -12,7 +12,7 @@ Brush::Brush(size_t id) noexcept : Entity(id)
 Brush::~Brush() noexcept
 {}
 
-void Brush::onPaintEvent(Event const& ev, GraphicSystem& gsys)
+void Brush::onPaintEvent(Event const& ev, RenderSystem& gsys)
 {}
 
 } // namespace Core

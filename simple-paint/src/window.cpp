@@ -10,20 +10,20 @@ inline void framebuffer_size_callback(GLFWwindow *, int width, int height)
 namespace mlg
 {
 
-namespace System
+namespace Graphics
 {
 
 Window::Window(int width, int height, char const *name)
 	: m_width(width), m_height(height), m_name(name)
 {
-	if (GLFW_FALSE == glfwInit()) {
-		throw "RenderWindow::RenderWindow - glfwInit() function fails\n";
-	}
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+    if (GLFW_FALSE == glfwInit()) {
+        std::cerr << "glfwInit() function fails" << std::endl;
+    }
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 #ifdef __APPLE__
-	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, true);
+    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, true);
 #endif
 }
 
@@ -44,10 +44,12 @@ void Window::create()
 	}
 
 	m_handle = glfwCreateWindow(m_width, m_height, m_name, nullptr, nullptr);
+
 	if (nullptr == m_handle) {
 		glfwTerminate();
 		throw "ERROR::WINDOW::CREATE 'failed to create GLFW window'\n";
 	}
+
 	glfwMakeContextCurrent(m_handle);
 }
 
@@ -56,9 +58,9 @@ bool Window::isOpen() const noexcept
 	return !glfwWindowShouldClose(m_handle);
 }
 
-void Window::setFramebufferSizeCallback() const noexcept
+void Window::setFramebufferSizeCallback() const
 {
-	glfwSetFramebufferSizeCallback(m_handle, framebuffer_size_callback);
+    (void)glfwSetFramebufferSizeCallback(m_handle, framebuffer_size_callback);
 }
 
 Window::handle Window::getHandle() const noexcept

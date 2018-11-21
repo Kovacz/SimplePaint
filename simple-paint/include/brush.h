@@ -9,7 +9,7 @@ namespace Core
 {
 
 class Event;
-class GraphicSystem;
+class RenderSystem;
 
 class Brush : public Entity
 {
@@ -17,7 +17,7 @@ public:
 	explicit Brush(size_t id) noexcept;
     ~Brush() noexcept override;
 
-    void onPaintEvent(Event const& ev, GraphicSystem& gsys) override;
+    void onPaintEvent(Event const& ev, RenderSystem& gsys) override;
 };
 
 } // namespace Core

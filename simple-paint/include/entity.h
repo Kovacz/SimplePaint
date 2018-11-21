@@ -12,23 +12,23 @@ namespace Core
 class Event;
 class Component;
 class EntityManager;
-class GraphicSystem;
+class RenderSystem;
 
 class Entity
 {
-friend class EntityManager;
+	friend class EntityManager;
 protected:
 	explicit Entity(size_t handle) noexcept;
 	virtual ~Entity() noexcept = 0;
 public:
 	size_t getID() const noexcept;
-	Component *getComponent() const noexcept;
+    Component* getComponent() const noexcept;
 
-	void attach(Component *comp) noexcept;
-	virtual void onPaintEvent(Event const &ev, GraphicSystem &gsys) = 0;
+    void attach(Component* comp) noexcept;
+    virtual void onPaintEvent(Event const& ev, RenderSystem& rsys) = 0;
 private:
 	size_t 		m_id;
-	Component 	*m_component;
+    Component*  m_component;
 };
 
 } // namespace Core

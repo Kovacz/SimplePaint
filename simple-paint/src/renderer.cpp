@@ -10,14 +10,14 @@ namespace Graphics
 
 Renderer::~Renderer() noexcept
 {
-	assert(m_pScene);
-	m_pScene = nullptr;
+	//assert(m_pScene);
+	//m_pScene = nullptr;
 }
 
 Renderer &Renderer::operator()(Scene *scene) noexcept
 {
 	assert(scene);
-	m_pScene = scene;
+	//m_pScene = scene;
 	return *this;
 }
 
@@ -28,16 +28,16 @@ void Renderer::add(Primitive *primitive) const noexcept
 
 void Renderer::render() const noexcept
 {
-	while (*m_pScene) {
-		m_pScene->setBgColor(COLOR_WHITE, 1.f);
-		m_pScene->onDraw();
+	//while (*m_pScene) {
+		//m_pScene->setBgColor(COLOR_WHITE, 1.f);
+		//m_pScene->onDraw();
 		/*  expects:
          *  for (auto it = m_targets.rbegin(); it != m_targets.rend(); ++it) {
          *      *it->onDraw();
          *  }
          */
-		m_pScene->display();
-	}
+		//m_pScene->display();
+	//}
 }
 
 Renderer Renderer::make_renderer()
