@@ -21,8 +21,8 @@ public:
 	void close() const noexcept;
 	void create();
 	bool isOpen() const noexcept;
-    // utility
-    void setFramebufferSizeCallback() const;
+	// utility
+	void setFramebufferSizeCallback() const;
 	info getInfo() const noexcept;
 	handle getHandle() const noexcept;
 private:

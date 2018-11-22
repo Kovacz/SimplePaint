@@ -14,17 +14,17 @@ class Component;
 
 class GraphicSystem : public System
 {
-    using LocalBuffers = std::tuple<uint32_t, uint32_t, uint32_t>;
+	using LocalBuffers = std::tuple<uint32_t, uint32_t, uint32_t>;
 public:
 	GraphicSystem() noexcept = default;
 	~GraphicSystem() noexcept override;
 
-    void draw() noexcept;
-    void update(Component const* component) noexcept;
+	void draw() noexcept;
+	void update(Component const* component) noexcept;
 private:
-    bool m_ready{false};
-    LocalBuffers m_buffers;
-    Component const* m_drawable{nullptr};
+	bool m_ready{false};
+	LocalBuffers m_buffers;
+	Component const* m_drawable{nullptr};
 };
 
 } // namespace Core

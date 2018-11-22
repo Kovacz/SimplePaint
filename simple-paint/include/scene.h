@@ -12,12 +12,12 @@ namespace Graphics
 
 class Scene
 {
-    friend class SceneManager;
+	friend class SceneManager;
 public:
 	Scene();
 	~Scene() noexcept;
 
-    GLFWwindow* operator()() const noexcept;
+	GLFWwindow* operator()() const noexcept;
 	explicit operator bool() const noexcept;
 
 	void onDraw();

@@ -28,7 +28,7 @@ public:
 	info getInfo() const noexcept;
 	byte *getImage() const noexcept;
 	unsigned getHandle() const noexcept;
-public:
+	public:
 	static void bind(Texture const* texture);
 private:
 	byte* 		m_data;
@@ -43,8 +43,8 @@ private:
 		// Positions            // Colors           // Texture Coords
 		-1.0f,  1.0f, 0.0f, 	1.0f, 1.0f, 1.0f, 	0.0f, 1.0f,
 		-1.0f, -1.0f, 0.0f, 	1.0f, 1.0f, 1.0f, 	0.0f, 0.0f,
-		 1.0f, -1.0f, 0.0f, 	1.0f, 1.0f, 1.0f, 	1.0f, 0.0f,
-		 1.0f,  1.0f, 0.0f, 	1.0f, 1.0f, 1.0f, 	1.0f, 1.0f
+			1.0f, -1.0f, 0.0f, 	1.0f, 1.0f, 1.0f, 	1.0f, 0.0f,
+			1.0f,  1.0f, 0.0f, 	1.0f, 1.0f, 1.0f, 	1.0f, 1.0f
 	};
 	std::vector<uint8_t> m_indexes{
 		0, 1, 3, // First Triangle

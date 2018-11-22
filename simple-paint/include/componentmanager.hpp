@@ -19,7 +19,7 @@ public:
 	~ComponentManager() noexcept = default;
 
 	template <typename T>
-    Component* create() noexcept
+	Component* create() noexcept
 	{
 		if (m_components.end() != exists<T*>()) {
 			return nullptr;

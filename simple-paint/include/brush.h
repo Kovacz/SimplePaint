@@ -12,9 +12,9 @@ class Brush : public Entity
 {
 public:
 	explicit Brush(size_t id) noexcept;
-    ~Brush() noexcept override;
+	~Brush() noexcept override;
 
-    void onPaintEvent(class Event const& event, class GraphicSystem& gsys) override;
+	void onPaintEvent(class Event const& event, class GraphicSystem& gsys) override;
 };
 
 } // namespace Core

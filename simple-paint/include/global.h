@@ -16,11 +16,11 @@ namespace mlg
 
 struct Global
 {
-    static Core::Brush* brush;
-    static Core::EntityManager entity_manager;
-    static std::deque<Core::Event*> events_pool;
+	static Core::Brush* brush;
+	static Core::EntityManager entity_manager;
+	static std::deque<Core::Event*> events_pool;
 
-    static void get_2d_ndc_coords(double& x, double& y);
+	static void get_2d_ndc_coords(double& x, double& y);
 	static void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods);
 	static void mouseCallback(GLFWwindow* window, int button, int action, int mods);
 	static void scrollCallback(GLFWwindow* window, double x, double y);
