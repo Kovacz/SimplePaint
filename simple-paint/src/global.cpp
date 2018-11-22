@@ -8,11 +8,9 @@ Core::EntityManager Global::entity_manager;
 std::deque<Core::Event*> Global::events_pool;
 using namespace Core;
 
-void Global::get_2d_ndc_coords(double& x, double& y)
+Vec3d Global::get_2d_ndc_coords(double const& x, double const& y)
 {
-    x =  ((x - (800 / 2)) / (800 / 2));
-    y = (-(y - (600 / 2)) / (600 / 2));
-    //return glm::dvec3(((x - (800 / 2)) / (800 / 2)), (-(y - (600 / 2)) / (600 / 2)), .0f);
+    return Vec3d(((x - (800 / 2)) / (800 / 2)), (-(y - (600 / 2)) / (600 / 2)), .0f);
 }
 
 void Global::keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods)

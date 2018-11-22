@@ -1,6 +1,7 @@
 #pragma once
 
 #include "multibuffer.hpp"
+#include "vector3.hpp"
 #include <vector>
 
 namespace mlg
@@ -11,7 +12,7 @@ namespace Core
 
 class Component
 {
-	using Vertices = std::vector<double>;
+	using Vertices = std::vector<Vec3d>;
 public:
 	Component() noexcept;
 	virtual  ~Component() noexcept = 0;

@@ -16,7 +16,9 @@ enum BufferTypes
 	VBO = 0x8892,
 	VAO = 0x386C,
 	EBO = 0x8893,
-	Undef = 0x0000,
+    DOUBLE = GL_DOUBLE,
+    FLOAT  = GL_FLOAT,
+    Undef  = 0x0000,
 };
 
 template <BufferTypes T, BufferTypes... Args>
@@ -34,7 +36,8 @@ public:
 	auto getBuffers() const noexcept;
 	template <typename U>
 	void setBufferData(BufferTypes type, std::vector<U> container) const noexcept;
-	void setAttribPointer(uint32_t index, int size, uint32_t offset) const noexcept;
+    template <typename U>
+    void setAttribPointer(uint32_t index, int size, BufferTypes type, uint32_t offset) const noexcept;
 private:
 	// inherit call
 	template <BufferTypes... Other>
@@ -120,10 +123,11 @@ inline auto MultiBuffer<T, Args...>::getBuffers() const noexcept
 }
 
 template <BufferTypes T, BufferTypes... Args>
-inline void MultiBuffer<T, Args...>::setAttribPointer(uint32_t index, int size, uint32_t offset) const noexcept
+template <typename U>
+inline void MultiBuffer<T, Args...>::setAttribPointer(uint32_t index, int size, BufferTypes type, uint32_t offset) const noexcept
 {
-    glVertexAttribPointer(index, size, GL_FLOAT, GL_FALSE, 0, reinterpret_cast<void*>(offset));
-    glEnableVertexAttribArray(0);
+	glVertexAttribPointer(index, size, type, GL_FALSE, sizeof(U), reinterpret_cast<void*>(offset));
+	glEnableVertexAttribArray(0);
 }
 
 template <BufferTypes T, BufferTypes... Args>

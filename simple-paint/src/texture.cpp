@@ -15,9 +15,9 @@ Texture::Texture()
         m_buff.setBufferData(VBO, m_vertices);
         m_buff.setBufferData(EBO, m_indexes);
         // set position, color and texture coords attribs
-        m_buff.setAttribPointer(0, 3, 0);
-        m_buff.setAttribPointer(1, 3, (3 * sizeof(float)));
-        m_buff.setAttribPointer(2, 2, (6 * sizeof(float)));
+//        m_buff.setAttribPointer(0, 3, 0);
+//        m_buff.setAttribPointer(1, 3, (3 * sizeof(float)));
+//        m_buff.setAttribPointer(2, 2, (6 * sizeof(float)));
     MultiBuffer<VBO, VAO, EBO>::unbind(&m_buff);
 }
 

@@ -29,7 +29,7 @@ void GraphicSystem::update(Component const* component) noexcept
     m_buffers = component->multiBuff.getBuffers();
 	// update
     glBindBuffer(GL_ARRAY_BUFFER, std::get<0>(m_buffers));
-    glBufferData(GL_ARRAY_BUFFER, static_cast<int>(component->vertices.size() * sizeof(double)), component->vertices.data(), GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, static_cast<int>(component->vertices.size() * sizeof(Vec3d)), component->vertices.data(), GL_STATIC_DRAW);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     // set flag ready to draw as true
     m_ready = true;

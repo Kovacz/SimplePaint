@@ -23,30 +23,19 @@ class SystemManager final
 public:
 	SystemManager() noexcept
 	{
-
 		this->assign<GraphicSystem>();
 
 		m_inputManager.bind(EventType::MOUSE_BUTTON_LEFT_PRESSED, [&](Event const* event) {
 				auto pos = event->get<CursorPosition>();
 				if (event->receiver()->getComponent()) {
-					double x = pos->x;
-					double y = pos->y;
-					Global::get_2d_ndc_coords(x, y);
-					event->receiver()->getComponent()->vertices.emplace_back(x);
-					event->receiver()->getComponent()->vertices.emplace_back(y);
-					event->receiver()->getComponent()->vertices.emplace_back(.0);
+					event->receiver()->getComponent()->vertices.emplace_back(Global::get_2d_ndc_coords(pos->x, pos->y));
 				}
 			});
 
 		m_inputManager.bind(EventType::MOUSE_BUTTON_LEFT_RELEASED, [&](Event const* event) {
 				auto pos = event->get<CursorPosition>();
 				if (event->receiver()->getComponent()) {
-					double x = pos->x;
-					double y = pos->y;
-					Global::get_2d_ndc_coords(x, y);
-					event->receiver()->getComponent()->vertices.emplace_back(x);
-					event->receiver()->getComponent()->vertices.emplace_back(y);
-					event->receiver()->getComponent()->vertices.emplace_back(.0);
+					event->receiver()->getComponent()->vertices.emplace_back(Global::get_2d_ndc_coords(pos->x, pos->y));
 
 					event->receiver()->onPaintEvent(*event, *this->get<GraphicSystem>());
 				}
@@ -62,7 +51,6 @@ public:
 					std::cout << "Key 'L' was pressed!" << std::endl;
 				}
 			});
-
 	}
 
 	~SystemManager() noexcept = default;
