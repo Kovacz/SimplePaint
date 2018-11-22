@@ -1,7 +1,6 @@
 #pragma once
 
 #include "component.h"
-#include "multibuffer.hpp"
 
 namespace mlg
 {
@@ -15,8 +14,6 @@ public:
     Line() = default;
 	~Line() noexcept override;
 	void update() noexcept override;
-
-    MultiBuffer<VBO, VAO> multiBuff;
 };
 
 } // namespace Graphics

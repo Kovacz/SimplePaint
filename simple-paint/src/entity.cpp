@@ -6,7 +6,9 @@ namespace mlg
 namespace Core
 {
 
-Entity::Entity(size_t id) noexcept : m_id(id)
+Entity::Entity(size_t id) noexcept
+    : m_id(id)
+    , m_component(nullptr)
 {}
 
 Entity::~Entity() noexcept

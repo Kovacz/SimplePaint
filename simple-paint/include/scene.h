@@ -7,20 +7,17 @@
 namespace mlg
 {
 
-class Engine;
-
 namespace Graphics
 {
 
-class SceneManager;
-
 class Scene
 {
-    friend Engine;
-    friend SceneManager;
+    friend class SceneManager;
 public:
 	Scene();
 	~Scene() noexcept;
+
+    GLFWwindow* operator()() const noexcept;
 	explicit operator bool() const noexcept;
 
 	void onDraw();

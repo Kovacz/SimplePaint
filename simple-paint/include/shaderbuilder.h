@@ -12,26 +12,23 @@ namespace mlg
 namespace Graphics
 {
 
-class VertexShader;
-class FragmentShader;
-
 class ShaderBuilder
 {
 private:
-	void checkOnErrors(uint32_t const &handle, std::string &&type) const;
-	bool compile(char const *vertexShaderCode, char const *fragmentShaderCode) noexcept;
+    void checkOnErrors(uint32_t const& handle, std::string&& type) const;
+    bool compile(char const* vertexShaderCode, char const* fragmentShaderCode) noexcept;
 	void deleteShaders();
 	bool link() noexcept;
 public:
 	ShaderBuilder() noexcept = default;
 	~ShaderBuilder() noexcept = default;
 	// delete unused functionality
-	ShaderBuilder(ShaderBuilder &&) = delete;
-	ShaderBuilder(ShaderBuilder const &) = delete;
-	ShaderBuilder &operator=(ShaderBuilder &&) = delete;
-	ShaderBuilder &operator=(ShaderBuilder const &) = delete;
+    ShaderBuilder(ShaderBuilder&&) = delete;
+    ShaderBuilder(ShaderBuilder const&) = delete;
+    ShaderBuilder& operator=(ShaderBuilder&&) = delete;
+    ShaderBuilder& operator=(ShaderBuilder const&) = delete;
 	// TODO: Geometry shader
-	bool build(VertexShader &&vert, FragmentShader &&frag) noexcept;
+    bool build(class VertexShader&& vert, class FragmentShader&& frag) noexcept;
 	void run();
 	uint32_t getShaderHandle() const noexcept;
 private:

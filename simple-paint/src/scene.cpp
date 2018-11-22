@@ -28,6 +28,11 @@ Scene::~Scene() noexcept
 {
 }
 
+GLFWwindow* Scene::operator()() const noexcept
+{
+    return m_window.getHandle();
+}
+
 Scene::operator bool() const noexcept
 {
 	return m_window.isOpen();

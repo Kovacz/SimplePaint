@@ -9,7 +9,7 @@ namespace mlg
 namespace Graphics
 {
 
-void ShaderBuilder::checkOnErrors(uint32_t const &handle, std::string &&type) const
+void ShaderBuilder::checkOnErrors(uint32_t const& handle, std::string&& type) const
 {
 	int success;
 	char infoLog[1024];
@@ -35,7 +35,7 @@ void ShaderBuilder::checkOnErrors(uint32_t const &handle, std::string &&type) co
 	}
 }
 
-bool ShaderBuilder::compile(char const *vertexShaderCode, char const *fragmentShaderCode) noexcept
+bool ShaderBuilder::compile(char const* vertexShaderCode, char const* fragmentShaderCode) noexcept
 {
 	try	{
 		// Vertex Shader
@@ -81,7 +81,7 @@ void ShaderBuilder::deleteShaders()
 	glDeleteShader(m_fragmentShaderHandle);
 }
 
-bool ShaderBuilder::build(VertexShader &&vert, FragmentShader &&frag) noexcept
+bool ShaderBuilder::build(VertexShader&& vert, FragmentShader&& frag) noexcept
 {
 	if (!this->compile(vert.getCode().c_str(), frag.getCode().c_str()) || !this->link()) {
 		return false;

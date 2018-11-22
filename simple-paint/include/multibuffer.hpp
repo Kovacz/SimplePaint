@@ -31,7 +31,7 @@ public:
 	MultiBuffer& operator=(MultiBuffer&&) = delete;
 	MultiBuffer& operator=(MultiBuffer const&) = delete;
 	// TODO: add more functionality?
-	auto getBufferHandlers() const noexcept;
+	auto getBuffers() const noexcept;
 	template <typename U>
 	void setBufferData(BufferTypes type, std::vector<U> container) const noexcept;
 	void setAttribPointer(uint32_t index, int size, uint32_t offset) const noexcept;
@@ -112,7 +112,7 @@ inline void MultiBuffer<T, Args...>::generateEbo() noexcept
 }
 
 template <BufferTypes T, BufferTypes... Args>
-inline auto MultiBuffer<T, Args...>::getBufferHandlers() const noexcept
+inline auto MultiBuffer<T, Args...>::getBuffers() const noexcept
 {
 	return std::make_tuple(m_vboHandler > 0 ? m_vboHandler : 0,
 						   m_vaoHandler > 0 ? m_vaoHandler : 0,
@@ -122,8 +122,8 @@ inline auto MultiBuffer<T, Args...>::getBufferHandlers() const noexcept
 template <BufferTypes T, BufferTypes... Args>
 inline void MultiBuffer<T, Args...>::setAttribPointer(uint32_t index, int size, uint32_t offset) const noexcept
 {
-	glVertexAttribPointer(index, size, GL_FLOAT, GL_FALSE, 0, reinterpret_cast<void *>(offset));
-	glEnableVertexAttribArray(true);
+    glVertexAttribPointer(index, size, GL_FLOAT, GL_FALSE, 0, reinterpret_cast<void*>(offset));
+    glEnableVertexAttribArray(0);
 }
 
 template <BufferTypes T, BufferTypes... Args>

@@ -10,12 +10,12 @@ class SystemManager;
 
 class System
 {
-	friend class SystemManager;
+    friend SystemManager;
 protected:
-	System() noexcept;
+    System() noexcept = default;
     virtual ~System() noexcept = 0;
 
-	SystemManager* handler;
+    SystemManager* handler;
 };
 
 } // namespace Core

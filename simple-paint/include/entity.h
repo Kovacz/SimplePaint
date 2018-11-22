@@ -9,10 +9,7 @@ namespace mlg
 namespace Core
 {
 
-class Event;
 class Component;
-class EntityManager;
-class RenderSystem;
 
 class Entity
 {
@@ -24,9 +21,9 @@ public:
 	size_t getID() const noexcept;
     Component* getComponent() const noexcept;
 
-    void attach(Component* comp) noexcept;
-    virtual void onPaintEvent(Event const& ev, RenderSystem& rsys) = 0;
-private:
+    void attach(class Component* comp) noexcept;
+    virtual void onPaintEvent(class Event const& event, class GraphicSystem& gsys) = 0;
+protected:
 	size_t 		m_id;
     Component*  m_component;
 };

@@ -1,19 +1,25 @@
 #pragma once
 
+#include "multibuffer.hpp"
+#include <vector>
+
 namespace mlg
 {
 
 namespace Core
 {
 
-class Entity;
-
 class Component
 {
+    using Vertices = std::vector<double>;
 public:
-	Component() noexcept = default;
+	Component() noexcept;
 	virtual  ~Component() noexcept = 0;
-	virtual void update() noexcept = 0;
+    // TODO: rewrite this method
+    virtual void update() noexcept = 0;
+
+	Vertices vertices;
+	Graphics::MultiBuffer<Graphics::VBO, Graphics::VAO> multiBuff;
 };
 
 } // namespace Core

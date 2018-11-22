@@ -20,7 +20,7 @@ struct Global
     static Core::EntityManager entity_manager;
     static std::deque<Core::Event*> events_pool;
 
-    static glm::dvec3 get_2d_ndc_coords(double const& x, double const& y);
+    static void get_2d_ndc_coords(double& x, double& y);
 	static void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods);
 	static void mouseCallback(GLFWwindow* window, int button, int action, int mods);
 	static void scrollCallback(GLFWwindow* window, double x, double y);
