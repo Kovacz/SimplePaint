@@ -1,5 +1,4 @@
 #include "engine.h"
-#include "global.h"
 #include "shader.h"
 #include "graphicsystem.h"
 
@@ -23,18 +22,19 @@ bool Engine::load() noexcept
 	return true;
 }
 
-void Engine::run(Scene const& scene) noexcept
+void Engine::run() noexcept
 {
 
-	while(scene) {
-        scene.setBgColor(COLOR_WHITE, 1.f);
+    while(!glfwWindowShouldClose(Application::getInstance()->window())) {
+
+        Application::getInstance()->setBgColor(COLOR_WHITE, 1.f);
 
         m_shaderProgram.run();
         m_systemManager.get<Core::GraphicSystem>()->draw();
 
-        scene.display();
+        Application::getInstance()->display();
 
-        while(!Global::events_pool.empty()) {
+        while(!Application::getInstance()->empty()) {
             m_systemManager.processEvent();
         }
     }

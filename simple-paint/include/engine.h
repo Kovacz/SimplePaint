@@ -1,6 +1,6 @@
 #pragma once
 
-#include "scene.h"
+#include "shaderbuilder.h"
 #include "systemmanager.hpp"
 
 namespace mlg
@@ -8,12 +8,11 @@ namespace mlg
 
 class Engine final
 {
-	using Scene = Graphics::Scene;
 public:
 	bool load() noexcept;
-	void run(Scene const& scene) noexcept;
+	void run() noexcept;
 private:
-	Core::SystemManager m_systemManager;
+    Core::SystemManager m_systemManager;
 	Graphics::ShaderBuilder m_shaderProgram;
 };
 

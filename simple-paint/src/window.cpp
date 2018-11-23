@@ -16,15 +16,6 @@ namespace Graphics
 Window::Window(int width, int height, char const *name)
 	: m_width(width), m_height(height), m_name(name)
 {
-    if (GLFW_FALSE == glfwInit()) {
-        std::cerr << "glfwInit() function fails" << std::endl;
-    }
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-#ifdef __APPLE__
-    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, true);
-#endif
 }
 
 Window::~Window() noexcept
