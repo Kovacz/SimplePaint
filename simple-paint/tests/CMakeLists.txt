@@ -74,10 +74,17 @@ add_library(SimplePaint STATIC
     "${THIRDPARTY}/glad/src/glad.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/../src/main.cpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/../src/window.cpp"
-    "${CMAKE_CURRENT_SOURCE_DIR}/../src/scene.cpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/../src/texture.cpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/../src/shader.cpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/../src/shaderbuilder.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../src/graphicsystem.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../src/system.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../src/component.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../src/entity.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../src/line.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../src/application.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../src/brush.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../src/event.cpp"
     )
 
 target_include_directories(SimplePaint PUBLIC
@@ -100,11 +107,12 @@ add_dependencies(SimplePaint GLM)
 
 add_executable(${PROJECT_NAME}
 
-    "${CMAKE_CURRENT_SOURCE_DIR}/scene_test.cpp"
-    "${CMAKE_CURRENT_SOURCE_DIR}/shader_test.cpp"
-    "${CMAKE_CURRENT_SOURCE_DIR}/texture_test.cpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/window_test.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/texture_test.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/shader_test.cpp"
+
     "${CMAKE_CURRENT_SOURCE_DIR}/multibuffer_test.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/graphicsystem_test.cpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/main.cpp"
     )
 

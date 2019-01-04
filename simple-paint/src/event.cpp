@@ -1,23 +1,15 @@
 #include "event.h"
 #include "entity.h"
 
-namespace mlg
-{
+namespace mlg {
 
-namespace Core
-{
+namespace Core {
 
-Event::Event(Entity* receiver) noexcept
-    : m_receiver(receiver)
-{}
+Event::Event(Entity* receiver) noexcept : m_receiver(receiver) {}
 
-Event::~Event() noexcept
-{}
+Event::~Event() noexcept {}
 
-Entity* Event::receiver() const noexcept
-{
-	return m_receiver;
-}
+Entity* Event::receiver() const noexcept { return m_receiver; }
 
 } // namespace Core
 

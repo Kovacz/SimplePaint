@@ -1,16 +1,14 @@
 #include "line.h"
 
-namespace mlg
-{
+namespace mlg {
 
-namespace Graphics
-{
+namespace Graphics {
 
-Line::~Line() noexcept
-{}
+Line::Line() noexcept {}
 
-void Line::update() noexcept
-{}
+Line::~Line() noexcept {}
+
+void Line::update() noexcept {}
 
 } // namespace Graphics
 

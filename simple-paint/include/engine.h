@@ -3,17 +3,16 @@
 #include "shaderbuilder.h"
 #include "systemmanager.hpp"
 
-namespace mlg
-{
+namespace mlg {
 
-class Engine final
-{
+class Engine final {
 public:
-	bool load() noexcept;
-	void run() noexcept;
+    bool load() noexcept;
+    void run() noexcept;
+
 private:
-    Core::SystemManager m_systemManager;
-	Graphics::ShaderBuilder m_shaderProgram;
+    Core::SystemManager     m_systemManager;
+    Graphics::ShaderBuilder m_shaderProgram;
 };
 
 } // namespace mlg

@@ -1,4 +1,6 @@
 {
+    "C_Cpp.default.configurationProvider": "vector-of-bool.cmake-tools"
+    /*
     "C_Cpp.default.configurationProvider": "vector-of-bool.cmake-tools",
     "C_Cpp.configurationWarnings": "Disabled",
     "files.associations": {
@@ -14,6 +16,10 @@
         "typeinfo": "cpp",
         "algorithm": "cpp",
         "optional": "cpp",
-        "variant": "cpp"
+        "variant": "cpp",
+        "deque": "cpp",
+        "functional": "cpp",
+        "ostream": "cpp"
     }
+    */
 }

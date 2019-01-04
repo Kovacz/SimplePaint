@@ -13,5 +13,5 @@ uniform float outerRadius;
 void main()
 {
     color = texture(ourTexture, TexCoord) * vec4(ourColor, 1.f);
-    //color = vec4(ourColor, 1.f);
+    // color = vec4(1.f, 0.f, 1.f, 1.f);
 }

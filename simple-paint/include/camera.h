@@ -1,13 +1,10 @@
 #pragma once
 
-namespace mlg
-{
+namespace mlg {
 
-namespace Graphics
-{
+namespace Graphics {
 
-class Camera
-{
+class Camera {
 public:
 };
 

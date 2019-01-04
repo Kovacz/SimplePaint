@@ -1,23 +1,21 @@
 #include "component.h"
 
-namespace mlg
-{
+namespace mlg {
 
 using namespace Graphics;
 
-namespace Core
-{
+namespace Core {
 
-Component::Component() noexcept
-{
-	MultiBuffer<VBO, VAO>::bind(&multiBuff);
-        multiBuff.setBufferData(VBO, vertices);
-        multiBuff.setAttribPointer<Vec3d>(0, 3, DOUBLE, 0);
+Component::Component() noexcept {
+    // clang-format off
+    MultiBuffer<VBO, VAO>::bind(&multiBuff);
+		multiBuff.setBufferData(VBO, vertices);
+		multiBuff.setAttribPointer<Vec3d>(0, 3, BufferTypes::DOUBLE, 0);
     MultiBuffer<VBO, VAO>::unbind(&multiBuff);
+    // clang-format on
 }
 
-Component::~Component() noexcept
-{}
+Component::~Component() noexcept {}
 
 } // namespace Core
 

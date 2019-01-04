@@ -1,13 +1,10 @@
 #include "system.h"
 
-namespace mlg
-{
+namespace mlg {
 
-namespace Core
-{
+namespace Core {
 
-System::~System() noexcept
-{}
+System::~System() noexcept {}
 
 } // namespace Core
 

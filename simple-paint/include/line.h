@@ -2,18 +2,15 @@
 
 #include "component.h"
 
-namespace mlg
-{
+namespace mlg {
 
-namespace Graphics
-{
+namespace Graphics {
 
-class Line : public Core::Component
-{
+class Line : public Core::Component {
 public:
-	Line() = default;
-	~Line() noexcept override;
-	void update() noexcept override;
+    Line() noexcept;
+    ~Line() noexcept override;
+    void update() noexcept override;
 };
 
 } // namespace Graphics

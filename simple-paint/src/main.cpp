@@ -4,13 +4,12 @@
 using namespace mlg;
 using namespace mlg::Core;
 
-int main()
-{
-	MAKE_APP();
+int main() {
+    MAKE_APP();
 
-	Engine engine;
-	if (!engine.load()) {
-		std::cerr << "Failed to load engine" << std::endl;
-	}
-	engine.run();
+    Engine engine;
+    if (!engine.load()) {
+        std::cerr << "Failed to load engine" << std::endl;
+    }
+    engine.run();
 }

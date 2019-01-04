@@ -9,7 +9,7 @@ SCENARIO("generate buffers", "[Multibuffer]") {
     GIVEN("VBO") {
         WHEN("the buffers was generated") {
 			MultiBuffer<VBO> buff;
-			auto [vbo, vao, ebo] = buff.getBufferHandlers();
+            auto [vbo, vao, ebo] = buff.getBuffers();
             THEN("the buffers handlers must be initialized") {
                 REQUIRE(vbo);
              }
@@ -23,7 +23,7 @@ SCENARIO("generate buffers", "[Multibuffer]") {
 	GIVEN("VBO, VAO") {
 		WHEN("the buffers was generated") {
 			MultiBuffer<VBO, VAO> buff;
-			auto [vbo, vao, ebo] = buff.getBufferHandlers();
+            auto [vbo, vao, ebo] = buff.getBuffers();
 			THEN("the buffers handlers must be initialized") {
 				REQUIRE(vbo);
 				REQUIRE(vao);
@@ -37,7 +37,7 @@ SCENARIO("generate buffers", "[Multibuffer]") {
 	GIVEN("VBO, VAO, EBO") {
 		WHEN("the buffers was generated") {
 			MultiBuffer<VBO, VAO, EBO> buff;
-			auto [vbo, vao, ebo] = buff.getBufferHandlers();
+            auto [vbo, vao, ebo] = buff.getBuffers();
             THEN("the buffers handlers must be initialized") {
 				REQUIRE(vbo);
 				REQUIRE(vao);

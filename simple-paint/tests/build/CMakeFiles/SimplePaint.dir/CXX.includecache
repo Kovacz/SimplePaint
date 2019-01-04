@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../../include/entity.h
+map
+-
+cstdint
+-
+
+../../include/event.h
+variant
+-
+
+/Users/akukh/Documents/Projects/simple-paint/src/event.cpp
+event.h
+/Users/akukh/Documents/Projects/simple-paint/src/event.h
+entity.h
+/Users/akukh/Documents/Projects/simple-paint/src/entity.h
+
