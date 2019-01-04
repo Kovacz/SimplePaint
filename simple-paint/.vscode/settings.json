@@ -1,0 +1,25 @@
+{
+    "C_Cpp.default.configurationProvider": "vector-of-bool.cmake-tools"
+    /*
+    "C_Cpp.default.configurationProvider": "vector-of-bool.cmake-tools",
+    "C_Cpp.configurationWarnings": "Disabled",
+    "files.associations": {
+        "tuple": "cpp",
+        "__config": "cpp",
+        "__nullptr": "cpp",
+        "cstddef": "cpp",
+        "exception": "cpp",
+        "initializer_list": "cpp",
+        "new": "cpp",
+        "stdexcept": "cpp",
+        "type_traits": "cpp",
+        "typeinfo": "cpp",
+        "algorithm": "cpp",
+        "optional": "cpp",
+        "variant": "cpp",
+        "deque": "cpp",
+        "functional": "cpp",
+        "ostream": "cpp"
+    }
+    */
+}

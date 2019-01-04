@@ -1,4 +1,0 @@
-/Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles/rebuild_cache.dir
-/Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles/edit_cache.dir
-/Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles/GLAD.dir
-/Users/akukh/Documents/Projects/Paint/Debug/CMakeFiles/Paint.dir

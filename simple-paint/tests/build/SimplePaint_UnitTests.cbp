@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="SimplePaint_UnitTests"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\glfw3\;CMake Files\build\;CMake Files\build\Catch2-prefix\;CMake Files\build\Catch2-prefix\tmp\;CMake Files\build\GLM-prefix\;CMake Files\build\GLM-prefix\tmp\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/akukh/Documents/Projects/simple-paint/tests/build"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/simple-paint/tests/build/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/simple-paint/tests/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/simple-paint/tests/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/simple-paint/tests/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/akukh/Documents/Projects/simple-paint/tests/build"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/simple-paint/tests/build/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/simple-paint/tests/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/simple-paint/tests/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/simple-paint/tests/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="SimplePaint_UnitTests">
+				<Option output="/Users/akukh/Documents/Projects/simple-paint/tests/build/SimplePaint_UnitTests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/akukh/Documents/Projects/simple-paint/tests/build"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/Users/akukh/Documents/Projects/simple-paint/tests/../external/Catch2-master/single_include"/>
+					<Add directory="/Users/akukh/Documents/Projects/simple-paint/tests/../external/SOIL/inc/SOIL"/>
+					<Add directory="/Users/akukh/Documents/Projects/simple-paint/tests/../external/glad/include"/>
+					<Add directory="/Users/akukh/Documents/Projects/simple-paint/tests/../include"/>
+					<Add directory="/Users/akukh/Documents/Projects/simple-paint/tests/../src"/>
+					<Add directory="/Users/akukh/Documents/Projects/simple-paint/tests/../external/glm-0.9.4.6"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/simple-paint/tests/build/Makefile&quot;  VERBOSE=1 SimplePaint_UnitTests"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/simple-paint/tests/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/simple-paint/tests/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/simple-paint/tests/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="SimplePaint_UnitTests/fast">
+				<Option output="/Users/akukh/Documents/Projects/simple-paint/tests/build/SimplePaint_UnitTests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/akukh/Documents/Projects/simple-paint/tests/build"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/Users/akukh/Documents/Projects/simple-paint/tests/../external/Catch2-master/single_include"/>
+					<Add directory="/Users/akukh/Documents/Projects/simple-paint/tests/../external/SOIL/inc/SOIL"/>
+					<Add directory="/Users/akukh/Documents/Projects/simple-paint/tests/../external/glad/include"/>
+					<Add directory="/Users/akukh/Documents/Projects/simple-paint/tests/../include"/>
+					<Add directory="/Users/akukh/Documents/Projects/simple-paint/tests/../src"/>
+					<Add directory="/Users/akukh/Documents/Projects/simple-paint/tests/../external/glm-0.9.4.6"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/simple-paint/tests/build/Makefile&quot;  VERBOSE=1 SimplePaint_UnitTests/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/simple-paint/tests/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/simple-paint/tests/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/simple-paint/tests/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Catch2">
+				<Option working_dir="/Users/akukh/Documents/Projects/simple-paint/tests/build"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/simple-paint/tests/build/Makefile&quot;  VERBOSE=1 Catch2"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/simple-paint/tests/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/simple-paint/tests/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/simple-paint/tests/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/akukh/Documents/Projects/simple-paint/tests/build"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/simple-paint/tests/build/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/simple-paint/tests/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/simple-paint/tests/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/simple-paint/tests/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="SimplePaint">
+				<Option output="/Users/akukh/Documents/Projects/simple-paint/tests/build/libSimplePaint.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/akukh/Documents/Projects/simple-paint/tests/build"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/akukh/Documents/Projects/simple-paint/tests/../external/SOIL/inc/SOIL"/>
+					<Add directory="/Users/akukh/Documents/Projects/simple-paint/tests/../external/glad/include"/>
+					<Add directory="/Users/akukh/Documents/Projects/simple-paint/tests/../include"/>
+					<Add directory="/Users/akukh/Documents/Projects/simple-paint/tests/../src"/>
+					<Add directory="/Users/akukh/Documents/Projects/simple-paint/tests/../external/glm-0.9.4.6"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/simple-paint/tests/build/Makefile&quot;  VERBOSE=1 SimplePaint"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/simple-paint/tests/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/simple-paint/tests/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/simple-paint/tests/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="SimplePaint/fast">
+				<Option output="/Users/akukh/Documents/Projects/simple-paint/tests/build/libSimplePaint.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/akukh/Documents/Projects/simple-paint/tests/build"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/akukh/Documents/Projects/simple-paint/tests/../external/SOIL/inc/SOIL"/>
+					<Add directory="/Users/akukh/Documents/Projects/simple-paint/tests/../external/glad/include"/>
+					<Add directory="/Users/akukh/Documents/Projects/simple-paint/tests/../include"/>
+					<Add directory="/Users/akukh/Documents/Projects/simple-paint/tests/../src"/>
+					<Add directory="/Users/akukh/Documents/Projects/simple-paint/tests/../external/glm-0.9.4.6"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/simple-paint/tests/build/Makefile&quot;  VERBOSE=1 SimplePaint/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/simple-paint/tests/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/simple-paint/tests/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/simple-paint/tests/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="GLM">
+				<Option working_dir="/Users/akukh/Documents/Projects/simple-paint/tests/build"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/simple-paint/tests/build/Makefile&quot;  VERBOSE=1 GLM"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/simple-paint/tests/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/simple-paint/tests/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/akukh/Documents/Projects/simple-paint/tests/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/akukh/Documents/Projects/simple-paint/external/glad/src/glad.c">
+			<Option target="SimplePaint"/>
+		</Unit>
+		<Unit filename="/Users/akukh/Documents/Projects/simple-paint/src/application.cpp">
+			<Option target="SimplePaint"/>
+		</Unit>
+		<Unit filename="/Users/akukh/Documents/Projects/simple-paint/src/brush.cpp">
+			<Option target="SimplePaint"/>
+		</Unit>
+		<Unit filename="/Users/akukh/Documents/Projects/simple-paint/src/component.cpp">
+			<Option target="SimplePaint"/>
+		</Unit>
+		<Unit filename="/Users/akukh/Documents/Projects/simple-paint/src/entity.cpp">
+			<Option target="SimplePaint"/>
+		</Unit>
+		<Unit filename="/Users/akukh/Documents/Projects/simple-paint/src/event.cpp">
+			<Option target="SimplePaint"/>
+		</Unit>
+		<Unit filename="/Users/akukh/Documents/Projects/simple-paint/src/graphicsystem.cpp">
+			<Option target="SimplePaint"/>
+		</Unit>
+		<Unit filename="/Users/akukh/Documents/Projects/simple-paint/src/line.cpp">
+			<Option target="SimplePaint"/>
+		</Unit>
+		<Unit filename="/Users/akukh/Documents/Projects/simple-paint/src/main.cpp">
+			<Option target="SimplePaint"/>
+		</Unit>
+		<Unit filename="/Users/akukh/Documents/Projects/simple-paint/src/shader.cpp">
+			<Option target="SimplePaint"/>
+		</Unit>
+		<Unit filename="/Users/akukh/Documents/Projects/simple-paint/src/shaderbuilder.cpp">
+			<Option target="SimplePaint"/>
+		</Unit>
+		<Unit filename="/Users/akukh/Documents/Projects/simple-paint/src/system.cpp">
+			<Option target="SimplePaint"/>
+		</Unit>
+		<Unit filename="/Users/akukh/Documents/Projects/simple-paint/src/texture.cpp">
+			<Option target="SimplePaint"/>
+		</Unit>
+		<Unit filename="/Users/akukh/Documents/Projects/simple-paint/src/window.cpp">
+			<Option target="SimplePaint"/>
+		</Unit>
+		<Unit filename="/Users/akukh/Documents/Projects/simple-paint/tests/graphicsystem_test.cpp">
+			<Option target="SimplePaint_UnitTests"/>
+		</Unit>
+		<Unit filename="/Users/akukh/Documents/Projects/simple-paint/tests/main.cpp">
+			<Option target="SimplePaint_UnitTests"/>
+		</Unit>
+		<Unit filename="/Users/akukh/Documents/Projects/simple-paint/tests/multibuffer_test.cpp">
+			<Option target="SimplePaint_UnitTests"/>
+		</Unit>
+		<Unit filename="/Users/akukh/Documents/Projects/simple-paint/tests/shader_test.cpp">
+			<Option target="SimplePaint_UnitTests"/>
+		</Unit>
+		<Unit filename="/Users/akukh/Documents/Projects/simple-paint/tests/texture_test.cpp">
+			<Option target="SimplePaint_UnitTests"/>
+		</Unit>
+		<Unit filename="/Users/akukh/Documents/Projects/simple-paint/tests/window_test.cpp">
+			<Option target="SimplePaint_UnitTests"/>
+		</Unit>
+		<Unit filename="/Users/akukh/Documents/Projects/simple-paint/tests/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/akukh/Documents/Projects/simple-paint/tests/../../../../../../usr/local/lib/cmake/glfw3/glfw3Config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\glfw3\"/>
+		</Unit>
+		<Unit filename="/Users/akukh/Documents/Projects/simple-paint/tests/../../../../../../usr/local/lib/cmake/glfw3/glfw3ConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\glfw3\"/>
+		</Unit>
+		<Unit filename="/Users/akukh/Documents/Projects/simple-paint/tests/../../../../../../usr/local/lib/cmake/glfw3/glfw3Targets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\glfw3\"/>
+		</Unit>
+		<Unit filename="/Users/akukh/Documents/Projects/simple-paint/tests/../../../../../../usr/local/lib/cmake/glfw3/glfw3Targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\glfw3\"/>
+		</Unit>
+		<Unit filename="/Users/akukh/Documents/Projects/simple-paint/tests/build/Catch2-prefix/tmp/Catch2-cfgcmd.txt.in">
+			<Option virtualFolder="CMake Files\build\Catch2-prefix\tmp\"/>
+		</Unit>
+		<Unit filename="/Users/akukh/Documents/Projects/simple-paint/tests/build/GLM-prefix/tmp/GLM-cfgcmd.txt.in">
+			<Option virtualFolder="CMake Files\build\GLM-prefix\tmp\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
