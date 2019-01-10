@@ -55,8 +55,10 @@ public:
     }
 
 private:
-    Entity*   m_receiver{nullptr};
+    Entity* m_receiver{nullptr};
+
     EventType m_type;
+
     EventData m_data;
 };
 

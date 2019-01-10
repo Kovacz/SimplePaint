@@ -10,6 +10,7 @@ class Line : public Core::Component {
 public:
     Line() noexcept;
     ~Line() noexcept override;
+
     void update() noexcept override;
 };
 

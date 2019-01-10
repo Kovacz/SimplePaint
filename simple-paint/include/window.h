@@ -15,19 +15,24 @@ class Window {
 public:
     Window(int width, int height, char const* name);
     ~Window() noexcept;
-    // functionality
+
     void close() const noexcept;
+
     void create();
+
     bool isOpen() const noexcept;
-    // utility
-    void   setFramebufferSizeCallback() const;
+
+    void setFramebufferSizeCallback() const;
+
     info   getInfo() const noexcept;
     handle getHandle() const noexcept;
 
 private:
-    int         m_width{0u};
-    int         m_height{0u};
+    int m_width{0u};
+    int m_height{0u};
+
     char const* m_name{nullptr};
+
     GLFWwindow* m_handle{nullptr};
 };
 

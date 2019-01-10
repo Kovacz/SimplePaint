@@ -14,10 +14,12 @@ class Component {
 public:
     Component() noexcept;
     virtual ~Component() noexcept = 0;
+
     // TODO: rewrite this method
     virtual void update() noexcept = 0;
 
-    Vertices                                            vertices;
+    Vertices vertices;
+
     Graphics::MultiBuffer<Graphics::VBO, Graphics::VAO> multiBuff;
 };
 

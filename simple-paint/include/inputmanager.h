@@ -19,7 +19,9 @@ public:
     ~InputManager() noexcept = default;
 
     void setHandlerOnEvent(EventType&& type, Handler&& action) noexcept;
+
     void free() noexcept;
+
     void exec(Event const* event) noexcept;
 
 private:

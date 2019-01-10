@@ -6,8 +6,10 @@ template <typename T>
 struct Vector3 {
     Vector3();
     Vector3(T _x, T _y, T _z);
+
     template <typename U>
     explicit Vector3(const Vector3<U>& vector);
+
     Vector3<T> operator-(const Vector3<T>& right);
     ////////////////////////////////////////////////////////
     // Member data

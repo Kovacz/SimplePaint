@@ -21,12 +21,9 @@ class SystemManager final {
 public:
     SystemManager() noexcept;
     ~SystemManager() noexcept = default;
+
     void processEvent() noexcept;
 
-public:
-    /*
-     * inline instance of template methods
-     */
     template <typename T>
     void assign() noexcept {
         if (m_systems.end() == m_systems.find(typeid(T*).name())) {

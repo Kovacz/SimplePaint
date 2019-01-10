@@ -18,10 +18,12 @@ public:
     ~GraphicSystem() noexcept override;
 
     bool draw() noexcept;
+
     bool update(Component const* component) noexcept;
 
 private:
-    uint32_t     m_verticesToDraw;
+    uint32_t m_verticesToDraw;
+
     LocalBuffers m_buffers;
 };
 

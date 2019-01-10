@@ -23,17 +23,21 @@ class MultiBuffer final {
 public:
     MultiBuffer();
     ~MultiBuffer() noexcept;
+
     // TODO: in future realize this logic
     MultiBuffer(MultiBuffer&&)      = delete;
     MultiBuffer(MultiBuffer const&) = delete;
     MultiBuffer& operator=(MultiBuffer&&) = delete;
     MultiBuffer& operator=(MultiBuffer const&) = delete;
-    // TODO: add more functionality?
+
     auto getBuffers() const noexcept;
     template <typename U>
     void setBufferData(BufferTypes type, std::vector<U> container) const noexcept;
     template <typename U>
     void setAttribPointer(uint32_t index, int size, BufferTypes type, uint32_t offset) const noexcept;
+
+    static void bind(MultiBuffer* p_mBuff);
+    static void unbind(MultiBuffer* p_mBuff);
 
 private:
     // inherit call
@@ -45,11 +49,6 @@ private:
     void generateVao() noexcept;
     void generateEbo() noexcept;
 
-public:
-    static void bind(MultiBuffer* p_mBuff);
-    static void unbind(MultiBuffer* p_mBuff);
-
-private:
     bool     m_bindState;
     uint32_t m_vboHandler;
     uint32_t m_vaoHandler;
